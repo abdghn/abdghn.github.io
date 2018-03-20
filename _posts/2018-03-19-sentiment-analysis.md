@@ -5,6 +5,12 @@ categories:
   - tutorial
 ---
 
+#Kelompok
+Abdul Ghoni Abbasi
+Aldi Ginanjar
+M. Fadlan Prayoga
+Widya Maylani
+
 # Scraping
 
 

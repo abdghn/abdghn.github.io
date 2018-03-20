@@ -4,7 +4,13 @@
     <entry>
       <title>Sentiment Analysis with Python 3</title>
       <url>/tutorial/2018/03/19/sentiment-analysis/</url>
-      <content type="text">Scraping
+      <content type="text">#Kelompok
+Abdul Ghoni Abbasi
+Aldi Ginanjar
+M. Fadlan Prayoga
+Widya Maylani
+
+Scraping
 
 Untuk mengambil data dari suatu post facebook, pertama kita scraping suatu post tersebut dengan kodingan dibawah ini
 
@@ -87,8 +93,6 @@ untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nil
 Setelah import library sentiment analyzer dari NLTK
 
 {'neutral': 594, 'positive': 1187, 'negative': 271}
-
-
 
 
 
