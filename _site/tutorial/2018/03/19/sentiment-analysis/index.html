@@ -119,9 +119,12 @@
 <meta property="og:site_name" content="Abdghn">
 <meta property="og:description" content="menganalisis komentar pada suatu post facebook menggunakan NLTK">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://localhost:4000/assets/images/Screenshot from 2018-03-18 23-37-32.png">
+<meta property="og:image" content="http://localhost:4000/assets/images/output_5_0.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sentiment Analysis with Python 3">
 <meta name="twitter:description" content="menganalisis komentar pada suatu post facebook menggunakan NLTK">
+<meta name="twitter:image" content="http://localhost:4000/assets/images/Screenshot from 2018-03-18 23-37-32.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -467,9 +470,15 @@ for x in messages:
         summary["negative"] +=1
 print(summary)
 </code></pre>
-<p>untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer
-Setelah import library sentiment analyzer dari NLTK
-![output hasil dari penentuan positif,negatif dan netral]</p>
+
+<p>untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array negatif akan bertambah.
+Setelah import library sentiment analyzer dari NLTK</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">'neutral':</span><span class="w"> </span><span class="err">594,</span><span class="w"> </span><span class="err">'positive':</span><span class="w"> </span><span class="err">1187,</span><span class="w"> </span><span class="err">'negative':</span><span class="w"> </span><span class="err">271</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="http://localhost:4000/assets/images/Screenshot from 2018-03-18 23-37-32.png" alt="my photo" /></p>
 
 <h2 id="result-from-pie-chart">Result from Pie Chart</h2>
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -477,6 +486,7 @@ Setelah import library sentiment analyzer dari NLTK
 <span class="n">pie_plot</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">autopct</span><span class="o">=</span><span class="s">'.</span><span class="si">%</span><span class="s">f'</span><span class="p">);</span>
 </code></pre>
 </div>
+<p><img src="http://localhost:4000/assets/images/output_5_0.png" alt="Pie Chart" /></p>
 
       
     </div>
