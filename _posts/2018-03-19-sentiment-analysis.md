@@ -93,7 +93,7 @@ Setelah import library sentiment analyzer dari NLTK
 {'neutral': 594, 'positive': 1187, 'negative': 271}
 ```
 
-![my photo]({{ site.url }}/assets/images/Screenshot from 2018-03-18 23-37-32.png)
+
 
 
 ## Result from Pie Chart
