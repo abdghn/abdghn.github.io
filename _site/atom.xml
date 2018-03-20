@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-20T20:49:49+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><subtitle>Web abdghn</subtitle><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;p&gt;#Kelompok
-Abdul Ghoni Abbasi
-Aldi Ginanjar
-M. Fadlan Prayoga
-Widya Maylani&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-21T00:36:52+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;kelompok&quot;&gt;Kelompok&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Abdul Ghoni Abbasi&lt;/li&gt;
+  &lt;li&gt;Aldi Ginanjar&lt;/li&gt;
+  &lt;li&gt;M. Fadlan Prayoga&lt;/li&gt;
+  &lt;li&gt;Widya Maylani&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;scraping&quot;&gt;Scraping&lt;/h1&gt;
 
@@ -54,7 +57,7 @@ Widya Maylani&lt;/p&gt;
 
 &lt;p&gt;Kemudian untuk data comment yang sudah di extract disimpan dalam file bernama comments.txt dan output yang dhasilkan dari script python diatas berupa :&lt;/p&gt;
 
-&lt;p&gt;![images]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comments.png&quot; alt=&quot;scraping&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;sentiment-analysis&quot;&gt;Sentiment Analysis&lt;/h1&gt;
 
@@ -83,8 +86,8 @@ for x in messages:
 print(summary)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array negatif akan bertambah.
-Setelah import library sentiment analyzer dari NLTK&lt;/p&gt;
+&lt;p&gt;untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah.
+Setelah import library sentiment analyzer dari NLTK untuk&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'neutral':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;594,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'positive':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;1187,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'negative':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;271&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -93,10 +96,10 @@ Setelah import library sentiment analyzer dari NLTK&lt;/p&gt;
 &lt;h2 id=&quot;result-from-pie-chart&quot;&gt;Result from Pie Chart&lt;/h2&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autopct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'.&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;f'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/output_5_0.png&quot; alt=&quot;Pie Chart&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">#Kelompok Abdul Ghoni Abbasi Aldi Ginanjar M. Fadlan Prayoga Widya Maylani</summary></entry><entry><title type="html">Next Theme Tutorial</title><link href="http://localhost:4000/tutorial/2017/07/20/next-tutorial/" rel="alternate" type="text/html" title="Next Theme Tutorial" /><published>2017-07-20T00:00:00+07:00</published><updated>2017-07-20T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2017/07/20/next-tutorial</id><content type="html" xml:base="http://localhost:4000/tutorial/2017/07/20/next-tutorial/">&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/output_5_0.png&quot; alt=&quot;Pie Chart&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Kelompok</summary></entry><entry><title type="html">Next Theme Tutorial</title><link href="http://localhost:4000/tutorial/2017/07/20/next-tutorial/" rel="alternate" type="text/html" title="Next Theme Tutorial" /><published>2017-07-20T00:00:00+07:00</published><updated>2017-07-20T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2017/07/20/next-tutorial</id><content type="html" xml:base="http://localhost:4000/tutorial/2017/07/20/next-tutorial/">&lt;blockquote&gt;
   &lt;p&gt;NexT is a high quality elegant &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme ported from &lt;a href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;Hexo Next&lt;/a&gt;. It is crafted from scratch, with love.&lt;/p&gt;
 &lt;/blockquote&gt;
 

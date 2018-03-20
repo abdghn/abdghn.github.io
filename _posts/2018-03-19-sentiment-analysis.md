@@ -5,11 +5,12 @@ categories:
   - tutorial
 ---
 
-#Kelompok
-Abdul Ghoni Abbasi
-Aldi Ginanjar
-M. Fadlan Prayoga
-Widya Maylani
+# Kelompok
+
+- Abdul Ghoni Abbasi
+- Aldi Ginanjar
+- M. Fadlan Prayoga
+- Widya Maylani
 
 # Scraping
 
@@ -62,7 +63,7 @@ for comment in data['data']:
 
 Kemudian untuk data comment yang sudah di extract disimpan dalam file bernama comments.txt dan output yang dhasilkan dari script python diatas berupa :
 
-![images]
+![scraping]({{ site.url }}/assets/images/comments.png)
 
 # Sentiment Analysis
 
@@ -92,8 +93,8 @@ for x in messages:
 print(summary)
 ```
 
-untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks "neutral" akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks "positive" dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array negatif akan bertambah.
-Setelah import library sentiment analyzer dari NLTK
+untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks "neutral" akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks "positive" dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array "negative" akan bertambah.
+Setelah import library sentiment analyzer dari NLTK untuk
 
 ```
 {'neutral': 594, 'positive': 1187, 'negative': 271}
@@ -106,6 +107,6 @@ Setelah import library sentiment analyzer dari NLTK
 ```python
 import matplotlib.pyplot as plt
 pie_plot = pd.Series(summary,index=summary)
-pie_plot.plot.pie(fontsize=11,figsize=(6,6),autopct='.%f');
+pie_plot.plot.pie(fontsize=11,figsize=(6,6));
 ```
 ![Pie Chart]({{ site.url }}/assets/images/output_5_0.png)
