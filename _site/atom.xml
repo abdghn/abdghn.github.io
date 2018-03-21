@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-21T00:36:52+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;kelompok&quot;&gt;Kelompok&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-21T09:12:06+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;kelompok&quot;&gt;Kelompok&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Abdul Ghoni Abbasi&lt;/li&gt;
-  &lt;li&gt;Aldi Ginanjar&lt;/li&gt;
-  &lt;li&gt;M. Fadlan Prayoga&lt;/li&gt;
-  &lt;li&gt;Widya Maylani&lt;/li&gt;
+  &lt;li&gt;Abdul Ghoni Abbasi(5C414919)&lt;/li&gt;
+  &lt;li&gt;Aldi Ginanjar(50414741)&lt;/li&gt;
+  &lt;li&gt;M. Fadlan Prayoga(56414918)&lt;/li&gt;
+  &lt;li&gt;Widya Maylani(5C414218)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;scraping&quot;&gt;Scraping&lt;/h1&gt;
@@ -17,13 +17,13 @@
 &lt;span class=&quot;c&quot;&gt;# paste your access token below&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;access_token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'EAAanvSwEfswBAG4xDMDJuJqmsPb179nvHy0XPMR7BcgPejGKBhaa7Iy0EaQu2W5PCOA92BcgiZA9nXJCJrFZBzKksVGwMCQHX7oq7lAXsn4YZBObZAZCI9kKa04m0eMsOpNoeZAwveKaZBu2cKQDUfycIM8zjbor0tbSplAABUlwQZDZD'&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# LHL's Facebook user id&lt;/span&gt;
+
 &lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'125845680811480'&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# the id of LHL's response post at https://www.facebook.com/leehsienloong/posts/1505690826160285&lt;/span&gt;
+
 &lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'1505690826160285'&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# the graph API endpoint for comments on LHL's post&lt;/span&gt;
+
 &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://graph.facebook.com/{}/{}_{}/comments'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph_api_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
@@ -48,14 +48,16 @@
         &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;import library requests agar mendapatkan akses token dari facebook, kemudian memasukkan access token yang terdapat pada facebook. Berikutnya untuk mengambil semua data komentar pada suatu post facebook yang dibutuhkan adalah id dari user facebook dan id dari post  yang ditentukan dalam variabel url nya. Setelah itu untuk mengambil semua komentar di dalam suatu post tersebut membuat array dengan nama comments and menggunakan library requests untuk mendapatkan akses token, untuk dibuat scraping atau data komentar dari suatu post dibuat kondisi terdapat error dalam data JSON tersebut maka ditampilkan pesan error, jika tidak maka dimuat isi array dengan banyak nya komentar menggunakan perintah&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Kemudian untuk data comment yang sudah di extract disimpan dalam file bernama comments.txt dan output yang dhasilkan dari script python diatas berupa :&lt;/p&gt;
+&lt;p&gt;Kemudian untuk data comment yang sudah di extract disimpan dalam file bernama &lt;code class=&quot;highlighter-rouge&quot;&gt;comments.txt&lt;/code&gt; dan output yang dhasilkan dari script python diatas berupa :&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comments.png&quot; alt=&quot;scraping&quot; /&gt;&lt;/p&gt;
 
@@ -86,20 +88,22 @@ for x in messages:
 print(summary)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah.
-Setelah import library sentiment analyzer dari NLTK untuk&lt;/p&gt;
+&lt;p&gt;untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah. Untuk mencetak perolehan angka sentimen gunakan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;print(summary)&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'neutral':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;594,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'positive':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;1187,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'negative':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;271&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;result-from-pie-chart&quot;&gt;Result from Pie Chart&lt;/h2&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/output_5_0.png&quot; alt=&quot;Pie Chart&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Kelompok</summary></entry><entry><title type="html">Next Theme Tutorial</title><link href="http://localhost:4000/tutorial/2017/07/20/next-tutorial/" rel="alternate" type="text/html" title="Next Theme Tutorial" /><published>2017-07-20T00:00:00+07:00</published><updated>2017-07-20T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2017/07/20/next-tutorial</id><content type="html" xml:base="http://localhost:4000/tutorial/2017/07/20/next-tutorial/">&lt;blockquote&gt;
+
+&lt;p&gt;Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan adalah
+&lt;img src=&quot;http://localhost:4000/assets/images/output_5_0.png&quot; alt=&quot;Pie Chart&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Kelompok</summary></entry><entry><title type="html">Next Theme Tutorial</title><link href="http://localhost:4000/tutorial/2017/07/20/next-tutorial/" rel="alternate" type="text/html" title="Next Theme Tutorial" /><published>2017-07-20T00:00:00+07:00</published><updated>2017-07-20T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2017/07/20/next-tutorial</id><content type="html" xml:base="http://localhost:4000/tutorial/2017/07/20/next-tutorial/">&lt;blockquote&gt;
   &lt;p&gt;NexT is a high quality elegant &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme ported from &lt;a href=&quot;https://github.com/iissnan/hexo-theme-next&quot;&gt;Hexo Next&lt;/a&gt;. It is crafted from scratch, with love.&lt;/p&gt;
 &lt;/blockquote&gt;
 
