@@ -119,12 +119,14 @@
 <meta property="og:site_name" content="Abdghn">
 <meta property="og:description" content="Menganalisis komentar pada suatu post Facebook dengan topik pornografi menggunakan NLTK(Natural Language Toolkit)">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://localhost:4000/assets/images/post.png">
+<meta property="og:image" content="http://localhost:4000/assets/images/output1.png">
 <meta property="og:image" content="http://localhost:4000/assets/images/comments.png">
-<meta property="og:image" content="http://localhost:4000/assets/images/output_5_0.png">
+<meta property="og:image" content="http://localhost:4000/assets/images/output2.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sentiment Analysis with Python 3">
 <meta name="twitter:description" content="Menganalisis komentar pada suatu post Facebook dengan topik pornografi menggunakan NLTK(Natural Language Toolkit)">
-<meta name="twitter:image" content="http://localhost:4000/assets/images/comments.png">
+<meta name="twitter:image" content="http://localhost:4000/assets/images/post.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -388,18 +390,21 @@
       
 
       
-        <h1 id="kelompok">Kelompok</h1>
+        <h1 id="team">Team</h1>
 
 <ul>
-  <li>Abdul Ghoni Abbasi(5C414919)</li>
-  <li>Aldi Ginanjar(50414741)</li>
-  <li>M. Fadlan Prayoga(56414918)</li>
-  <li>Widya Maylani(5C414218)</li>
+  <li>Abdul Ghoni Abbasi (5C414919)</li>
+  <li>Aldi Ginanjar (50414741)</li>
+  <li>M. Fadlan Prayoga (56414918)</li>
+  <li>Widya Maylani (5C414218)</li>
 </ul>
 
 <h1 id="scraping">Scraping</h1>
+<blockquote>
+  <p>Web Scraping adalah pengambilan sebuah dokumen semi-struktur dari internet, umumnya berupa halaman-halaman web dalam bahasa markup seperti HTML atau XHTML, dan menganalisis untuk diambil data tertentu dari halaman tersebut</p>
+</blockquote>
 
-<p>Untuk mengambil data dari suatu post facebook, pertama kita scraping suatu post tersebut dengan kodingan dibawah ini</p>
+<p><img src="http://localhost:4000/assets/images/post.png" alt="post" /></p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
 
@@ -407,11 +412,10 @@
 <span class="c"># paste your access token below</span>
 <span class="n">access_token</span> <span class="o">=</span> <span class="s">'EAAanvSwEfswBAG4xDMDJuJqmsPb179nvHy0XPMR7BcgPejGKBhaa7Iy0EaQu2W5PCOA92BcgiZA9nXJCJrFZBzKksVGwMCQHX7oq7lAXsn4YZBObZAZCI9kKa04m0eMsOpNoeZAwveKaZBu2cKQDUfycIM8zjbor0tbSplAABUlwQZDZD'</span>
 
+<span class="n">user_id</span> <span class="o">=</span> <span class="s">'164305410295882'</span>
 
-<span class="n">user_id</span> <span class="o">=</span> <span class="s">'125845680811480'</span>
 
-
-<span class="n">post_id</span> <span class="o">=</span> <span class="s">'1505690826160285'</span>
+<span class="n">post_id</span> <span class="o">=</span> <span class="s">'1727321057327635'</span>
 
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">'https://graph.facebook.com/{}/{}_{}/comments'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">graph_api_version</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">post_id</span><span class="p">)</span>
@@ -439,61 +443,67 @@
 </code></pre>
 </div>
 
-<p>import library requests agar mendapatkan akses token dari facebook, kemudian memasukkan access token yang terdapat pada facebook. Berikutnya untuk mengambil semua data komentar pada suatu post facebook yang dibutuhkan adalah id dari user facebook dan id dari post  yang ditentukan dalam variabel url nya. Setelah itu untuk mengambil semua komentar di dalam suatu post tersebut membuat array dengan nama comments and menggunakan library requests untuk mendapatkan akses token, untuk dibuat scraping atau data komentar dari suatu post dibuat kondisi terdapat error dalam data JSON tersebut maka ditampilkan pesan error, jika tidak maka dimuat isi array dengan banyak nya komentar menggunakan perintah</p>
+<p>import library requests agar mendapatkan akses token dari facebook, kemudian memasukkan access token yang terdapat pada facebook. Berikutnya untuk mengambil semua data komentar pada suatu post facebook yang dibutuhkan adalah id dari user facebook dan id dari post  yang ditentukan dalam variabel url nya. Setelah itu bisa di ketahui konsep scraping untuk mengambil semua komentar di dalam suatu post tersebut membuat array dengan nama comments and menggunakan library requests untuk mendapatkan akses token, untuk dibuat scraping atau data komentar dari suatu post dibuat kondisi terdapat error dalam data JSON tersebut maka ditampilkan pesan error, jika tidak maka dimuat isi array dengan banyak nya komentar menggunakan perintah</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">comment</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s">'data'</span><span class="p">]:</span>
   <span class="n">text</span> <span class="o">=</span> <span class="n">comment</span><span class="p">[</span><span class="s">'message'</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">' '</span><span class="p">)</span>
   <span class="n">comments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </code></pre>
 </div>
+<p>Jika sudah simpan file python dengan nama <code class="highlighter-rouge">scraping.py</code> lalu run program yang sudah dibuat dengan perintah <code class="highlighter-rouge">python3 scraping.py</code> maka akan ditampilkan output
+<img src="http://localhost:4000/assets/images/output1.png" alt="output1" /></p>
 
-<p>Kemudian untuk data comment yang sudah di extract disimpan dalam file bernama <code class="highlighter-rouge">comments.txt</code> dan output yang dhasilkan dari script python diatas berupa :</p>
+<p>Kemudian untuk data comment yang sudah di extract disimpan dalam file bernama <code class="highlighter-rouge">comments.txt</code> dan output yang dhasilkan dari script python diatas berupa:</p>
 
 <p><img src="http://localhost:4000/assets/images/comments.png" alt="scraping" /></p>
 
 <h1 id="sentiment-analysis">Sentiment Analysis</h1>
 
-<p>Sebelum melakukan sentiment analysis, import library seperti NLTK, pandas</p>
+<p>Sebelum melakukan sentimen analisis, import library seperti NLTK, pandas</p>
+
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">nltk</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">string</span>
 </code></pre>
 </div>
-<p>library yang digunakan yaitu vader lexicon untuk pemanggilan fungsi SentimentIntensityAnalyzer</p>
+
+<p>Library yang digunakan yaitu vader lexicon untuk pemanggilan fungsi <code class="highlighter-rouge">SentimentIntensityAnalyzer()</code></p>
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">nltk.sentiment.vader</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
 <span class="n">sid</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
 </code></pre>
 </div>
 <h2 id="print-positive-negative-and-neutral">Print Positive, Negative and Neutral</h2>
 
-<pre><code class="language-Python">summary = {"positive":0,"neutral":0,"negative":0}
-for x in messages:
-    ss = sid.polarity_scores(x)
-    if ss["compound"] == 0.0:
-        summary["neutral"] +=1
-    elif ss["compound"] &gt; 0.0:
-        summary["positive"] +=1
-    else:
-        summary["negative"] +=1
-print(summary)
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">summary</span> <span class="o">=</span> <span class="p">{</span><span class="s">"positive"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">"neutral"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">"negative"</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="n">sid</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ss</span><span class="p">[</span><span class="s">"compound"</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="n">summary</span><span class="p">[</span><span class="s">"neutral"</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">ss</span><span class="p">[</span><span class="s">"compound"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="n">summary</span><span class="p">[</span><span class="s">"positive"</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">summary</span><span class="p">[</span><span class="s">"negative"</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
 </code></pre>
+</div>
 
-<p>untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah. Untuk mencetak perolehan angka sentimen gunakan perintah <code class="highlighter-rouge">print(summary)</code></p>
+<p>untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library <code class="highlighter-rouge">SentimentIntensityAnalyzer()</code> sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah. Untuk mencetak perolehan angka sentimen gunakan perintah <code class="highlighter-rouge">print(summary)</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">'neutral':</span><span class="w"> </span><span class="err">594,</span><span class="w"> </span><span class="err">'positive':</span><span class="w"> </span><span class="err">1187,</span><span class="w"> </span><span class="err">'negative':</span><span class="w"> </span><span class="err">271</span><span class="p">}</span><span class="w">
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="w">
+</span><span class="p">{</span><span class="err">'positive':</span><span class="w"> </span><span class="err">57,</span><span class="w"> </span><span class="err">'neutral':</span><span class="w"> </span><span class="err">81,</span><span class="w"> </span><span class="err">'negative':</span><span class="w"> </span><span class="err">55</span><span class="p">}</span><span class="w">
 </span></code></pre>
 </div>
 
 <h2 id="result-from-pie-chart">Result from Pie Chart</h2>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="n">pie_plot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">summary</span><span class="p">)</span>
-<span class="n">pie_plot</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">));</span>
+<span class="n">pie_plot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">pie_plot</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">autopct</span><span class="o">=</span><span class="s">'</span><span class="si">%.2</span><span class="s">f'</span><span class="p">);</span>
 </code></pre>
 </div>
 
-<p>Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan adalah
-<img src="http://localhost:4000/assets/images/output_5_0.png" alt="Pie Chart" /></p>
+<p>Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah <code class="highlighter-rouge">autopct=%2.f</code> maka outputnya adalah
+<img src="http://localhost:4000/assets/images/output2.png" alt="Pie Chart" /></p>
 
       
     </div>
@@ -532,6 +542,10 @@ print(summary)
       
         <div class="post-nav" id="post-nav-id">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/21/pertemuan-1-sistem-multimedia/" rel="next" title="Pertemuan 1 Sistem Multimedia">
+                <i class="fa fa-chevron-left"></i> Pertemuan 1 Sistem Multimedia
+              </a>
             
           </div>
 
@@ -626,7 +640,7 @@ print(summary)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -723,7 +737,7 @@ print(summary)
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-1"> <a class="nav-link" href="#kelompok"> <span class="nav-number">1</span> <span class="nav-text">Kelompok</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#scraping"> <span class="nav-number">2</span> <span class="nav-text">Scraping</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#sentiment-analysis"> <span class="nav-number">3</span> <span class="nav-text">Sentiment Analysis</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#print-positive-negative-and-neutral"> <span class="nav-number">3.1</span> <span class="nav-text">Print Positive, Negative and Neutral</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#result-from-pie-chart"> <span class="nav-number">3.2</span> <span class="nav-text">Result from Pie Chart</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#team"> <span class="nav-number">1</span> <span class="nav-text">Team</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#scraping"> <span class="nav-number">2</span> <span class="nav-text">Scraping</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#sentiment-analysis"> <span class="nav-number">3</span> <span class="nav-text">Sentiment Analysis</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#print-positive-negative-and-neutral"> <span class="nav-number">3.1</span> <span class="nav-text">Print Positive, Negative and Neutral</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#result-from-pie-chart"> <span class="nav-number">3.2</span> <span class="nav-text">Result from Pie Chart</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
     </ol>
   </div>
             
