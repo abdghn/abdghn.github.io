@@ -559,7 +559,7 @@ will be displayed as
   
     <entry>
       <title>Images</title>
-      <url>/2013/12/27/images/</url>
+      <url>/2013/12/26/images/</url>
       <content type="text">This is a image test post.
 
 
@@ -663,7 +663,7 @@ Gist
   
     <entry>
       <title>日本語テスト</title>
-      <url>/2013/12/25/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/</url>
+      <url>/2013/12/24/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/</url>
       <content type="text">This is a Japanese test post.
 
 私は昨日ついにその助力家というのの上よりするたなけれ。
@@ -693,7 +693,7 @@ From すぐ使えるダミーテキスト - 日本語 Lorem ipsum
   
     <entry>
       <title>中文測試</title>
-      <url>/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</url>
+      <url>/test/test/2013/12/24/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</url>
       <content type="text">This is a Chinese test post.
 
 善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。
@@ -723,7 +723,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</title>
-      <url>/foo/2013/12/25/long-title/</url>
+      <url>/foo/2013/12/24/long-title/</url>
       <content type="text">This post has a long title. Make sure the title displayed right.
 </content>
       <categories>
@@ -741,7 +741,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Categories</title>
-      <url>/foo/bar/baz/2013/12/25/categories/</url>
+      <url>/foo/bar/baz/2013/12/24/categories/</url>
       <content type="text">This post contains 3 categories. Make sure your theme can display all of the categories.
 </content>
       <categories>
@@ -761,7 +761,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Link Post</title>
-      <url>/foo/2013/12/25/link-post/</url>
+      <url>/foo/2013/12/24/link-post/</url>
       <content type="text">This is a link post. Clicking on the link should open Google in a new tab or window.
 </content>
       <categories>
@@ -777,7 +777,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Tags</title>
-      <url>/foo/2013/12/25/tags/</url>
+      <url>/foo/2013/12/24/tags/</url>
       <content type="text">This post contains 3 tags. Make sure your theme can display all of the tags.
 </content>
       <categories>
@@ -799,7 +799,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Elements</title>
-      <url>/foo/2013/12/25/elements/</url>
+      <url>/foo/2013/12/24/elements/</url>
       <content type="text">The purpose of this post is to help you make sure all of HTML elements can display properly. If you use CSS reset, don’t forget to redefine the style by yourself.
 
 
