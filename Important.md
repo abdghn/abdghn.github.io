@@ -6,13 +6,7 @@ cd testFlask
 
 virtualenv my-first-env
 
-cd
-
-
- source my-env/bin/activate
-
-
- . my-env/bin/activate
+source ./my-first-env/bin/activate
 
 make file hello.py
 
