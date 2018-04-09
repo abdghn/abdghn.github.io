@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-01T02:36:14+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><subtitle>Web abdghn</subtitle><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Pertemuan 1 Sistem Multimedia</title><link href="http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia/" rel="alternate" type="text/html" title="Pertemuan 1 Sistem Multimedia" /><published>2018-03-21T00:00:00+07:00</published><updated>2018-03-21T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia/"></content><author><name>Abdul Ghani Abbasi</name></author><summary type="html"></summary></entry><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;team&quot;&gt;Team&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-09T17:13:20+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-09T00:00:00+07:00</published><updated>2018-04-09T00:00:00+07:00</updated><id>http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern</id><content type="html" xml:base="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">&lt;h1 id=&quot;teori-komputasi&quot;&gt;Teori Komputasi&lt;/h1&gt;
+
+&lt;h2 id=&quot;pengertian-teori-komputasi&quot;&gt;Pengertian Teori Komputasi&lt;/h2&gt;
+&lt;p&gt;Teori komputasi adalah cabang ilmu komputer teoritis, berkaitan dengan studi bagaimana persoalan(problem) dapat diselesaikan pada sebuah model dengan menggunakan algoritma. Model tersebut dinamakan model komputasi.&lt;/p&gt;
+
+&lt;h2 id=&quot;teori-otomata&quot;&gt;Teori Otomata&lt;/h2&gt;
+&lt;p&gt;Teori Otomata adalah teori mengenai mesin-mesin abstrak, dan berkaitan erat dengan teori bahasa formal. ada beberapa hal yang berkaitan dengan Otomata, yaitu Grammar. Grammar adalah bentuk abstrak yang dapat diterima (accept) untuk membangkitkan suatu kalimat otomata berdasarkan suatu aturan tertentu.&lt;/p&gt;
+
+&lt;h2 id=&quot;teori-komputabilitas&quot;&gt;Teori Komputabilitas&lt;/h2&gt;
+
+&lt;p&gt;Teori komputabilitas bertujuan untuk memeriksa apakah persoalan komputasi dapat dipecahkan pada suatu model komputasi teoritis. Dengan kata lain, teori komputabilitas mengklasifikasikan persoalan sebagai dapat dipecahkan (solvable) atau persoalan yang tidak dapat dipecahkan (unsolvable).&lt;/p&gt;
+
+&lt;h2 id=&quot;teori-kompleksitas&quot;&gt;Teori Kompleksitas&lt;/h2&gt;
+&lt;p&gt;Teori kompleksitas bertujuan untuk mengkaji kebutuhan waktu dan ruang untuk memecahkan persoalan yang diselesaikan dengan pendekatan yang berbeda-beda.&lt;/p&gt;
+
+&lt;h2 id=&quot;model-komputasi&quot;&gt;Model komputasi&lt;/h2&gt;
+
+&lt;h3 id=&quot;finite-state-automatafsa--finite-state-machinefsm&quot;&gt;Finite State Automata(FSA) / Finite State Machine(FSM)&lt;/h3&gt;
+&lt;p&gt;Finite State Machine dapat berupa suatu mesin yang tidak memiliki output. Finite State Machine yang tidak mengeluarkan output ini dikenal sebagai Finite State Automata (FSA).&lt;/p&gt;
+
+&lt;p&gt;Secara formal FSA dapat didefinisikan sebagai TUPLE-5 : (K, VT, M, S, Z)
+Dimana :
+K	: himpunan hingga stata,
+VT 	: himpunan hingga simbol input (alfabet)
+M 	: fungsi transisi, menggambarkan transisi stata AH akibat pembacaan symbol input. (Fungsi transisi ini biasanya diberikan dalam bentuk tabel.)
+S  	: stata awal
+Z  	: himpunan stata penerima&lt;/p&gt;
+
+&lt;p&gt;Ada dua jenis Finite State Automata :
+• Deterministic Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
+bersifat tertentu. “Jika pada setiap state dari FSA tersebut apabila menerima input
+sebuah simbol maka HANYA ada SATU NEXT STATE yang mungkin dituju.”
+&lt;strong&gt;M(DFA) : K x VT x K&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;• Non Deterministik Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
+bersifat tak tentu. “Jika FSA tersebut menerima input simbol maka minimal ada satu
+state yang akan berpindah ke LEBIH DARI SATU NEXT STATE yang mungkin dituju.”
+&lt;strong&gt;M(AHN) : K x VT x 2K&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;contoh-soal&quot;&gt;Contoh Soal&lt;/h4&gt;
+
+&lt;h2 id=&quot;push-down-automatapda&quot;&gt;Push Down Automata(PDA)&lt;/h2&gt;
+&lt;p&gt;PDA adalah mesin otomata yang memiliki kendali masukan menggunakan teknik LIFO (Last In First Out), untuk menentukan apakah suatu output diterima atau tidak oleh mesin tsb. Dalam melakukan proses peneerimaan input, PDA menggunakan memory stack.
+Mekanisme kerja memory stack adalah menyimpan input pertama pada alamat paling bawah, input berikutnya di simpan pada alamat di atasnya, dan input terakhir di simpan pada alamat paling atas. Perintah operasi yang digunakan untuk menyimpan input pada stack adalah “push”. Sedangkan perintah operasi untuk mengeluarkan input yang telah tersimpan adalah “pop”.&lt;/p&gt;
+
+&lt;p&gt;Sebuah PDA dinyatakan dengan 7 Tupel:
+Q = himpunan state
+Σ = himpunan simbol input
+T = simbol stack
+Δ = fungsi transisi
+S = state awal
+F = state akhir
+Z = top of stack&lt;/p&gt;
+
+&lt;h2 id=&quot;turing-machine&quot;&gt;Turing Machine&lt;/h2&gt;
+
+&lt;p&gt;Mesin Turing adalah model komputasi teoretis yang ditemukan oleh Alan Turing, berfungsi sebagai model ideal untuk melakukan perhitungan matematis. Walaupun model ideal ini diperkenalkan sebelum komputer nyata dibangun, model ini tetap diterima kalangan ilmu komputer sebagai model komputer yang sesuai untuk menentukan apakah suatu fungsi dapat selesaikan oleh komputer atau tidak (menentukan computable function). Mesin Turing terkenal dengan ungkapan “ Apapun yang bisa dilakukan oleh Mesin Turing pasti bisa dilakukan oleh komputer.”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/model_komputasi.png&quot; alt=&quot;Model Computing&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;implementasi&quot;&gt;Implementasi&lt;/h2&gt;
+
+&lt;h3 id=&quot;bidang-fisika&quot;&gt;Bidang Fisika&lt;/h3&gt;
+&lt;p&gt;Implementasi komputasi modern di bidang Fisika adalah Computational Physics yang mempelajari suatu gabungan antara Fisika, Komputer Sains dan Matematika Terapan untuk memberikan solusi pada “Kejadian dan masalah yang kompleks pada dunia nyata” baik dengan menggunakan simulasi juga penggunaan Algoritma yang tepat.
+Banyak perangkat lunak ataupun bahasa yang digunakan, seperti : MatLab, Visual Basic, Fortran, Open Source Physics (OSP), Labview, Mathematica, dan lain sebagainya digunakan untuk pemahaman dan pencarian solusi numerik dari masalah-masalah pada Fisika komputasi.&lt;/p&gt;
+&lt;h3 id=&quot;bidang-kimia&quot;&gt;Bidang Kimia&lt;/h3&gt;
+&lt;p&gt;Implementasi komputasi modern di bidang Kimia adalah Computational Chemistry yaitu penggunaan ilmu komputer untuk membantu menyelesaikan masalah Kimia. Contohnya penggunaan super komputer untuk menghitung struktur dan sifat molekul. Istilah Kimia teori dapat didefinisikan sebagai deskripsi Matematika untuk Kimia, sedangkan Kimia komputasi biasanya digunakan ketika metode Matematika dikembangkan dengan cukup baik untuk dapat digunakan dalam program komputer.&lt;/p&gt;
+&lt;h3 id=&quot;bidang-matematika&quot;&gt;Bidang Matematika&lt;/h3&gt;
+&lt;p&gt;Menyelesaikan sebuah masalah yang berkaitan dengan perhitungan Matematis, namun dalam pengertian yang akan dibahas dalam pembahasan komputasi modern ini merupakan sebuah sistem yang akan menyelesaikan masalah Matematis menggunakan komputer dengan cara menyusun Algoritma yang dapat dimengerti oleh komputer.&lt;/p&gt;
+&lt;h3 id=&quot;bidang-geografi&quot;&gt;Bidang Geografi&lt;/h3&gt;
+&lt;p&gt;Komputasi dalam bidang Geografi biasanya di gunakan untuk peramalan cuaca, di Indonesia khususnya ada salah satu instansi Negara dengan nama BMKG (Badan Meteorologi Klimatologi dan Geofisika) yakni instansi negara yang meneliti mengamati tentang Metereologi, Klimatologi kualitas udara dan Geofisika&lt;/p&gt;
+&lt;h3 id=&quot;bidang-geologi&quot;&gt;Bidang Geologi&lt;/h3&gt;
+&lt;p&gt;Implementasi pada bidang ini untuk memetakan letak sumber daya dan kontur dari permukaan bumi yang terdapat hasil tambang.&lt;/p&gt;
+
+&lt;h1 id=&quot;cloud-computing&quot;&gt;Cloud Computing&lt;/h1&gt;
+&lt;p&gt;Cloud Computing hadir dengan memudahkan akses data dari mana saja dan kapan saja, karena dengan memanfaatkan internet dan menggunakan perangkat fixed atau mobile device menggunakan internet cloud sebagai tempat penyimpanan data, aplikasi dan lainya&lt;/p&gt;
+
+&lt;h2 id=&quot;grid-computing&quot;&gt;Grid Computing&lt;/h2&gt;
+
+&lt;p&gt;Komputasi Grid sebenarnya merupakan sebuah aplikasi pengembangan dari jaringan komputer (network). Hanya saja, tidak seperti jaringan komputer konvensional yang berfokus pada komunikasi antar piranti (device), aplikasi pada grid computing dirancang untuk memanfaatkan sumber daya pada terminal dalam jaringannya.&lt;/p&gt;
+
+&lt;h2 id=&quot;virtualisasi&quot;&gt;Virtualisasi&lt;/h2&gt;
+&lt;p&gt;Virtualisasi adalah sebuah teknologi, yang memungkinkan anda untuk membuat versi virtual dari sesuatu yang bersifat fisik, misalnya sistem operasi, storage data atau sumber daya jaringan. Proses tersebut dilakukan oleh sebuah software atau firmware bernama Hypervisor. Hypervisor inilah yang menjadi nyawanya virtualisasi, karena dialah layer yang “berpura – pura” menjadi sebuah infrastruktur untuk menjalankan beberapa virtual machine.&lt;/p&gt;
+
+&lt;p&gt;Istilah virtualisasi perangkat-keras mengacu kepada upaya menciptakan mesin virtual yang bekerja layaknya sebuah komputer lengkap dengan sistem operasi.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Para-virtualisasi&lt;/strong&gt;: Perangkat keras tidak disimulasikan tetapi perangkat-lunak tamu berjalan dalam domainnya sendiri seolah-olah dalam sistem yang berbeda. Dalam hal ini perangkat-lunak tamu perlu disesuaikan untuk dapat berjalan.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Virtualisasi sebagian&lt;/strong&gt;: Tidak semua aspek lingkungan disimulasikan tidak semua perangkat-lunak dapat langsung berjalan, beberapa perlu disesuaikan untuk dapat berjalan dalam lingkungan virtual ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Virtualisasi penuh&lt;/strong&gt;: Hampir menyerupai mesin asli dan mampu menjalankan perangkat lunak tanpa perlu diubah.&lt;/p&gt;
+
+&lt;h2 id=&quot;distributed-computation-dalam-cloud-computing&quot;&gt;Distributed Computation dalam Cloud Computing&lt;/h2&gt;
+
+&lt;p&gt;Komputasi Terdistribusi merupakan salah satu tujuan dari Cloud Computing, karena menawarkan pengaksesan sumber daya secara parallel, para pengguna juga bisa memanfaatkannya secara bersamaan (tidak harus menunggu dalam antrian untuk mendapatkan pelayanan), terdiri dari banyak sistem sehingga jika salah satu sistem crash, sistem lain tidak akan terpengaruh, dapat menghemat biaya operasional karena tidak membutuhkan sumber daya (resourches).&lt;/p&gt;
+
+&lt;h2 id=&quot;standar-teknologi-informasi-pada-cloud-computing&quot;&gt;Standar Teknologi Informasi pada Cloud Computing&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/Gartner.png&quot; alt=&quot;Model test&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;saas-software-as-a-service&quot;&gt;SaaS (Software as a Service)&lt;/h3&gt;
+&lt;p&gt;Software as a Service adalah layanan software yang digunakan melalui internet. Sebenarnya hal ini bukan merupakan hal yang asing dan sering kita gunakan (hanya mungkin kita belum tahu aja), contoh dari SaaS ini adalah google docs, facebook, aplikasi CRM berbayar, dan lain-lain. Pengguna hanya perlu menggunakan aplikasi tersebut tanpa harus mengerti bagaimana data disimpan, bagaimana aplikasi tersebut di maintenance, karena hal tersebut merupakan service yang disediakan penyedia jasa. Pembayaran dari penggunaan aplikasi-aplikasi ini pun hanya per pemakaiannya (terkadang ada yang tak berbayar tetapi ada fitur-fitur tertentu yang bisa didapatkan ketika pengguna membayar fitur-fitur tersebut, yah semacam nyewa parabola gitu lah, bayar berdasar channel yang diinginkan).&lt;/p&gt;
+
+&lt;h3 id=&quot;paas-platform-as-a-service&quot;&gt;PaaS (Platform as a Service)&lt;/h3&gt;
+&lt;p&gt;Platform as a Service adalah penyediaan platform bagi developer yang disediakan melalui internet. Hal ini dibutuhkan ketika aplikasi yang disediakan melalui SaaS tidak sesuai dengan kebutuhan proses bisnis yang terdapat pada perusahaan. PaaS memungkinkan kita untuk membangun aplikasi, mengupload aplikasi, melakukan testing aplikasi, ataupun mengatur konfigurasi yang dibutuhkan dalam proses pengembangan aplikasi.&lt;/p&gt;
+
+&lt;h3 id=&quot;iaas-infrastructure-as-a-service&quot;&gt;IaaS (Infrastructure as a Service)&lt;/h3&gt;
+&lt;p&gt;Infrastructure as a Service adalah penyediaan infrastruktur yang disediakan melalui internet dan dibayarkan berdasarkan pemakaian. Hal ini terjadi apabila developer membutuhkan sebuah infrastruktur dimana dia dapat melakukan setting untuk jalannya sebuah aplikasi. IaaS memberikan kendali penuh bagi pengguna layanan untuk menyewa infrastruktur IT (storage, RAM, prosesor dll) secara virtual tanpa sistem operasi, yang tentunya pemilihan sistem operasi tersebut dipilih berdasarkan keinginan pengguna.  Apabila SaaS dan PaaS kurang terasa manfaatnya bagi perusahaan, IaaS ini sangat menguntungkan bagi perusahaan kecil yang membutuhkan sebuah infrastruktur IT tanpa harus membeli perangkat yang dibutuhkan tersebut.&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Teori Komputasi</summary></entry><entry><title type="html">Pertemuan 2 Mata Kuliah Sistem Multimedia</title><link href="http://localhost:4000/2018/03/24/pertemuan-2-sistem-multimedia/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Sistem Multimedia" /><published>2018-03-24T00:00:00+07:00</published><updated>2018-03-24T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/24/pertemuan-2-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/24/pertemuan-2-sistem-multimedia/">&lt;p&gt;#RLE(Run Length Encoding)
+#Lossy dan Loseless
+#Metode Huffman
+##kompresi audio
+##kompresi image&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">#RLE(Run Length Encoding) #Lossy dan Loseless #Metode Huffman ##kompresi audio ##kompresi image</summary></entry><entry><title type="html">Pertemuan 1 Sistem Multimedia</title><link href="http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia/" rel="alternate" type="text/html" title="Pertemuan 1 Sistem Multimedia" /><published>2018-03-21T00:00:00+07:00</published><updated>2018-03-21T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia/"></content><author><name>Abdul Ghani Abbasi</name></author><summary type="html"></summary></entry><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;team&quot;&gt;Team&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Abdul Ghoni Abbasi (5C414919)&lt;/li&gt;
@@ -14,7 +124,7 @@
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/post.png&quot; alt=&quot;post&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;graph_api_version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'v2.9'&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# paste your access token below&lt;/span&gt;
@@ -48,16 +158,14 @@
 &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'comments.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'w'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;import library requests agar mendapatkan akses token dari facebook, kemudian memasukkan access token yang terdapat pada facebook. Berikutnya untuk mengambil semua data komentar pada suatu post facebook yang dibutuhkan adalah id dari user facebook dan id dari post  yang ditentukan dalam variabel url nya. Setelah itu bisa di ketahui konsep scraping untuk mengambil semua komentar di dalam suatu post tersebut membuat array dengan nama comments and menggunakan library requests untuk mendapatkan akses token, untuk dibuat scraping atau data komentar dari suatu post dibuat kondisi terdapat error dalam data JSON tersebut maka ditampilkan pesan error, jika tidak maka dimuat isi array dengan banyak nya komentar menggunakan perintah&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Jika sudah simpan file python dengan nama &lt;code class=&quot;highlighter-rouge&quot;&gt;scraping.py&lt;/code&gt; lalu run program yang sudah dibuat dengan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 scraping.py&lt;/code&gt; maka akan ditampilkan output
 &lt;img src=&quot;http://localhost:4000/assets/images/output1.png&quot; alt=&quot;output1&quot; /&gt;&lt;/p&gt;
 
@@ -69,20 +177,18 @@
 
 &lt;p&gt;Sebelum melakukan sentimen analisis, import library seperti NLTK, pandas&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pd&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;string&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Library yang digunakan yaitu vader lexicon untuk pemanggilan fungsi &lt;code class=&quot;highlighter-rouge&quot;&gt;SentimentIntensityAnalyzer()&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk.sentiment.vader&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SentimentIntensityAnalyzer&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk.sentiment.vader&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SentimentIntensityAnalyzer&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SentimentIntensityAnalyzer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id=&quot;print-positive-negative-and-neutral&quot;&gt;Print Positive, Negative and Neutral&lt;/h2&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;positive&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;neutral&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;negative&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;positive&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;neutral&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;negative&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polarity_scores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;compound&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -92,23 +198,20 @@
     &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;negative&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library &lt;code class=&quot;highlighter-rouge&quot;&gt;SentimentIntensityAnalyzer()&lt;/code&gt; sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah. Untuk mencetak perolehan angka sentimen gunakan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;print(summary)&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'positive':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;57,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'neutral':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;81,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'negative':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+{'positive': 57, 'neutral': 81, 'negative': 55}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;result-from-pie-chart&quot;&gt;Result from Pie Chart&lt;/h2&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autopct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%.2&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;f'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;autopct=%2.f&lt;/code&gt; maka outputnya adalah
 &lt;img src=&quot;http://localhost:4000/assets/images/output2.png&quot; alt=&quot;Pie Chart&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Team</summary></entry><entry><title type="html">Next Theme Tutorial</title><link href="http://localhost:4000/tutorial/2017/07/20/next-tutorial/" rel="alternate" type="text/html" title="Next Theme Tutorial" /><published>2017-07-20T00:00:00+07:00</published><updated>2017-07-20T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2017/07/20/next-tutorial</id><content type="html" xml:base="http://localhost:4000/tutorial/2017/07/20/next-tutorial/">&lt;blockquote&gt;
@@ -149,34 +252,29 @@
 
 &lt;p&gt;Check whether you have &lt;code class=&quot;highlighter-rouge&quot;&gt;Ruby 2.1.0&lt;/code&gt; or higher installed:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby --version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Install &lt;code class=&quot;highlighter-rouge&quot;&gt;Bundler&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install bundler
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Clone Jacman theme:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Simpleyyt/jekyll-theme-next.git
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Simpleyyt/jekyll-theme-next.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jekyll-theme-next
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Install Jekyll and other dependencies from the GitHub Pages gem:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Run your Jekyll site locally:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;More Details：&lt;a href=&quot;https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/&quot;&gt;Setting up your GitHub Pages site locally with Jekyll&lt;/a&gt;&lt;/p&gt;
 
@@ -186,21 +284,19 @@
 
 &lt;p&gt;Default language is English.&lt;/p&gt;
 
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# language: zh-Hans&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# language: fr-FR&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# language: zh-hk&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# language: zh-tw&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# language: ru&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# language: de&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Set &lt;code class=&quot;highlighter-rouge&quot;&gt;language&lt;/code&gt; field as following in site &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; to change to Chinese.&lt;/p&gt;
 
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;zh-Hans&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;zh-Hans&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;comment-support&quot;&gt;Comment support.&lt;/h3&gt;
 
@@ -208,30 +304,27 @@
 
 &lt;p&gt;Add the following snippets to your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;duoshuo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;shortname&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-duoshuo-shortname&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;duoshuo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;shortname&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-duoshuo-shortname&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;OR&lt;/p&gt;
 
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;disqus_shortname&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-disqus-shortname&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;disqus_shortname&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-disqus-shortname&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;social-media&quot;&gt;Social Media&lt;/h3&gt;
 
 &lt;p&gt;NexT can automatically add links to your Social Media accounts:&lt;/p&gt;
 
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;social&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;GitHub&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-github-url&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;Twitter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-twitter-url&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;Weibo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-weibo-url&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;DouBan&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-douban-url&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;ZhiHu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-zhihu-url&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;social&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;GitHub&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-github-url&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Twitter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-twitter-url&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;Weibo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-weibo-url&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;DouBan&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-douban-url&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ZhiHu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-zhihu-url&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;feed-link&quot;&gt;Feed link.&lt;/h3&gt;
 
@@ -265,31 +358,30 @@ Next use &lt;code class=&quot;highlighter-rouge&quot;&gt;normal&lt;/code&gt; by 
 
 &lt;p&gt;NexT comes with few configurations.&lt;/p&gt;
 
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;c1&quot;&gt;# Menu configuration.&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;archives&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/archives&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;archives&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/archives&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# Favicon&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;favicon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/favicon.ico&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;favicon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/favicon.ico&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# Avatar (put the image into next/source/images/)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# can be any image format supported by web browsers (JPEG,PNG,GIF,SVG,..)&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/default_avatar.png&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/default_avatar.png&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# Code highlight theme&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# available: normal | night | night eighties | night blue | night bright&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;highlight_theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;normal&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;highlight_theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;normal&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# Fancybox for image gallery&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;fancybox&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;fancybox&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# Specify the date when the site was setup&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;since&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2013&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;since&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2013&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;browser-support&quot;&gt;Browser support&lt;/h2&gt;
 
@@ -297,42 +389,37 @@ Next use &lt;code class=&quot;highlighter-rouge&quot;&gt;normal&lt;/code&gt; by 
 
 &lt;h1 id=&quot;normal-block&quot;&gt;Normal block&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alert('Hello World!');
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alert('Hello World!');
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print 'helloworld'
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print 'helloworld'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;highlight-block&quot;&gt;Highlight block&lt;/h1&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hello, world!'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hello, world!'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'helloworld'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'helloworld'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
 &lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -348,8 +435,7 @@ Next use &lt;code class=&quot;highlighter-rouge&quot;&gt;normal&lt;/code&gt; by 
   &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">This is a highlight test. Normal block alert('Hello World!'); print 'helloworld' Highlight block alert( 'Hello, world!' ); print 'helloworld' def foo puts 'foo' end def foo puts 'foo' end 1 2 3def foo puts 'foo' end #include &amp;lt;iostream&amp;gt; using namespace std; void foo(int arg1, int arg2) { } int main() { string str; foo(1, 2); cout &amp;lt;&amp;lt; &quot;Hello World&quot; &amp;lt;&amp;lt; endl; return 0; }</summary></entry><entry><title type="html">Emoji Test</title><link href="http://localhost:4000/2015/09/19/emoji-test/" rel="alternate" type="text/html" title="Emoji Test" /><published>2015-09-19T00:00:00+07:00</published><updated>2015-09-19T00:00:00+07:00</updated><id>http://localhost:4000/2015/09/19/emoji-test</id><content type="html" xml:base="http://localhost:4000/2015/09/19/emoji-test/">&lt;p&gt;This is an emoji test. :smile: lol.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">This is a highlight test. Normal block alert('Hello World!'); print 'helloworld' Highlight block alert( 'Hello, world!' ); print 'helloworld' def foo puts 'foo' end def foo puts 'foo' end 1 2 3 def foo puts 'foo' end #include &amp;lt;iostream&amp;gt; using namespace std; void foo(int arg1, int arg2) { } int main() { string str; foo(1, 2); cout &amp;lt;&amp;lt; &quot;Hello World&quot; &amp;lt;&amp;lt; endl; return 0; }</summary></entry><entry><title type="html">Emoji Test</title><link href="http://localhost:4000/2015/09/19/emoji-test/" rel="alternate" type="text/html" title="Emoji Test" /><published>2015-09-19T00:00:00+07:00</published><updated>2015-09-19T00:00:00+07:00</updated><id>http://localhost:4000/2015/09/19/emoji-test</id><content type="html" xml:base="http://localhost:4000/2015/09/19/emoji-test/">&lt;p&gt;This is an emoji test. :smile: lol.&lt;/p&gt;
 
 &lt;p&gt;See emoji cheat sheet for more detail :wink: : &lt;a href=&quot;https://www.webpagefx.com/tools/emoji-cheat-sheet/&quot;&gt;https://www.webpagefx.com/tools/emoji-cheat-sheet/&lt;/a&gt;.&lt;/p&gt;
 
@@ -440,7 +526,7 @@ underscores with a backslash like so &lt;code class=&quot;highlighter-rouge&quot
 
 &lt;p&gt;will be displayed as&lt;/p&gt;
 
-&lt;p&gt;\[ \mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p} \]&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><category term="resources" /><category term="jekyll" /><summary type="html">One of the rewards of switching my website to Jekyll is the ability to support MathJax, which means I can write LaTeX-like equations that get nicely displayed in a web browser, like this one \( \sqrt{\frac{n!}{k!(n-k)!}} \) or this one \( x^2 + y^2 = r^2 \).</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://gastonsanchez.com/images/blog/mathjax_logo.png" /></entry><entry><title type="html">Images</title><link href="http://localhost:4000/2013/12/26/images/" rel="alternate" type="text/html" title="Images" /><published>2013-12-27T05:46:49+07:00</published><updated>2013-12-27T05:46:49+07:00</updated><id>http://localhost:4000/2013/12/26/images</id><content type="html" xml:base="http://localhost:4000/2013/12/26/images/">&lt;p&gt;This is a image test post.&lt;/p&gt;
+&lt;p&gt;\[ \mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p} \]&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><category term="resources" /><category term="jekyll" /><summary type="html">One of the rewards of switching my website to Jekyll is the ability to support MathJax, which means I can write LaTeX-like equations that get nicely displayed in a web browser, like this one \( \sqrt{\frac{n!}{k!(n-k)!}} \) or this one \( x^2 + y^2 = r^2 \).</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://gastonsanchez.com/images/blog/mathjax_logo.png" /></entry><entry><title type="html">Images</title><link href="http://localhost:4000/2013/12/27/images/" rel="alternate" type="text/html" title="Images" /><published>2013-12-27T05:46:49+07:00</published><updated>2013-12-27T05:46:49+07:00</updated><id>http://localhost:4000/2013/12/27/images</id><content type="html" xml:base="http://localhost:4000/2013/12/27/images/">&lt;p&gt;This is a image test post.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/mw690/81b78497jw1emfgwkasznj21hc0u0qb7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -448,55 +534,4 @@ underscores with a backslash like so &lt;code class=&quot;highlighter-rouge&quot
 
 &lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/mw690/81b78497jw1emfgwil5xkj21hc0u0tpm.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://placehold.it/350x150.jpg&quot; alt=&quot;Small Picture&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">This is a image test post.</summary></entry><entry><title type="html">Excerpts</title><link href="http://localhost:4000/2013/12/25/excerpts/" rel="alternate" type="text/html" title="Excerpts" /><published>2013-12-25T07:23:23+07:00</published><updated>2013-12-25T07:23:23+07:00</updated><id>http://localhost:4000/2013/12/25/excerpts</id><content type="html" xml:base="http://localhost:4000/2013/12/25/excerpts/">&lt;p&gt;The following contents should be invisible in home/archive page.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.&lt;/p&gt;
-
-&lt;p&gt;Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">The following contents should be invisible in home/archive page.</summary></entry><entry><title type="html">Block</title><link href="http://localhost:4000/foo/2013/12/25/block/" rel="alternate" type="text/html" title="Block" /><published>2013-12-25T07:14:39+07:00</published><updated>2013-12-25T07:14:39+07:00</updated><id>http://localhost:4000/foo/2013/12/25/block</id><content type="html" xml:base="http://localhost:4000/foo/2013/12/25/block/">&lt;p&gt;This post is used for testing tag plugins. See &lt;a href=&quot;http://zespia.tw/hexo/docs/tag-plugins.html&quot;&gt;docs&lt;/a&gt; for more info.&lt;/p&gt;
-
-&lt;h2 id=&quot;block-quote&quot;&gt;Block Quote&lt;/h2&gt;
-
-&lt;h3 id=&quot;normal-blockquote&quot;&gt;Normal blockquote&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;code-block&quot;&gt;Code Block&lt;/h2&gt;
-
-&lt;h3 id=&quot;inline-code-block&quot;&gt;Inline code block&lt;/h3&gt;
-
-&lt;p&gt;This is a inline code block: &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;print 'helloworld'&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;normal-code-block&quot;&gt;Normal code block&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alert('Hello World!');
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print &quot;Hello world&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;highlight-code-block&quot;&gt;Highlight code block&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;gist&quot;&gt;Gist&lt;/h3&gt;
-
-&lt;script src=&quot;https://gist.github.com/996818.js&quot;&gt; &lt;/script&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">This post is used for testing tag plugins. See docs for more info.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/350x150.jpg&quot; alt=&quot;Small Picture&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">This is a image test post.</summary></entry></feed>

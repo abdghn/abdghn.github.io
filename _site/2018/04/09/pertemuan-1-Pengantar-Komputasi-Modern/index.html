@@ -1,0 +1,942 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abdghn" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Rangkuman Materi tentang Pengenalan Komputasi, Implementasi Komputasi dan Pengenalan Cloud Computing">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern">
+<meta property="og:url" content="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">
+<meta property="og:site_name" content="Abdghn">
+<meta property="og:description" content="Rangkuman Materi tentang Pengenalan Komputasi, Implementasi Komputasi dan Pengenalan Cloud Computing">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://localhost:4000/assets/images/model_komputasi.png">
+<meta property="og:image" content="http://localhost:4000/assets/images/Gartner.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern">
+<meta name="twitter:description" content="Rangkuman Materi tentang Pengenalan Komputasi, Implementasi Komputasi dan Pengenalan Cloud Computing">
+<meta name="twitter:image" content="http://localhost:4000/assets/images/model_komputasi.png">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/"/>
+
+
+
+
+
+  <title>Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern | Abdghn</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abdghn</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abdul Ghani Abbasi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abdghn">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-09T00:00:00+07:00">
+                2018-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="teori-komputasi">Teori Komputasi</h1>
+
+<h2 id="pengertian-teori-komputasi">Pengertian Teori Komputasi</h2>
+<p>Teori komputasi adalah cabang ilmu komputer teoritis, berkaitan dengan studi bagaimana persoalan(problem) dapat diselesaikan pada sebuah model dengan menggunakan algoritma. Model tersebut dinamakan model komputasi.</p>
+
+<h2 id="teori-otomata">Teori Otomata</h2>
+<p>Teori Otomata adalah teori mengenai mesin-mesin abstrak, dan berkaitan erat dengan teori bahasa formal. ada beberapa hal yang berkaitan dengan Otomata, yaitu Grammar. Grammar adalah bentuk abstrak yang dapat diterima (accept) untuk membangkitkan suatu kalimat otomata berdasarkan suatu aturan tertentu.</p>
+
+<h2 id="teori-komputabilitas">Teori Komputabilitas</h2>
+
+<p>Teori komputabilitas bertujuan untuk memeriksa apakah persoalan komputasi dapat dipecahkan pada suatu model komputasi teoritis. Dengan kata lain, teori komputabilitas mengklasifikasikan persoalan sebagai dapat dipecahkan (solvable) atau persoalan yang tidak dapat dipecahkan (unsolvable).</p>
+
+<h2 id="teori-kompleksitas">Teori Kompleksitas</h2>
+<p>Teori kompleksitas bertujuan untuk mengkaji kebutuhan waktu dan ruang untuk memecahkan persoalan yang diselesaikan dengan pendekatan yang berbeda-beda.</p>
+
+<h2 id="model-komputasi">Model komputasi</h2>
+
+<h3 id="finite-state-automatafsa--finite-state-machinefsm">Finite State Automata(FSA) / Finite State Machine(FSM)</h3>
+<p>Finite State Machine dapat berupa suatu mesin yang tidak memiliki output. Finite State Machine yang tidak mengeluarkan output ini dikenal sebagai Finite State Automata (FSA).</p>
+
+<p>Secara formal FSA dapat didefinisikan sebagai TUPLE-5 : (K, VT, M, S, Z)
+Dimana :
+K	: himpunan hingga stata,
+VT 	: himpunan hingga simbol input (alfabet)
+M 	: fungsi transisi, menggambarkan transisi stata AH akibat pembacaan symbol input. (Fungsi transisi ini biasanya diberikan dalam bentuk tabel.)
+S  	: stata awal
+Z  	: himpunan stata penerima</p>
+
+<p>Ada dua jenis Finite State Automata :
+• Deterministic Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
+bersifat tertentu. “Jika pada setiap state dari FSA tersebut apabila menerima input
+sebuah simbol maka HANYA ada SATU NEXT STATE yang mungkin dituju.”
+<strong>M(DFA) : K x VT x K</strong></p>
+
+<p>• Non Deterministik Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
+bersifat tak tentu. “Jika FSA tersebut menerima input simbol maka minimal ada satu
+state yang akan berpindah ke LEBIH DARI SATU NEXT STATE yang mungkin dituju.”
+<strong>M(AHN) : K x VT x 2K</strong></p>
+
+<h4 id="contoh-soal">Contoh Soal</h4>
+
+<h2 id="push-down-automatapda">Push Down Automata(PDA)</h2>
+<p>PDA adalah mesin otomata yang memiliki kendali masukan menggunakan teknik LIFO (Last In First Out), untuk menentukan apakah suatu output diterima atau tidak oleh mesin tsb. Dalam melakukan proses peneerimaan input, PDA menggunakan memory stack.
+Mekanisme kerja memory stack adalah menyimpan input pertama pada alamat paling bawah, input berikutnya di simpan pada alamat di atasnya, dan input terakhir di simpan pada alamat paling atas. Perintah operasi yang digunakan untuk menyimpan input pada stack adalah “push”. Sedangkan perintah operasi untuk mengeluarkan input yang telah tersimpan adalah “pop”.</p>
+
+<p>Sebuah PDA dinyatakan dengan 7 Tupel:
+Q = himpunan state
+Σ = himpunan simbol input
+T = simbol stack
+Δ = fungsi transisi
+S = state awal
+F = state akhir
+Z = top of stack</p>
+
+<h2 id="turing-machine">Turing Machine</h2>
+
+<p>Mesin Turing adalah model komputasi teoretis yang ditemukan oleh Alan Turing, berfungsi sebagai model ideal untuk melakukan perhitungan matematis. Walaupun model ideal ini diperkenalkan sebelum komputer nyata dibangun, model ini tetap diterima kalangan ilmu komputer sebagai model komputer yang sesuai untuk menentukan apakah suatu fungsi dapat selesaikan oleh komputer atau tidak (menentukan computable function). Mesin Turing terkenal dengan ungkapan “ Apapun yang bisa dilakukan oleh Mesin Turing pasti bisa dilakukan oleh komputer.”</p>
+
+<p><img src="http://localhost:4000/assets/images/model_komputasi.png" alt="Model Computing" /></p>
+
+<h2 id="implementasi">Implementasi</h2>
+
+<h3 id="bidang-fisika">Bidang Fisika</h3>
+<p>Implementasi komputasi modern di bidang Fisika adalah Computational Physics yang mempelajari suatu gabungan antara Fisika, Komputer Sains dan Matematika Terapan untuk memberikan solusi pada “Kejadian dan masalah yang kompleks pada dunia nyata” baik dengan menggunakan simulasi juga penggunaan Algoritma yang tepat.
+Banyak perangkat lunak ataupun bahasa yang digunakan, seperti : MatLab, Visual Basic, Fortran, Open Source Physics (OSP), Labview, Mathematica, dan lain sebagainya digunakan untuk pemahaman dan pencarian solusi numerik dari masalah-masalah pada Fisika komputasi.</p>
+<h3 id="bidang-kimia">Bidang Kimia</h3>
+<p>Implementasi komputasi modern di bidang Kimia adalah Computational Chemistry yaitu penggunaan ilmu komputer untuk membantu menyelesaikan masalah Kimia. Contohnya penggunaan super komputer untuk menghitung struktur dan sifat molekul. Istilah Kimia teori dapat didefinisikan sebagai deskripsi Matematika untuk Kimia, sedangkan Kimia komputasi biasanya digunakan ketika metode Matematika dikembangkan dengan cukup baik untuk dapat digunakan dalam program komputer.</p>
+<h3 id="bidang-matematika">Bidang Matematika</h3>
+<p>Menyelesaikan sebuah masalah yang berkaitan dengan perhitungan Matematis, namun dalam pengertian yang akan dibahas dalam pembahasan komputasi modern ini merupakan sebuah sistem yang akan menyelesaikan masalah Matematis menggunakan komputer dengan cara menyusun Algoritma yang dapat dimengerti oleh komputer.</p>
+<h3 id="bidang-geografi">Bidang Geografi</h3>
+<p>Komputasi dalam bidang Geografi biasanya di gunakan untuk peramalan cuaca, di Indonesia khususnya ada salah satu instansi Negara dengan nama BMKG (Badan Meteorologi Klimatologi dan Geofisika) yakni instansi negara yang meneliti mengamati tentang Metereologi, Klimatologi kualitas udara dan Geofisika</p>
+<h3 id="bidang-geologi">Bidang Geologi</h3>
+<p>Implementasi pada bidang ini untuk memetakan letak sumber daya dan kontur dari permukaan bumi yang terdapat hasil tambang.</p>
+
+<h1 id="cloud-computing">Cloud Computing</h1>
+<p>Cloud Computing hadir dengan memudahkan akses data dari mana saja dan kapan saja, karena dengan memanfaatkan internet dan menggunakan perangkat fixed atau mobile device menggunakan internet cloud sebagai tempat penyimpanan data, aplikasi dan lainya</p>
+
+<h2 id="grid-computing">Grid Computing</h2>
+
+<p>Komputasi Grid sebenarnya merupakan sebuah aplikasi pengembangan dari jaringan komputer (network). Hanya saja, tidak seperti jaringan komputer konvensional yang berfokus pada komunikasi antar piranti (device), aplikasi pada grid computing dirancang untuk memanfaatkan sumber daya pada terminal dalam jaringannya.</p>
+
+<h2 id="virtualisasi">Virtualisasi</h2>
+<p>Virtualisasi adalah sebuah teknologi, yang memungkinkan anda untuk membuat versi virtual dari sesuatu yang bersifat fisik, misalnya sistem operasi, storage data atau sumber daya jaringan. Proses tersebut dilakukan oleh sebuah software atau firmware bernama Hypervisor. Hypervisor inilah yang menjadi nyawanya virtualisasi, karena dialah layer yang “berpura – pura” menjadi sebuah infrastruktur untuk menjalankan beberapa virtual machine.</p>
+
+<p>Istilah virtualisasi perangkat-keras mengacu kepada upaya menciptakan mesin virtual yang bekerja layaknya sebuah komputer lengkap dengan sistem operasi.</p>
+
+<p><strong>Para-virtualisasi</strong>: Perangkat keras tidak disimulasikan tetapi perangkat-lunak tamu berjalan dalam domainnya sendiri seolah-olah dalam sistem yang berbeda. Dalam hal ini perangkat-lunak tamu perlu disesuaikan untuk dapat berjalan.</p>
+
+<p><strong>Virtualisasi sebagian</strong>: Tidak semua aspek lingkungan disimulasikan tidak semua perangkat-lunak dapat langsung berjalan, beberapa perlu disesuaikan untuk dapat berjalan dalam lingkungan virtual ini.</p>
+
+<p><strong>Virtualisasi penuh</strong>: Hampir menyerupai mesin asli dan mampu menjalankan perangkat lunak tanpa perlu diubah.</p>
+
+<h2 id="distributed-computation-dalam-cloud-computing">Distributed Computation dalam Cloud Computing</h2>
+
+<p>Komputasi Terdistribusi merupakan salah satu tujuan dari Cloud Computing, karena menawarkan pengaksesan sumber daya secara parallel, para pengguna juga bisa memanfaatkannya secara bersamaan (tidak harus menunggu dalam antrian untuk mendapatkan pelayanan), terdiri dari banyak sistem sehingga jika salah satu sistem crash, sistem lain tidak akan terpengaruh, dapat menghemat biaya operasional karena tidak membutuhkan sumber daya (resourches).</p>
+
+<h2 id="standar-teknologi-informasi-pada-cloud-computing">Standar Teknologi Informasi pada Cloud Computing</h2>
+<p><img src="http://localhost:4000/assets/images/Gartner.png" alt="Model test" /></p>
+
+<h3 id="saas-software-as-a-service">SaaS (Software as a Service)</h3>
+<p>Software as a Service adalah layanan software yang digunakan melalui internet. Sebenarnya hal ini bukan merupakan hal yang asing dan sering kita gunakan (hanya mungkin kita belum tahu aja), contoh dari SaaS ini adalah google docs, facebook, aplikasi CRM berbayar, dan lain-lain. Pengguna hanya perlu menggunakan aplikasi tersebut tanpa harus mengerti bagaimana data disimpan, bagaimana aplikasi tersebut di maintenance, karena hal tersebut merupakan service yang disediakan penyedia jasa. Pembayaran dari penggunaan aplikasi-aplikasi ini pun hanya per pemakaiannya (terkadang ada yang tak berbayar tetapi ada fitur-fitur tertentu yang bisa didapatkan ketika pengguna membayar fitur-fitur tersebut, yah semacam nyewa parabola gitu lah, bayar berdasar channel yang diinginkan).</p>
+
+<h3 id="paas-platform-as-a-service">PaaS (Platform as a Service)</h3>
+<p>Platform as a Service adalah penyediaan platform bagi developer yang disediakan melalui internet. Hal ini dibutuhkan ketika aplikasi yang disediakan melalui SaaS tidak sesuai dengan kebutuhan proses bisnis yang terdapat pada perusahaan. PaaS memungkinkan kita untuk membangun aplikasi, mengupload aplikasi, melakukan testing aplikasi, ataupun mengatur konfigurasi yang dibutuhkan dalam proses pengembangan aplikasi.</p>
+
+<h3 id="iaas-infrastructure-as-a-service">IaaS (Infrastructure as a Service)</h3>
+<p>Infrastructure as a Service adalah penyediaan infrastruktur yang disediakan melalui internet dan dibayarkan berdasarkan pemakaian. Hal ini terjadi apabila developer membutuhkan sebuah infrastruktur dimana dia dapat melakukan setting untuk jalannya sebuah aplikasi. IaaS memberikan kendali penuh bagi pengguna layanan untuk menyewa infrastruktur IT (storage, RAM, prosesor dll) secara virtual tanpa sistem operasi, yang tentunya pemilihan sistem operasi tersebut dipilih berdasarkan keinginan pengguna.  Apabila SaaS dan PaaS kurang terasa manfaatnya bagi perusahaan, IaaS ini sangat menguntungkan bagi perusahaan kecil yang membutuhkan sebuah infrastruktur IT tanpa harus membeli perangkat yang dibutuhkan tersebut.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/24/pertemuan-2-sistem-multimedia/" rel="prev" title="Pertemuan 2 Mata Kuliah Sistem Multimedia">
+                Pertemuan 2 Mata Kuliah Sistem Multimedia <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Abdul Ghani Abbasi" />
+          <p class="site-author-name" itemprop="name">Abdul Ghani Abbasi</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="abdulghaniii" target="_blank" title="twitter">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  twitter
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="aaaa" target="_blank" title="facebook">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  facebook
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#teori-komputasi"> <span class="nav-number">1</span> <span class="nav-text">Teori Komputasi</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#pengertian-teori-komputasi"> <span class="nav-number">1.1</span> <span class="nav-text">Pengertian Teori Komputasi</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#teori-otomata"> <span class="nav-number">1.2</span> <span class="nav-text">Teori Otomata</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#teori-komputabilitas"> <span class="nav-number">1.3</span> <span class="nav-text">Teori Komputabilitas</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#teori-kompleksitas"> <span class="nav-number">1.4</span> <span class="nav-text">Teori Kompleksitas</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#model-komputasi"> <span class="nav-number">1.5</span> <span class="nav-text">Model komputasi</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#finite-state-automatafsa--finite-state-machinefsm"> <span class="nav-number">1.5.1</span> <span class="nav-text">Finite State Automata(FSA) / Finite State Machine(FSM)</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-4"> <a class="nav-link" href="#contoh-soal"> <span class="nav-number">1.5.1.1</span> <span class="nav-text">Contoh Soal</span> </a> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#push-down-automatapda"> <span class="nav-number">1.6</span> <span class="nav-text">Push Down Automata(PDA)</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#turing-machine"> <span class="nav-number">1.7</span> <span class="nav-text">Turing Machine</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#implementasi"> <span class="nav-number">1.8</span> <span class="nav-text">Implementasi</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#bidang-fisika"> <span class="nav-number">1.8.1</span> <span class="nav-text">Bidang Fisika</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#bidang-kimia"> <span class="nav-number">1.8.2</span> <span class="nav-text">Bidang Kimia</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#bidang-matematika"> <span class="nav-number">1.8.3</span> <span class="nav-text">Bidang Matematika</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#bidang-geografi"> <span class="nav-number">1.8.4</span> <span class="nav-text">Bidang Geografi</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#bidang-geologi"> <span class="nav-number">1.8.5</span> <span class="nav-text">Bidang Geologi</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#cloud-computing"> <span class="nav-number">2</span> <span class="nav-text">Cloud Computing</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#grid-computing"> <span class="nav-number">2.1</span> <span class="nav-text">Grid Computing</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#virtualisasi"> <span class="nav-number">2.2</span> <span class="nav-text">Virtualisasi</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#distributed-computation-dalam-cloud-computing"> <span class="nav-number">2.3</span> <span class="nav-text">Distributed Computation dalam Cloud Computing</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#standar-teknologi-informasi-pada-cloud-computing"> <span class="nav-number">2.4</span> <span class="nav-text">Standar Teknologi Informasi pada Cloud Computing</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#saas-software-as-a-service"> <span class="nav-number">2.4.1</span> <span class="nav-text">SaaS (Software as a Service)</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#paas-platform-as-a-service"> <span class="nav-number">2.4.2</span> <span class="nav-text">PaaS (Platform as a Service)</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#iaas-infrastructure-as-a-service"> <span class="nav-number">2.4.3</span> <span class="nav-text">IaaS (Infrastructure as a Service)</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abdul Ghani Abbasi</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://blog-cpljbj5mlr.disqus.com/count.js" async></script>
+    
+
+    
+      
+      <script type="text/javascript">
+          var disqus_config = function () {
+              this.page.url = 'http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/';
+              this.page.identifier = '/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/';
+              this.page.title = 'Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern';
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://blog-cpljbj5mlr.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+      </script>
+      
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

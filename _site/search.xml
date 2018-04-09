@@ -2,6 +2,144 @@
 <search>
   
     <entry>
+      <title>Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern</title>
+      <url>/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/</url>
+      <content type="text">Teori Komputasi
+
+Pengertian Teori Komputasi
+Teori komputasi adalah cabang ilmu komputer teoritis, berkaitan dengan studi bagaimana persoalan(problem) dapat diselesaikan pada sebuah model dengan menggunakan algoritma. Model tersebut dinamakan model komputasi.
+
+Teori Otomata
+Teori Otomata adalah teori mengenai mesin-mesin abstrak, dan berkaitan erat dengan teori bahasa formal. ada beberapa hal yang berkaitan dengan Otomata, yaitu Grammar. Grammar adalah bentuk abstrak yang dapat diterima (accept) untuk membangkitkan suatu kalimat otomata berdasarkan suatu aturan tertentu.
+
+Teori Komputabilitas
+
+Teori komputabilitas bertujuan untuk memeriksa apakah persoalan komputasi dapat dipecahkan pada suatu model komputasi teoritis. Dengan kata lain, teori komputabilitas mengklasifikasikan persoalan sebagai dapat dipecahkan (solvable) atau persoalan yang tidak dapat dipecahkan (unsolvable).
+
+Teori Kompleksitas
+Teori kompleksitas bertujuan untuk mengkaji kebutuhan waktu dan ruang untuk memecahkan persoalan yang diselesaikan dengan pendekatan yang berbeda-beda.
+
+Model komputasi
+
+Finite State Automata(FSA) / Finite State Machine(FSM)
+Finite State Machine dapat berupa suatu mesin yang tidak memiliki output. Finite State Machine yang tidak mengeluarkan output ini dikenal sebagai Finite State Automata (FSA).
+
+Secara formal FSA dapat didefinisikan sebagai TUPLE-5 : (K, VT, M, S, Z)
+Dimana :
+K	: himpunan hingga stata,
+VT 	: himpunan hingga simbol input (alfabet)
+M 	: fungsi transisi, menggambarkan transisi stata AH akibat pembacaan symbol input. (Fungsi transisi ini biasanya diberikan dalam bentuk tabel.)
+S  	: stata awal
+Z  	: himpunan stata penerima
+
+Ada dua jenis Finite State Automata :
+• Deterministic Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
+bersifat tertentu. “Jika pada setiap state dari FSA tersebut apabila menerima input
+sebuah simbol maka HANYA ada SATU NEXT STATE yang mungkin dituju.”
+M(DFA) : K x VT x K
+
+• Non Deterministik Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
+bersifat tak tentu. “Jika FSA tersebut menerima input simbol maka minimal ada satu
+state yang akan berpindah ke LEBIH DARI SATU NEXT STATE yang mungkin dituju.”
+M(AHN) : K x VT x 2K
+
+Contoh Soal
+
+Push Down Automata(PDA)
+PDA adalah mesin otomata yang memiliki kendali masukan menggunakan teknik LIFO (Last In First Out), untuk menentukan apakah suatu output diterima atau tidak oleh mesin tsb. Dalam melakukan proses peneerimaan input, PDA menggunakan memory stack.
+Mekanisme kerja memory stack adalah menyimpan input pertama pada alamat paling bawah, input berikutnya di simpan pada alamat di atasnya, dan input terakhir di simpan pada alamat paling atas. Perintah operasi yang digunakan untuk menyimpan input pada stack adalah “push”. Sedangkan perintah operasi untuk mengeluarkan input yang telah tersimpan adalah “pop”.
+
+Sebuah PDA dinyatakan dengan 7 Tupel:
+Q = himpunan state
+Σ = himpunan simbol input
+T = simbol stack
+Δ = fungsi transisi
+S = state awal
+F = state akhir
+Z = top of stack
+
+Turing Machine
+
+Mesin Turing adalah model komputasi teoretis yang ditemukan oleh Alan Turing, berfungsi sebagai model ideal untuk melakukan perhitungan matematis. Walaupun model ideal ini diperkenalkan sebelum komputer nyata dibangun, model ini tetap diterima kalangan ilmu komputer sebagai model komputer yang sesuai untuk menentukan apakah suatu fungsi dapat selesaikan oleh komputer atau tidak (menentukan computable function). Mesin Turing terkenal dengan ungkapan “ Apapun yang bisa dilakukan oleh Mesin Turing pasti bisa dilakukan oleh komputer.”
+
+
+
+Implementasi
+
+Bidang Fisika
+Implementasi komputasi modern di bidang Fisika adalah Computational Physics yang mempelajari suatu gabungan antara Fisika, Komputer Sains dan Matematika Terapan untuk memberikan solusi pada “Kejadian dan masalah yang kompleks pada dunia nyata” baik dengan menggunakan simulasi juga penggunaan Algoritma yang tepat.
+Banyak perangkat lunak ataupun bahasa yang digunakan, seperti : MatLab, Visual Basic, Fortran, Open Source Physics (OSP), Labview, Mathematica, dan lain sebagainya digunakan untuk pemahaman dan pencarian solusi numerik dari masalah-masalah pada Fisika komputasi.
+Bidang Kimia
+Implementasi komputasi modern di bidang Kimia adalah Computational Chemistry yaitu penggunaan ilmu komputer untuk membantu menyelesaikan masalah Kimia. Contohnya penggunaan super komputer untuk menghitung struktur dan sifat molekul. Istilah Kimia teori dapat didefinisikan sebagai deskripsi Matematika untuk Kimia, sedangkan Kimia komputasi biasanya digunakan ketika metode Matematika dikembangkan dengan cukup baik untuk dapat digunakan dalam program komputer.
+Bidang Matematika
+Menyelesaikan sebuah masalah yang berkaitan dengan perhitungan Matematis, namun dalam pengertian yang akan dibahas dalam pembahasan komputasi modern ini merupakan sebuah sistem yang akan menyelesaikan masalah Matematis menggunakan komputer dengan cara menyusun Algoritma yang dapat dimengerti oleh komputer.
+Bidang Geografi
+Komputasi dalam bidang Geografi biasanya di gunakan untuk peramalan cuaca, di Indonesia khususnya ada salah satu instansi Negara dengan nama BMKG (Badan Meteorologi Klimatologi dan Geofisika) yakni instansi negara yang meneliti mengamati tentang Metereologi, Klimatologi kualitas udara dan Geofisika
+Bidang Geologi
+Implementasi pada bidang ini untuk memetakan letak sumber daya dan kontur dari permukaan bumi yang terdapat hasil tambang.
+
+Cloud Computing
+Cloud Computing hadir dengan memudahkan akses data dari mana saja dan kapan saja, karena dengan memanfaatkan internet dan menggunakan perangkat fixed atau mobile device menggunakan internet cloud sebagai tempat penyimpanan data, aplikasi dan lainya
+
+Grid Computing
+
+Komputasi Grid sebenarnya merupakan sebuah aplikasi pengembangan dari jaringan komputer (network). Hanya saja, tidak seperti jaringan komputer konvensional yang berfokus pada komunikasi antar piranti (device), aplikasi pada grid computing dirancang untuk memanfaatkan sumber daya pada terminal dalam jaringannya.
+
+Virtualisasi
+Virtualisasi adalah sebuah teknologi, yang memungkinkan anda untuk membuat versi virtual dari sesuatu yang bersifat fisik, misalnya sistem operasi, storage data atau sumber daya jaringan. Proses tersebut dilakukan oleh sebuah software atau firmware bernama Hypervisor. Hypervisor inilah yang menjadi nyawanya virtualisasi, karena dialah layer yang “berpura – pura” menjadi sebuah infrastruktur untuk menjalankan beberapa virtual machine.
+
+Istilah virtualisasi perangkat-keras mengacu kepada upaya menciptakan mesin virtual yang bekerja layaknya sebuah komputer lengkap dengan sistem operasi.
+
+Para-virtualisasi: Perangkat keras tidak disimulasikan tetapi perangkat-lunak tamu berjalan dalam domainnya sendiri seolah-olah dalam sistem yang berbeda. Dalam hal ini perangkat-lunak tamu perlu disesuaikan untuk dapat berjalan.
+
+Virtualisasi sebagian: Tidak semua aspek lingkungan disimulasikan tidak semua perangkat-lunak dapat langsung berjalan, beberapa perlu disesuaikan untuk dapat berjalan dalam lingkungan virtual ini.
+
+Virtualisasi penuh: Hampir menyerupai mesin asli dan mampu menjalankan perangkat lunak tanpa perlu diubah.
+
+Distributed Computation dalam Cloud Computing
+
+Komputasi Terdistribusi merupakan salah satu tujuan dari Cloud Computing, karena menawarkan pengaksesan sumber daya secara parallel, para pengguna juga bisa memanfaatkannya secara bersamaan (tidak harus menunggu dalam antrian untuk mendapatkan pelayanan), terdiri dari banyak sistem sehingga jika salah satu sistem crash, sistem lain tidak akan terpengaruh, dapat menghemat biaya operasional karena tidak membutuhkan sumber daya (resourches).
+
+Standar Teknologi Informasi pada Cloud Computing
+
+
+SaaS (Software as a Service)
+Software as a Service adalah layanan software yang digunakan melalui internet. Sebenarnya hal ini bukan merupakan hal yang asing dan sering kita gunakan (hanya mungkin kita belum tahu aja), contoh dari SaaS ini adalah google docs, facebook, aplikasi CRM berbayar, dan lain-lain. Pengguna hanya perlu menggunakan aplikasi tersebut tanpa harus mengerti bagaimana data disimpan, bagaimana aplikasi tersebut di maintenance, karena hal tersebut merupakan service yang disediakan penyedia jasa. Pembayaran dari penggunaan aplikasi-aplikasi ini pun hanya per pemakaiannya (terkadang ada yang tak berbayar tetapi ada fitur-fitur tertentu yang bisa didapatkan ketika pengguna membayar fitur-fitur tersebut, yah semacam nyewa parabola gitu lah, bayar berdasar channel yang diinginkan).
+
+PaaS (Platform as a Service)
+Platform as a Service adalah penyediaan platform bagi developer yang disediakan melalui internet. Hal ini dibutuhkan ketika aplikasi yang disediakan melalui SaaS tidak sesuai dengan kebutuhan proses bisnis yang terdapat pada perusahaan. PaaS memungkinkan kita untuk membangun aplikasi, mengupload aplikasi, melakukan testing aplikasi, ataupun mengatur konfigurasi yang dibutuhkan dalam proses pengembangan aplikasi.
+
+IaaS (Infrastructure as a Service)
+Infrastructure as a Service adalah penyediaan infrastruktur yang disediakan melalui internet dan dibayarkan berdasarkan pemakaian. Hal ini terjadi apabila developer membutuhkan sebuah infrastruktur dimana dia dapat melakukan setting untuk jalannya sebuah aplikasi. IaaS memberikan kendali penuh bagi pengguna layanan untuk menyewa infrastruktur IT (storage, RAM, prosesor dll) secara virtual tanpa sistem operasi, yang tentunya pemilihan sistem operasi tersebut dipilih berdasarkan keinginan pengguna.  Apabila SaaS dan PaaS kurang terasa manfaatnya bagi perusahaan, IaaS ini sangat menguntungkan bagi perusahaan kecil yang membutuhkan sebuah infrastruktur IT tanpa harus membeli perangkat yang dibutuhkan tersebut.
+</content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>Pertemuan 2 Mata Kuliah Sistem Multimedia</title>
+      <url>/2018/03/24/pertemuan-2-sistem-multimedia/</url>
+      <content type="text">#RLE(Run Length Encoding)
+#Lossy dan Loseless
+#Metode Huffman
+##kompresi audio
+##kompresi image
+</content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title>Pertemuan 1 Sistem Multimedia</title>
       <url>/2018/03/21/pertemuan-1-sistem-multimedia/</url>
       <content type="text">
@@ -70,13 +208,11 @@ with open('comments.txt', 'w', encoding='utf-8') as f:
         f.write(comment + '\n')
 
 
-
 import library requests agar mendapatkan akses token dari facebook, kemudian memasukkan access token yang terdapat pada facebook. Berikutnya untuk mengambil semua data komentar pada suatu post facebook yang dibutuhkan adalah id dari user facebook dan id dari post  yang ditentukan dalam variabel url nya. Setelah itu bisa di ketahui konsep scraping untuk mengambil semua komentar di dalam suatu post tersebut membuat array dengan nama comments and menggunakan library requests untuk mendapatkan akses token, untuk dibuat scraping atau data komentar dari suatu post dibuat kondisi terdapat error dalam data JSON tersebut maka ditampilkan pesan error, jika tidak maka dimuat isi array dengan banyak nya komentar menggunakan perintah
 
 for comment in data['data']:
   text = comment['message'].replace('\n', ' ')
   comments.append(text)
-
 
 Jika sudah simpan file python dengan nama scraping.py lalu run program yang sudah dibuat dengan perintah python3 scraping.py maka akan ditampilkan output
 
@@ -94,11 +230,9 @@ import pandas as pd
 import string
 
 
-
 Library yang digunakan yaitu vader lexicon untuk pemanggilan fungsi SentimentIntensityAnalyzer()
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 sid = SentimentIntensityAnalyzer()
-
 
 Print Positive, Negative and Neutral
 
@@ -114,12 +248,10 @@ for x in messages:
 print(summary)
 
 
-
 untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library SentimentIntensityAnalyzer() sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah. Untuk mencetak perolehan angka sentimen gunakan perintah print(summary)
 
 
 {'positive': 57, 'neutral': 81, 'negative': 55}
-
 
 
 Result from Pie Chart
@@ -127,7 +259,6 @@ Result from Pie Chart
 import matplotlib.pyplot as plt
 pie_plot = pd.Series(summary,name='')
 pie_plot.plot.pie(fontsize=11,figsize=(6,6),autopct='%.2f');
-
 
 
 Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah autopct=%2.f maka outputnya adalah
@@ -188,11 +319,9 @@ Check whether you have Ruby 2.1.0 or higher installed:
 ruby --version
 
 
-
 Install Bundler:
 
 gem install bundler
-
 
 
 Clone Jacman theme:
@@ -201,17 +330,14 @@ git clone https://github.com/Simpleyyt/jekyll-theme-next.git
 cd jekyll-theme-next
 
 
-
 Install Jekyll and other dependencies from the GitHub Pages gem:
 
 bundle install
 
 
-
 Run your Jekyll site locally:
 
 bundle exec jekyll server
-
 
 
 More Details：Setting up your GitHub Pages site locally with Jekyll
@@ -231,11 +357,9 @@ language: en
 # language: de
 
 
-
 Set language field as following in site _config.yml to change to Chinese.
 
 language: zh-Hans
-
 
 
 Comment support.
@@ -249,11 +373,9 @@ duoshuo:
   shortname: your-duoshuo-shortname
 
 
-
 OR
 
 disqus_shortname: your-disqus-shortname
-
 
 
 Social Media
@@ -266,7 +388,6 @@ social:
   Weibo: your-weibo-url
   DouBan: your-douban-url
   ZhiHu: your-zhihu-url
-
 
 
 Feed link.
@@ -326,7 +447,6 @@ since: 2013
 
 
 
-
 Browser support
 
 
@@ -352,9 +472,7 @@ Normal block
 alert('Hello World!');
 
 
-
 print 'helloworld'
-
 
 
 Highlight block
@@ -362,15 +480,12 @@ Highlight block
 alert( 'Hello, world!' );
 
 
-
 print 'helloworld'
-
 
 
 def foo
   puts 'foo'
 end
-
 
 
 def foo
@@ -379,10 +494,10 @@ end
 
 1
 2
-3def foo
+3
+def foo
   puts 'foo'
 end
-
 
 #include &amp;lt;iostream&amp;gt;
 
@@ -400,7 +515,6 @@ int main()
   cout &amp;lt;&amp;lt; &quot;Hello World&quot; &amp;lt;&amp;lt; endl;
   return 0;
 }
-
 
 </content>
       <categories>
@@ -559,7 +673,7 @@ will be displayed as
   
     <entry>
       <title>Images</title>
-      <url>/2013/12/26/images/</url>
+      <url>/2013/12/27/images/</url>
       <content type="text">This is a image test post.
 
 
@@ -623,15 +737,12 @@ Normal code block
 alert('Hello World!');
 
 
-
 print &quot;Hello world&quot;
-
 
 
 Highlight code block
 
 print &quot;Hello world&quot;
-
 
 
 def foo
@@ -640,10 +751,10 @@ end
 
 1
 2
-3def foo
+3
+def foo
   puts 'foo'
 end
-
 
 Gist
 
@@ -663,7 +774,7 @@ Gist
   
     <entry>
       <title>日本語テスト</title>
-      <url>/2013/12/24/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/</url>
+      <url>/2013/12/25/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/</url>
       <content type="text">This is a Japanese test post.
 
 私は昨日ついにその助力家というのの上よりするたなけれ。
@@ -693,7 +804,7 @@ From すぐ使えるダミーテキスト - 日本語 Lorem ipsum
   
     <entry>
       <title>中文測試</title>
-      <url>/test/test/2013/12/24/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</url>
+      <url>/test/test/2013/12/25/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</url>
       <content type="text">This is a Chinese test post.
 
 善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。
@@ -723,7 +834,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</title>
-      <url>/foo/2013/12/24/long-title/</url>
+      <url>/foo/2013/12/25/long-title/</url>
       <content type="text">This post has a long title. Make sure the title displayed right.
 </content>
       <categories>
@@ -741,7 +852,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Categories</title>
-      <url>/foo/bar/baz/2013/12/24/categories/</url>
+      <url>/foo/bar/baz/2013/12/25/categories/</url>
       <content type="text">This post contains 3 categories. Make sure your theme can display all of the categories.
 </content>
       <categories>
@@ -761,7 +872,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Link Post</title>
-      <url>/foo/2013/12/24/link-post/</url>
+      <url>/foo/2013/12/25/link-post/</url>
       <content type="text">This is a link post. Clicking on the link should open Google in a new tab or window.
 </content>
       <categories>
@@ -777,7 +888,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Tags</title>
-      <url>/foo/2013/12/24/tags/</url>
+      <url>/foo/2013/12/25/tags/</url>
       <content type="text">This post contains 3 tags. Make sure your theme can display all of the tags.
 </content>
       <categories>
@@ -799,7 +910,7 @@ From 亂數假文產生器 - Chinese Lorem Ipsum
   
     <entry>
       <title>Elements</title>
-      <url>/foo/2013/12/24/elements/</url>
+      <url>/foo/2013/12/25/elements/</url>
       <content type="text">The purpose of this post is to help you make sure all of HTML elements can display properly. If you use CSS reset, don’t forget to redefine the style by yourself.
 
 
