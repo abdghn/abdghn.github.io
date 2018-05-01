@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-09T17:13:20+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-09T00:00:00+07:00</published><updated>2018-04-09T00:00:00+07:00</updated><id>http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern</id><content type="html" xml:base="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">&lt;h1 id=&quot;teori-komputasi&quot;&gt;Teori Komputasi&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-28T10:49:53+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><subtitle>Web abdghn</subtitle><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-09T00:00:00+07:00</published><updated>2018-04-09T00:00:00+07:00</updated><id>http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern</id><content type="html" xml:base="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">&lt;h1 id=&quot;teori-komputasi&quot;&gt;Teori Komputasi&lt;/h1&gt;
 
 &lt;h2 id=&quot;pengertian-teori-komputasi&quot;&gt;Pengertian Teori Komputasi&lt;/h2&gt;
 &lt;p&gt;Teori komputasi adalah cabang ilmu komputer teoritis, berkaitan dengan studi bagaimana persoalan(problem) dapat diselesaikan pada sebuah model dengan menggunakan algoritma. Model tersebut dinamakan model komputasi.&lt;/p&gt;
@@ -108,7 +108,172 @@ Banyak perangkat lunak ataupun bahasa yang digunakan, seperti : MatLab, Visual B
 #Lossy dan Loseless
 #Metode Huffman
 ##kompresi audio
-##kompresi image&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">#RLE(Run Length Encoding) #Lossy dan Loseless #Metode Huffman ##kompresi audio ##kompresi image</summary></entry><entry><title type="html">Pertemuan 1 Sistem Multimedia</title><link href="http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia/" rel="alternate" type="text/html" title="Pertemuan 1 Sistem Multimedia" /><published>2018-03-21T00:00:00+07:00</published><updated>2018-03-21T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/21/pertemuan-1-sistem-multimedia/"></content><author><name>Abdul Ghani Abbasi</name></author><summary type="html"></summary></entry><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;team&quot;&gt;Team&lt;/h1&gt;
+##kompresi image&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">#RLE(Run Length Encoding) #Lossy dan Loseless #Metode Huffman ##kompresi audio ##kompresi image</summary></entry><entry><title type="html">Rangkuman Sistem Multimedia</title><link href="http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia/" rel="alternate" type="text/html" title="Rangkuman Sistem Multimedia" /><published>2018-03-21T00:00:00+07:00</published><updated>2018-03-21T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia/">&lt;p&gt;Multimedia  : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.&lt;/p&gt;
+
+&lt;p&gt;Sistem  : Adalah kumpulan dari elemen – elemen yang berinteraksi untuk mencapai suatu tujuan tertentu.&lt;/p&gt;
+
+&lt;p&gt;Sistem Multimedia : Adalah beberapa sistem yang mendukung lebih dari satu macam   media.&lt;/p&gt;
+&lt;h2 id=&quot;text&quot;&gt;Text&lt;/h2&gt;
+
+&lt;p&gt;jenis text terbagi dalam 3 kategori&lt;/p&gt;
+
+&lt;h3 id=&quot;plain-text&quot;&gt;Plain text&lt;/h3&gt;
+&lt;p&gt;Plain text adalah teks yang dikode dalam format ASCII&lt;/p&gt;
+
+&lt;p&gt;Contoh :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/plaintext.jpg&quot; alt=&quot;plain&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hyper-text&quot;&gt;Hyper Text&lt;/h3&gt;
+&lt;p&gt;Hypert Text adalah teks yang memiliki fasilitas linking dan betujuan untuk menyambungkan/berhubungan dengan dokumen lain/teks sebelumnya yang telah diberi atau memiliki format pada sisi penulisannya. Hypert Text disebut juga sebagai link penghubung.
+ Hypertext terbagi menjadi dua,yaitu  :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;HTML (Hypertext Markup Language) yang berfungsi untuk mengontrol tampilan web&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;XML (Extensible Markup Language) yang berfungsi untuk menjadikan dokumen lebih simple dan lebih cepat.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;rich-text&quot;&gt;Rich text&lt;/h3&gt;
+&lt;p&gt;Rich Text Format adalah teks yang sudah diformatting dan sudah di desain sedemikian rupa sehingga pada teks ini kita dapat memberikan efek pada teks dengan di Bold, Italic, Underline dan diberi warna.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/richtext.jpg&quot; alt=&quot;richtext&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;image&quot;&gt;Image&lt;/h2&gt;
+&lt;p&gt;Image atau citra adalah gambar pada bidang dua dimensi
+Sebuah titik terkecil dalam sebuah gambar grafis yang dihitung per inci disebut dengan pixel.
+&lt;img src=&quot;http://localhost:4000/assets/images/pixel.png&quot; alt=&quot;pixel&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+&lt;p&gt;Video
+Merupakan rangkaian gambar yang ditampilkan secara sekuensial&lt;/p&gt;
+
+&lt;h1 id=&quot;representasi-dan-kompresi-data&quot;&gt;Representasi dan Kompresi Data&lt;/h1&gt;
+
+&lt;p&gt;Kompresi Data merupakan cara untuk memperkeil kebutuhan penyimpanan data&lt;/p&gt;
+
+&lt;p&gt;Kompresi terbagi 2 jenis yaitu Lossy dan Loseless&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lossy : teknik kompresi dengan menghilangkan beberapa informasi penting&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Loseless : teknik kompresi dengan tidak menghilangkan beberapa informasi&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;representasi-dan-kompresi-pada-data-teks&quot;&gt;Representasi dan Kompresi pada Data Teks&lt;/h2&gt;
+
+&lt;h3 id=&quot;run-length-encoding&quot;&gt;Run Length Encoding&lt;/h3&gt;
+&lt;p&gt;Suatu teknik kompresi dengan menghasilkan output Loseless&lt;/p&gt;
+
+&lt;p&gt;Contoh :&lt;/p&gt;
+
+&lt;p&gt;Data: ABCCCCCCCCDEFGGGG = 17 karakter&lt;/p&gt;
+
+&lt;p&gt;dapat menggunakan tanda ! untuk mengurangi panjang nya data sehingga menjadi seperti ini&lt;/p&gt;
+
+&lt;p&gt;Data: ABCCCCCCCCDEFGGGG = 17 karakter&lt;/p&gt;
+
+&lt;h3 id=&quot;huffman-coding&quot;&gt;Huffman Coding&lt;/h3&gt;
+&lt;p&gt;Huffman merupakan teknik dengan banyak nya 1 huruf kemudian dibagi banyak nya huruf maka dilakukan Kompresi&lt;/p&gt;
+
+&lt;p&gt;Contoh :&lt;/p&gt;
+
+&lt;p&gt;MAMA SAYA
+A = 4 -&amp;gt; 4/8 = 0.5
+M = 2 -&amp;gt; 2/8 = 0.25
+S = 1 -&amp;gt; 1/8 = 0.125
+Y = 1 -&amp;gt; 1/8 = 0.125
+Total = 8 karakter&lt;/p&gt;
+
+&lt;p&gt;kemudian dibuat pohon Huffman nya maka menjadi seperti ini
+&lt;img src=&quot;http://localhost:4000/assets/images/huffman.jpg&quot; alt=&quot;huffman&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;representasi-dan-kompresi-pada-data-suara&quot;&gt;Representasi dan Kompresi pada Data Suara&lt;/h2&gt;
+
+&lt;p&gt;Kompresi pada Audio yaitu dengan memotong jarak amplitudo paling maksimum dan minimum yang dianggap noise&lt;/p&gt;
+
+&lt;p&gt;Contoh Lossy format :Vorbis, MP3&lt;/p&gt;
+
+&lt;p&gt;Contoh Loseless format : FLAC&lt;/p&gt;
+
+&lt;h1 id=&quot;jaringan-multimedia&quot;&gt;Jaringan Multimedia&lt;/h1&gt;
+&lt;p&gt;Penggunaan komputer untuk menampilkan media dengan interaksi dan komunikasi&lt;/p&gt;
+
+&lt;h2 id=&quot;streaming-multimedia&quot;&gt;Streaming Multimedia&lt;/h2&gt;
+
+&lt;p&gt;Merupakan multimedia yang secara terus menerus diterima dan ditampilkan oleh user&lt;/p&gt;
+
+&lt;h2 id=&quot;voice-over-internet-protocol&quot;&gt;Voice Over Internet protocol&lt;/h2&gt;
+
+&lt;p&gt;teknologi yang memungkinkan komunikasi suara menggunkana jaringan berbasis IP&lt;/p&gt;
+
+&lt;h2 id=&quot;session-internet-protocol&quot;&gt;Session Internet Protocol&lt;/h2&gt;
+&lt;p&gt;SIP merupakan sebuah protocol standart multimedia dimana merupakan produk dari Internet Engineering Task Force (IETF) dan telah digunakan menjadi suatu standart penggunaan VoIP&lt;/p&gt;
+
+&lt;h2 id=&quot;real-time-transport&quot;&gt;Real Time Transport&lt;/h2&gt;
+
+&lt;p&gt;Real Time Transport Protocol  (RTP) didefinisikan sebagai standarisasi paket untukmengirimkan audio dan video pada jaringan IP.&lt;/p&gt;
+
+&lt;h1 id=&quot;distribusi-multimedia&quot;&gt;Distribusi multimedia&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B. Broadcasting penyiaran multimedia baik berupa video maupun suara yang disiarkan kepada penonton melalui media elektronik. Ex: Live instagram
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cara kerja tv:
+    • Kamera merekam sebuah objek yang dengan sistem prism dibagi menjadi tiga warna
+    • CCD mengubahnya menjadi sebuah elektronik signal yang disebut video signal
+    • Tranmisi merubahnya menjadi signal televisi yang disiarkan melalui antenna dengan gelombang elektromagnetik
+    • Anttena rumah akan menerima signal televisi
+    • Tunner memisahkan video signal dengan audio signak
+    • Video signal dibagi menjadi tiga signal
+    • Ketiga signal akan menampilkan gambar&lt;/p&gt;
+
+&lt;p&gt;Cara kerja live broadcasting:
+bekerja di saat yang bersamaan secara langsung, dimana audio mengirim datanya ke sound card dan dienkripsi oleh encoder yang akan langsung diupload ke streaming server oleh streamer.
+EX:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C. Internet Radio Yaitu: audio digital yang ditransmisikan melalui internet. Cara kerja internet radio:
+1. Audio pada sebuah sound card diencoding pada komputer yang digunakan untuk broadcasting
+2. Sistem encode menterjemahkan audio ke streaming format dan mengkompresnya untuk bisa dikirimkan via internet.
+3. Audio yang telah dikompres dikirim ke server
+4. Server mengirimkan data audio melalui internet ke komputer pendengar melalui sebuah plug-in atau software.
+5. Plug-in akan menterjemhkan data audio dari server ke suara yang bisa didengar pendengar   EX: Prambors
+
+
+
+
+
+
+
+
+
+D. Video on Demand (VoD) sistem televisi interaktif yang memfasilitasi untuk memilih sendiri program televisi atau video yang ingin ditonton.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;augmented-reality&quot;&gt;Augmented Reality&lt;/h1&gt;
+
+&lt;p&gt;sebuah konsep yang memadukan dunia maya(virtual) dan dunia nyata dengan cara menanamkan sebuah object di dalam proses pembuatannya.&lt;/p&gt;
+
+&lt;h2 id=&quot;jenis---jenis&quot;&gt;Jenis - jenis&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Memakai Marker (Marker Based Tracking), yaitu terdapat proses pemakaian marker didalamnya untuk memunculkan objek 2D atau 3D.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tanpa Marker (Markerless), yaitu tidak terdapat pemakaian marker didalamnya tetapi menggunakan teknik yang mempunyai ruang lingkup lebih luas daripada metode Marker Based Tracking.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;digital-culture&quot;&gt;Digital Culture&lt;/h1&gt;
+
+&lt;p&gt;suatu perkembangan yang menjadikan budaya di era digital contoh nya seperti mengakses informasi dari internet, serta mengirimkan email dan download upload&lt;/p&gt;
+
+&lt;p&gt;contoh : E-commerce, E-book dll&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Multimedia : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.</summary></entry><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;team&quot;&gt;Team&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Abdul Ghoni Abbasi (5C414919)&lt;/li&gt;
