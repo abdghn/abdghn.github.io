@@ -1,10 +1,6 @@
 ---
-title: Pertemuan 2 Mata Kuliah Sistem Multimedia
-description: Rangkuman materi tentang RLE(Run Length Encoding), Huffman Tree untuk kompresi audio dan image
+title: Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern
+description: Rangkuman materi tentang Map Reduce, NoSQL dan Quantom Computation
 ---
 
-#RLE(Run Length Encoding)
-#Lossy dan Loseless
-#Metode Huffman
-##kompresi audio
-##kompresi image
+# Map Reduce

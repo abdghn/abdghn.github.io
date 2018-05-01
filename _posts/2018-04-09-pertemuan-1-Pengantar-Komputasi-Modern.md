@@ -1,5 +1,5 @@
 ---
-title: Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern
+title: Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern
 description: Rangkuman Materi tentang Pengenalan Komputasi, Implementasi Komputasi dan Pengenalan Cloud Computing
 ---
 
