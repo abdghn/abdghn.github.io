@@ -1,6 +1,7 @@
 ---
 title: Rangkuman Sistem Multimedia
 description: membahas tentang jenis text, image dan video
+category : tugas kuliah
 ---
 
 Multimedia  : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.
