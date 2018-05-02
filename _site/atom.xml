@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-28T10:49:53+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><subtitle>Web abdghn</subtitle><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-09T00:00:00+07:00</published><updated>2018-04-09T00:00:00+07:00</updated><id>http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern</id><content type="html" xml:base="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">&lt;h1 id=&quot;teori-komputasi&quot;&gt;Teori Komputasi&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-02T07:34:45+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/2018/04/28/pertemuan-2-pengantar-komputasi-modern/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-28T00:00:00+07:00</published><updated>2018-04-28T00:00:00+07:00</updated><id>http://localhost:4000/2018/04/28/pertemuan-2-pengantar-komputasi-modern</id><content type="html" xml:base="http://localhost:4000/2018/04/28/pertemuan-2-pengantar-komputasi-modern/">&lt;h1 id=&quot;map-reduce&quot;&gt;Map Reduce&lt;/h1&gt;
+&lt;p&gt;MapReduce merupakan model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam cluster yang terdiri atas ribuan komputer&lt;/p&gt;
+
+&lt;h2 id=&quot;map&quot;&gt;Map&lt;/h2&gt;
+&lt;p&gt;Proses Map yaitu mengumpulkan informasi dari potongan - potongan data dari komputer - komputer yang saling terhubung.&lt;/p&gt;
+
+&lt;h2 id=&quot;reduce&quot;&gt;Reduce&lt;/h2&gt;
+&lt;p&gt;Hasil dari proses Map di arakhkan ke proses Reduce yaitu mengirimkan hasil akhr kepada pengguna.&lt;/p&gt;
+
+&lt;h2 id=&quot;produk&quot;&gt;produk&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apache Hadoop&lt;/li&gt;
+  &lt;li&gt;Pig&lt;/li&gt;
+  &lt;li&gt;Cascading&lt;/li&gt;
+  &lt;li&gt;Microsoft Dryad&lt;/li&gt;
+  &lt;li&gt;IBM MapReduce Tool for   Eclipse  &lt;/li&gt;
+  &lt;li&gt;Skynet&lt;/li&gt;
+  &lt;li&gt;CouchDB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;nosql&quot;&gt;NoSQL&lt;/h1&gt;
+&lt;p&gt;NoSQL adalah sebuah konsep mengenai penyimpanan data non-relasional. NoSQL sangat berguna pada data-data yang terus-menerus berkembang, dimana  data tersebut sangat kompleks sehingga sebuah database relational tidak lagi bisa mengakomodir&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kelebihan NoSQL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;NoSQL bisa menampung data yang terstruktur, semi terstruktur dan tidak terstuktur secara efesien dalam skala besar.
+Menggunakan OOP dalam pengaksesan atau manipulasi datanya.
+jika database noSQL di jalankan di cluster server (multiple server) maka data akan tersebar secara otomatis dan merata keseluruh server&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kekurangan NoSQL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hostingnya mahal. beberapa layanan di luar negeri mencharge biaya 100-200USD untuk hosting database noSQL
+Sulitnya mencari hosting Cpanel yang mendukung database MongoDB atau database noSQL lainnya&lt;/p&gt;
+
+&lt;h2 id=&quot;couchdb&quot;&gt;CouchDB&lt;/h2&gt;
+&lt;p&gt;CouchDB yang dikembangkan oleh Apache lebih dulu muncul jauh sebelum mongoDB yaitu pada tahun 2005. CouchDB tidak menyimpan datanya dalam tabel melainkan dalam dokumen seperti halnya mongoDB.
+Basis data ini juga merupakan proyek open source serta dikembangkan dalam bahasa pemrograman Erlang oleh karena itu kita bisa ikut berkontribusi dalam pengembangan CouchDB agar basis data ini lebih baik.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/couchdb.jpg&quot; alt=&quot;couchdb&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cassandra&quot;&gt;Cassandra&lt;/h2&gt;
+&lt;p&gt;Cassandra merupakan sebuah sistem penyimpanan data terdistribusi untuk menangani jumlah data yang sangat besar dan terstruktur. Cassandra juga dikembangkan Apache.&lt;/p&gt;
+
+&lt;p&gt;Cassandra juga merupakan aplikasi open source yang ditulis dalam bahasa Java dengan lisensi Apache License 2.0.&lt;/p&gt;
+
+&lt;p&gt;Untuk memproses datanya, Cassandra menggunakan bahasa sendiri yang mirip dengan SQL yaitu Cassandra Query Language (CQL).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/cassandra.jpg&quot; alt=&quot;cassandra&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mongodb&quot;&gt;MongoDB&lt;/h2&gt;
+
+&lt;p&gt;MongoDB merupakan basis data yang paling populer diantara basis data NoSQL lainnya. Hal ini dikarenakan pemasangan maupun penggunaan mongoDB tidaklah sulit atau merepotkan penggunanya. Selain itu mongoDB juga merupakan salah satu basis data yang open source.
+MongoDB merupakan basis data NoSQL yang document based. Ia menyimpan data-datanya dalam suatu dokumen JSON yang disebut BSON (Binary JSON).
+Dikembangkan sejak tahun 2009, mongoDB sekarang telah mendukung hampir semua bahasa pemrograman untuk dapat berinteraksi dengan mongoDB.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/mongodb.jpg&quot; alt=&quot;mongodb&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;riak&quot;&gt;Riak&lt;/h2&gt;
+&lt;p&gt;Riak merupakan basis data NoSQL terdistribusi yang menyimpan datanya dalam bentu key-value. Riak menawarkan fitur high availability, fault tolerance, operational simplicaity, dan scalability.&lt;/p&gt;
+
+&lt;p&gt;Riak memiliki dua versi yakni Open source edition dan Enterprise edition. Enterprise edition menawarkan dukungan berbayar intensif dari pengembangnya. Pengguna Open source edition dapat bermigrasi kapan saja ke Enterprise edition jika dibutuhkan. Erlang ditulis dalam bahasa pemrograman Erlang dengan lisensi Apache License 2.0&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/riak.jpg&quot; alt=&quot;riak&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;redis&quot;&gt;Redis&lt;/h2&gt;
+&lt;p&gt;Redis merupakan basis data berbasis key-value. Redis merupakan singkatan dari REmote DIctionary Server. Basis data ini dikembangkan oleh Salvatore Sanfilippo pada tahun 2009 dan ditulis dalam bahasa C. Redis banyak dipilih karena memiliki fitur in-memory, networked, dan durabilitas tinggi.&lt;/p&gt;
+
+&lt;p&gt;Redis mendukung banyak bahasa pemrograman seperti ActionScript, C/C++, C#, Clojure, Common LIsp, Dart, Erlang, Go, Haskell, Haxe, Io, Java, JavaScript (Node.js), Lua, Objective-C, Perl, PHP, Pure Data, Python, R, Ruby, Scala, Smalltalk, dan Tcl.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/redis.jpg&quot; alt=&quot;redis&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;quantum-computation&quot;&gt;Quantum Computation&lt;/h1&gt;
+
+&lt;p&gt;Quantum computation atau komputasi quantum merupakan sebuah perhitungan yang menggunakan kuantum mekanika fenomena yang dilakukan untuk melakukan operasi data&lt;/p&gt;
+
+&lt;h2 id=&quot;entaglement&quot;&gt;Entaglement&lt;/h2&gt;
+&lt;p&gt;Entanglement adalah suatu teori mekanika quantum yang menggambarkan seberapa cepat dan betapa kuatnya keterhubungan partikel-partikel pada Quantum computer yang dimana jika suatu partikel diperlakukan “A” maka akan memberikan dampak “A” juga ke partikel lainnya&lt;/p&gt;
+
+&lt;h2 id=&quot;quantum-gates&quot;&gt;Quantum Gates&lt;/h2&gt;
+&lt;p&gt;Quantum gates merupakan gerbang dari kuantum yang berfungsi mengoperasikan bit yang terdiri dari 0 dan 1 juga dalam qubits sehingga proses yang terjadi lebih cepat, karena setiap perhitungan dilakukan secara bersamaan&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/quantumgates.jpg&quot; alt=&quot;quantumgates&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pengoperasian-data-qubit&quot;&gt;Pengoperasian Data Qubit&lt;/h2&gt;
+&lt;p&gt;Dalam komputer kuantum, sejumlah partikel elemental seperti elektron atau foton dapat digunakan yang  bertindak sebagai representasi dari 0 dan  1. Setiap partikel-partikel ini dikenal sebagai qubit, sifat dan perilaku partikel-partikel ini membentuk dasar dari komputasi kuantum.
+Namun dalam mekanika quantum, objek apapun yang memiliki dua status berbeda pasti memiliki rangkaian status potensial, disebut superposisi, yang menjerat kedua status hingga derajat bermacam-macam.
+&lt;img src=&quot;http://localhost:4000/assets/images/entaglement.jpg&quot; alt=&quot;Entaglement&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;algoritma-shor&quot;&gt;Algoritma Shor&lt;/h2&gt;
+
+&lt;p&gt;Inti dari algoritma ini merupakan bagaimana cara menyelesaikan faktorisasi terhaadap bilanga interger atau bulat yang besar.&lt;/p&gt;
+
+&lt;p&gt;Algoritma Shor terdiri dari dua bagian:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Penurunan yang bisa dilakukan pada komputer klasik, dari masalah anjak untuk masalah ketertiban - temuan.&lt;/li&gt;
+  &lt;li&gt;Sebuah algoritma kuantum untuk memecahkan masalah order-temuan&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Map Reduce MapReduce merupakan model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam cluster yang terdiri atas ribuan komputer</summary></entry><entry><title type="html">Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="alternate" type="text/html" title="Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-09T00:00:00+07:00</published><updated>2018-04-09T00:00:00+07:00</updated><id>http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern</id><content type="html" xml:base="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">&lt;h1 id=&quot;teori-komputasi&quot;&gt;Teori Komputasi&lt;/h1&gt;
 
 &lt;h2 id=&quot;pengertian-teori-komputasi&quot;&gt;Pengertian Teori Komputasi&lt;/h2&gt;
 &lt;p&gt;Teori komputasi adalah cabang ilmu komputer teoritis, berkaitan dengan studi bagaimana persoalan(problem) dapat diselesaikan pada sebuah model dengan menggunakan algoritma. Model tersebut dinamakan model komputasi.&lt;/p&gt;
@@ -104,11 +204,7 @@ Banyak perangkat lunak ataupun bahasa yang digunakan, seperti : MatLab, Visual B
 &lt;p&gt;Platform as a Service adalah penyediaan platform bagi developer yang disediakan melalui internet. Hal ini dibutuhkan ketika aplikasi yang disediakan melalui SaaS tidak sesuai dengan kebutuhan proses bisnis yang terdapat pada perusahaan. PaaS memungkinkan kita untuk membangun aplikasi, mengupload aplikasi, melakukan testing aplikasi, ataupun mengatur konfigurasi yang dibutuhkan dalam proses pengembangan aplikasi.&lt;/p&gt;
 
 &lt;h3 id=&quot;iaas-infrastructure-as-a-service&quot;&gt;IaaS (Infrastructure as a Service)&lt;/h3&gt;
-&lt;p&gt;Infrastructure as a Service adalah penyediaan infrastruktur yang disediakan melalui internet dan dibayarkan berdasarkan pemakaian. Hal ini terjadi apabila developer membutuhkan sebuah infrastruktur dimana dia dapat melakukan setting untuk jalannya sebuah aplikasi. IaaS memberikan kendali penuh bagi pengguna layanan untuk menyewa infrastruktur IT (storage, RAM, prosesor dll) secara virtual tanpa sistem operasi, yang tentunya pemilihan sistem operasi tersebut dipilih berdasarkan keinginan pengguna.  Apabila SaaS dan PaaS kurang terasa manfaatnya bagi perusahaan, IaaS ini sangat menguntungkan bagi perusahaan kecil yang membutuhkan sebuah infrastruktur IT tanpa harus membeli perangkat yang dibutuhkan tersebut.&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Teori Komputasi</summary></entry><entry><title type="html">Pertemuan 2 Mata Kuliah Sistem Multimedia</title><link href="http://localhost:4000/2018/03/24/pertemuan-2-sistem-multimedia/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Sistem Multimedia" /><published>2018-03-24T00:00:00+07:00</published><updated>2018-03-24T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/24/pertemuan-2-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/24/pertemuan-2-sistem-multimedia/">&lt;p&gt;#RLE(Run Length Encoding)
-#Lossy dan Loseless
-#Metode Huffman
-##kompresi audio
-##kompresi image&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">#RLE(Run Length Encoding) #Lossy dan Loseless #Metode Huffman ##kompresi audio ##kompresi image</summary></entry><entry><title type="html">Rangkuman Sistem Multimedia</title><link href="http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia/" rel="alternate" type="text/html" title="Rangkuman Sistem Multimedia" /><published>2018-03-21T00:00:00+07:00</published><updated>2018-03-21T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia/">&lt;p&gt;Multimedia  : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.&lt;/p&gt;
+&lt;p&gt;Infrastructure as a Service adalah penyediaan infrastruktur yang disediakan melalui internet dan dibayarkan berdasarkan pemakaian. Hal ini terjadi apabila developer membutuhkan sebuah infrastruktur dimana dia dapat melakukan setting untuk jalannya sebuah aplikasi. IaaS memberikan kendali penuh bagi pengguna layanan untuk menyewa infrastruktur IT (storage, RAM, prosesor dll) secara virtual tanpa sistem operasi, yang tentunya pemilihan sistem operasi tersebut dipilih berdasarkan keinginan pengguna.  Apabila SaaS dan PaaS kurang terasa manfaatnya bagi perusahaan, IaaS ini sangat menguntungkan bagi perusahaan kecil yang membutuhkan sebuah infrastruktur IT tanpa harus membeli perangkat yang dibutuhkan tersebut.&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Teori Komputasi</summary></entry><entry><title type="html">Rangkuman Sistem Multimedia</title><link href="http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia/" rel="alternate" type="text/html" title="Rangkuman Sistem Multimedia" /><published>2018-03-21T00:00:00+07:00</published><updated>2018-03-21T00:00:00+07:00</updated><id>http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/2018/03/21/rangkuman-sistem-multimedia/">&lt;p&gt;Multimedia  : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.&lt;/p&gt;
 
 &lt;p&gt;Sistem  : Adalah kumpulan dari elemen – elemen yang berinteraksi untuk mencapai suatu tujuan tertentu.&lt;/p&gt;
 
