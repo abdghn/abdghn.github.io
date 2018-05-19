@@ -64,7 +64,7 @@ feed:
   path: atom.xml
 
 social:
- twitter: http://twitter.com/abdulghaniii
+ twitter: https://twitter.com/abdulghaniii
  facebook: aaaa
 # Plugins
 ## Docs: https://help.github.com/articles/configuring-jekyll-plugins/
