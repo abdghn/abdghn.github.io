@@ -111,22 +111,25 @@
 
 
 
-<meta name="description" content="membahas tentang jenis text, image dan video">
+<meta name="description" content="Rangkuman materi tentang Map Reduce, NoSQL dan Quantum Computation">
 <meta name="keywords" content="Jekyll, NexT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Rangkuman Sistem Multimedia">
-<meta property="og:url" content="http://localhost:4000/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/">
+<meta property="og:title" content="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern">
+<meta property="og:url" content="http://localhost:4000/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/">
 <meta property="og:site_name" content="Abdghn">
-<meta property="og:description" content="membahas tentang jenis text, image dan video">
+<meta property="og:description" content="Rangkuman materi tentang Map Reduce, NoSQL dan Quantum Computation">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://localhost:4000/assets/images/plaintext.jpg">
-<meta property="og:image" content="http://localhost:4000/assets/images/richtext.jpg">
-<meta property="og:image" content="http://localhost:4000/assets/images/pixel.png">
-<meta property="og:image" content="http://localhost:4000/assets/images/huffman.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/couchdb.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/cassandra.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/mongodb.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/riak.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/redis.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/quantumgates.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/entaglement.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rangkuman Sistem Multimedia">
-<meta name="twitter:description" content="membahas tentang jenis text, image dan video">
-<meta name="twitter:image" content="http://localhost:4000/assets/images/plaintext.jpg">
+<meta name="twitter:title" content="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern">
+<meta name="twitter:description" content="Rangkuman materi tentang Map Reduce, NoSQL dan Quantum Computation">
+<meta name="twitter:image" content="http://localhost:4000/assets/images/couchdb.jpg">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -159,7 +162,7 @@
 
 
 
-  <title>Rangkuman Sistem Multimedia | Abdghn</title>
+  <title>Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern | Abdghn</title>
   
 
 
@@ -285,7 +288,7 @@
   
 
   <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abdul Ghani Abbasi">
@@ -305,7 +308,7 @@
           <h1 class="post-title" itemprop="name headline">
           
           
-            Rangkuman Sistem Multimedia
+            Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern
           
         </h1>
         
@@ -319,8 +322,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-21T00:00:00+07:00">
-                2018-03-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-28T00:00:00+07:00">
+                2018-04-28
               </time>
             
 
@@ -361,9 +364,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/#comments" itemprop="discussionUrl">
+                <a href="/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/" itemprop="commentCount"></span>
+                        data-disqus-identifier="/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -379,7 +382,7 @@
           
             
                 <div class="post-description">
-                    membahas tentang jenis text, image dan video
+                    Rangkuman materi tentang Map Reduce, NoSQL dan Quantum Computation
                 </div>
             
           
@@ -394,172 +397,107 @@
       
 
       
-        <p>Multimedia  : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.</p>
+        <h1 id="map-reduce">Map Reduce</h1>
+<p>MapReduce merupakan model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam cluster yang terdiri atas ribuan komputer</p>
 
-<p>Sistem  : Adalah kumpulan dari elemen – elemen yang berinteraksi untuk mencapai suatu tujuan tertentu.</p>
+<h2 id="map">Map</h2>
+<p>Proses Map yaitu mengumpulkan informasi dari potongan - potongan data dari komputer - komputer yang saling terhubung.</p>
 
-<p>Sistem Multimedia : Adalah beberapa sistem yang mendukung lebih dari satu macam   media.</p>
-<h2 id="text">Text</h2>
+<h2 id="reduce">Reduce</h2>
+<p>Hasil dari proses Map di arakhkan ke proses Reduce yaitu mengirimkan hasil akhr kepada pengguna.</p>
 
-<p>jenis text terbagi dalam 3 kategori</p>
-
-<h3 id="plain-text">Plain text</h3>
-<p>Plain text adalah teks yang dikode dalam format ASCII</p>
-
-<p>Contoh :</p>
-
-<p><img src="http://localhost:4000/assets/images/plaintext.jpg" alt="plain" /></p>
-
-<h3 id="hyper-text">Hyper Text</h3>
-<p>Hypert Text adalah teks yang memiliki fasilitas linking dan betujuan untuk menyambungkan/berhubungan dengan dokumen lain/teks sebelumnya yang telah diberi atau memiliki format pada sisi penulisannya. Hypert Text disebut juga sebagai link penghubung.
- Hypertext terbagi menjadi dua,yaitu  :</p>
-
+<h2 id="produk">produk</h2>
 <ul>
-  <li>
-    <p>HTML (Hypertext Markup Language) yang berfungsi untuk mengontrol tampilan web</p>
-  </li>
-  <li>
-    <p>XML (Extensible Markup Language) yang berfungsi untuk menjadikan dokumen lebih simple dan lebih cepat.</p>
-  </li>
+  <li>Apache Hadoop</li>
+  <li>Pig</li>
+  <li>Cascading</li>
+  <li>Microsoft Dryad</li>
+  <li>IBM MapReduce Tool for   Eclipse  </li>
+  <li>Skynet</li>
+  <li>CouchDB</li>
 </ul>
 
-<h3 id="rich-text">Rich text</h3>
-<p>Rich Text Format adalah teks yang sudah diformatting dan sudah di desain sedemikian rupa sehingga pada teks ini kita dapat memberikan efek pada teks dengan di Bold, Italic, Underline dan diberi warna.</p>
-
-<p><img src="http://localhost:4000/assets/images/richtext.jpg" alt="richtext" /></p>
-<h2 id="image">Image</h2>
-<p>Image atau citra adalah gambar pada bidang dua dimensi
-Sebuah titik terkecil dalam sebuah gambar grafis yang dihitung per inci disebut dengan pixel.
-<img src="http://localhost:4000/assets/images/pixel.png" alt="pixel" /></p>
-
-<h2 id="video">Video</h2>
-<p>Video
-Merupakan rangkaian gambar yang ditampilkan secara sekuensial</p>
-
-<h1 id="representasi-dan-kompresi-data">Representasi dan Kompresi Data</h1>
-
-<p>Kompresi Data merupakan cara untuk memperkeil kebutuhan penyimpanan data</p>
-
-<p>Kompresi terbagi 2 jenis yaitu Lossy dan Loseless</p>
+<h1 id="nosql">NoSQL</h1>
+<p>NoSQL adalah sebuah konsep mengenai penyimpanan data non-relasional. NoSQL sangat berguna pada data-data yang terus-menerus berkembang, dimana  data tersebut sangat kompleks sehingga sebuah database relational tidak lagi bisa mengakomodir</p>
 
 <ul>
-  <li>
-    <p>Lossy : teknik kompresi dengan menghilangkan beberapa informasi penting</p>
-  </li>
-  <li>
-    <p>Loseless : teknik kompresi dengan tidak menghilangkan beberapa informasi</p>
-  </li>
+  <li>Kelebihan NoSQL</li>
 </ul>
 
-<h2 id="representasi-dan-kompresi-pada-data-teks">Representasi dan Kompresi pada Data Teks</h2>
+<p>NoSQL bisa menampung data yang terstruktur, semi terstruktur dan tidak terstuktur secara efesien dalam skala besar.
+Menggunakan OOP dalam pengaksesan atau manipulasi datanya.
+jika database noSQL di jalankan di cluster server (multiple server) maka data akan tersebar secara otomatis dan merata keseluruh server</p>
 
-<h3 id="run-length-encoding">Run Length Encoding</h3>
-<p>Suatu teknik kompresi dengan menghasilkan output Loseless</p>
-
-<p>Contoh :</p>
-
-<p>Data: ABCCCCCCCCDEFGGGG = 17 karakter</p>
-
-<p>dapat menggunakan tanda ! untuk mengurangi panjang nya data sehingga menjadi seperti ini</p>
-
-<p>Data: ABCCCCCCCCDEFGGGG = 17 karakter</p>
-
-<h3 id="huffman-coding">Huffman Coding</h3>
-<p>Huffman merupakan teknik dengan banyak nya 1 huruf kemudian dibagi banyak nya huruf maka dilakukan Kompresi</p>
-
-<p>Contoh :</p>
-
-<p>MAMA SAYA
-A = 4 -&gt; 4/8 = 0.5
-M = 2 -&gt; 2/8 = 0.25
-S = 1 -&gt; 1/8 = 0.125
-Y = 1 -&gt; 1/8 = 0.125
-Total = 8 karakter</p>
-
-<p>kemudian dibuat pohon Huffman nya maka menjadi seperti ini
-<img src="http://localhost:4000/assets/images/huffman.jpg" alt="huffman" /></p>
-
-<h2 id="representasi-dan-kompresi-pada-data-suara">Representasi dan Kompresi pada Data Suara</h2>
-
-<p>Kompresi pada Audio yaitu dengan memotong jarak amplitudo paling maksimum dan minimum yang dianggap noise</p>
-
-<p>Contoh Lossy format :Vorbis, MP3</p>
-
-<p>Contoh Loseless format : FLAC</p>
-
-<h1 id="jaringan-multimedia">Jaringan Multimedia</h1>
-<p>Penggunaan komputer untuk menampilkan media dengan interaksi dan komunikasi</p>
-
-<h2 id="streaming-multimedia">Streaming Multimedia</h2>
-
-<p>Merupakan multimedia yang secara terus menerus diterima dan ditampilkan oleh user</p>
-
-<h2 id="voice-over-internet-protocol">Voice Over Internet protocol</h2>
-
-<p>teknologi yang memungkinkan komunikasi suara menggunkana jaringan berbasis IP</p>
-
-<h2 id="session-internet-protocol">Session Internet Protocol</h2>
-<p>SIP merupakan sebuah protocol standart multimedia dimana merupakan produk dari Internet Engineering Task Force (IETF) dan telah digunakan menjadi suatu standart penggunaan VoIP</p>
-
-<h2 id="real-time-transport">Real Time Transport</h2>
-
-<p>Real Time Transport Protocol  (RTP) didefinisikan sebagai standarisasi paket untukmengirimkan audio dan video pada jaringan IP.</p>
-
-<h1 id="distribusi-multimedia">Distribusi multimedia</h1>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B. Broadcasting penyiaran multimedia baik berupa video maupun suara yang disiarkan kepada penonton melalui media elektronik. Ex: Live instagram
-</code></pre></div></div>
-
-<p>Cara kerja tv:
-    • Kamera merekam sebuah objek yang dengan sistem prism dibagi menjadi tiga warna
-    • CCD mengubahnya menjadi sebuah elektronik signal yang disebut video signal
-    • Tranmisi merubahnya menjadi signal televisi yang disiarkan melalui antenna dengan gelombang elektromagnetik
-    • Anttena rumah akan menerima signal televisi
-    • Tunner memisahkan video signal dengan audio signak
-    • Video signal dibagi menjadi tiga signal
-    • Ketiga signal akan menampilkan gambar</p>
-
-<p>Cara kerja live broadcasting:
-bekerja di saat yang bersamaan secara langsung, dimana audio mengirim datanya ke sound card dan dienkripsi oleh encoder yang akan langsung diupload ke streaming server oleh streamer.
-EX:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C. Internet Radio Yaitu: audio digital yang ditransmisikan melalui internet. Cara kerja internet radio:
-1. Audio pada sebuah sound card diencoding pada komputer yang digunakan untuk broadcasting
-2. Sistem encode menterjemahkan audio ke streaming format dan mengkompresnya untuk bisa dikirimkan via internet.
-3. Audio yang telah dikompres dikirim ke server
-4. Server mengirimkan data audio melalui internet ke komputer pendengar melalui sebuah plug-in atau software.
-5. Plug-in akan menterjemhkan data audio dari server ke suara yang bisa didengar pendengar   EX: Prambors
-
-
-
-
-
-
-
-
-
-D. Video on Demand (VoD) sistem televisi interaktif yang memfasilitasi untuk memilih sendiri program televisi atau video yang ingin ditonton.
-</code></pre></div></div>
-
-<h1 id="augmented-reality">Augmented Reality</h1>
-
-<p>sebuah konsep yang memadukan dunia maya(virtual) dan dunia nyata dengan cara menanamkan sebuah object di dalam proses pembuatannya.</p>
-
-<h2 id="jenis---jenis">Jenis - jenis</h2>
 <ul>
-  <li>
-    <p>Memakai Marker (Marker Based Tracking), yaitu terdapat proses pemakaian marker didalamnya untuk memunculkan objek 2D atau 3D.</p>
-  </li>
-  <li>
-    <p>Tanpa Marker (Markerless), yaitu tidak terdapat pemakaian marker didalamnya tetapi menggunakan teknik yang mempunyai ruang lingkup lebih luas daripada metode Marker Based Tracking.</p>
-  </li>
+  <li>Kekurangan NoSQL</li>
 </ul>
 
-<h1 id="digital-culture">Digital Culture</h1>
+<p>Hostingnya mahal. beberapa layanan di luar negeri mencharge biaya 100-200USD untuk hosting database noSQL
+Sulitnya mencari hosting Cpanel yang mendukung database MongoDB atau database noSQL lainnya</p>
 
-<p>suatu perkembangan yang menjadikan budaya di era digital contoh nya seperti mengakses informasi dari internet, serta mengirimkan email dan download upload</p>
+<h2 id="couchdb">CouchDB</h2>
+<p>CouchDB yang dikembangkan oleh Apache lebih dulu muncul jauh sebelum mongoDB yaitu pada tahun 2005. CouchDB tidak menyimpan datanya dalam tabel melainkan dalam dokumen seperti halnya mongoDB.
+Basis data ini juga merupakan proyek open source serta dikembangkan dalam bahasa pemrograman Erlang oleh karena itu kita bisa ikut berkontribusi dalam pengembangan CouchDB agar basis data ini lebih baik.</p>
 
-<p>contoh : E-commerce, E-book dll</p>
+<p><img src="http://localhost:4000/assets/images/couchdb.jpg" alt="couchdb" /></p>
+
+<h2 id="cassandra">Cassandra</h2>
+<p>Cassandra merupakan sebuah sistem penyimpanan data terdistribusi untuk menangani jumlah data yang sangat besar dan terstruktur. Cassandra juga dikembangkan Apache.</p>
+
+<p>Cassandra juga merupakan aplikasi open source yang ditulis dalam bahasa Java dengan lisensi Apache License 2.0.</p>
+
+<p>Untuk memproses datanya, Cassandra menggunakan bahasa sendiri yang mirip dengan SQL yaitu Cassandra Query Language (CQL).</p>
+
+<p><img src="http://localhost:4000/assets/images/cassandra.jpg" alt="cassandra" /></p>
+
+<h2 id="mongodb">MongoDB</h2>
+
+<p>MongoDB merupakan basis data yang paling populer diantara basis data NoSQL lainnya. Hal ini dikarenakan pemasangan maupun penggunaan mongoDB tidaklah sulit atau merepotkan penggunanya. Selain itu mongoDB juga merupakan salah satu basis data yang open source.
+MongoDB merupakan basis data NoSQL yang document based. Ia menyimpan data-datanya dalam suatu dokumen JSON yang disebut BSON (Binary JSON).
+Dikembangkan sejak tahun 2009, mongoDB sekarang telah mendukung hampir semua bahasa pemrograman untuk dapat berinteraksi dengan mongoDB.</p>
+
+<p><img src="http://localhost:4000/assets/images/mongodb.jpg" alt="mongodb" /></p>
+
+<h2 id="riak">Riak</h2>
+<p>Riak merupakan basis data NoSQL terdistribusi yang menyimpan datanya dalam bentu key-value. Riak menawarkan fitur high availability, fault tolerance, operational simplicaity, dan scalability.</p>
+
+<p>Riak memiliki dua versi yakni Open source edition dan Enterprise edition. Enterprise edition menawarkan dukungan berbayar intensif dari pengembangnya. Pengguna Open source edition dapat bermigrasi kapan saja ke Enterprise edition jika dibutuhkan. Erlang ditulis dalam bahasa pemrograman Erlang dengan lisensi Apache License 2.0</p>
+
+<p><img src="http://localhost:4000/assets/images/riak.jpg" alt="riak" /></p>
+
+<h2 id="redis">Redis</h2>
+<p>Redis merupakan basis data berbasis key-value. Redis merupakan singkatan dari REmote DIctionary Server. Basis data ini dikembangkan oleh Salvatore Sanfilippo pada tahun 2009 dan ditulis dalam bahasa C. Redis banyak dipilih karena memiliki fitur in-memory, networked, dan durabilitas tinggi.</p>
+
+<p>Redis mendukung banyak bahasa pemrograman seperti ActionScript, C/C++, C#, Clojure, Common LIsp, Dart, Erlang, Go, Haskell, Haxe, Io, Java, JavaScript (Node.js), Lua, Objective-C, Perl, PHP, Pure Data, Python, R, Ruby, Scala, Smalltalk, dan Tcl.</p>
+
+<p><img src="http://localhost:4000/assets/images/redis.jpg" alt="redis" /></p>
+
+<h1 id="quantum-computation">Quantum Computation</h1>
+
+<p>Quantum computation atau komputasi quantum merupakan sebuah perhitungan yang menggunakan kuantum mekanika fenomena yang dilakukan untuk melakukan operasi data</p>
+
+<h2 id="entaglement">Entaglement</h2>
+<p>Entanglement adalah suatu teori mekanika quantum yang menggambarkan seberapa cepat dan betapa kuatnya keterhubungan partikel-partikel pada Quantum computer yang dimana jika suatu partikel diperlakukan “A” maka akan memberikan dampak “A” juga ke partikel lainnya</p>
+
+<h2 id="quantum-gates">Quantum Gates</h2>
+<p>Quantum gates merupakan gerbang dari kuantum yang berfungsi mengoperasikan bit yang terdiri dari 0 dan 1 juga dalam qubits sehingga proses yang terjadi lebih cepat, karena setiap perhitungan dilakukan secara bersamaan</p>
+
+<p><img src="http://localhost:4000/assets/images/quantumgates.jpg" alt="quantumgates" /></p>
+
+<h2 id="pengoperasian-data-qubit">Pengoperasian Data Qubit</h2>
+<p>Dalam komputer kuantum, sejumlah partikel elemental seperti elektron atau foton dapat digunakan yang  bertindak sebagai representasi dari 0 dan  1. Setiap partikel-partikel ini dikenal sebagai qubit, sifat dan perilaku partikel-partikel ini membentuk dasar dari komputasi kuantum.
+Namun dalam mekanika quantum, objek apapun yang memiliki dua status berbeda pasti memiliki rangkaian status potensial, disebut superposisi, yang menjerat kedua status hingga derajat bermacam-macam.
+<img src="http://localhost:4000/assets/images/entaglement.jpg" alt="Entaglement" /></p>
+
+<h2 id="algoritma-shor">Algoritma Shor</h2>
+
+<p>Inti dari algoritma ini merupakan bagaimana cara menyelesaikan faktorisasi terhaadap bilanga interger atau bulat yang besar.</p>
+
+<p>Algoritma Shor terdiri dari dua bagian:</p>
+<ul>
+  <li>Penurunan yang bisa dilakukan pada komputer klasik, dari masalah anjak untuk masalah ketertiban - temuan.</li>
+  <li>Sebuah algoritma kuantum untuk memecahkan masalah order-temuan</li>
+</ul>
 
       
     </div>
@@ -599,8 +537,8 @@ D. Video on Demand (VoD) sistem televisi interaktif yang memfasilitasi untuk mem
         <div class="post-nav" id="post-nav-id">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="next" title="Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern">
-                <i class="fa fa-chevron-left"></i> Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern
+              <a href="/2018/07/15/part-1-pengenalan-neural-network/" rel="next" title="Sentiment Analysis with Python 3">
+                <i class="fa fa-chevron-left"></i> Sentiment Analysis with Python 3
               </a>
             
           </div>
@@ -609,8 +547,8 @@ D. Video on Demand (VoD) sistem televisi interaktif yang memfasilitasi untuk mem
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/tutorial/2018/03/19/sentiment-analysis/" rel="prev" title="Sentiment Analysis with Python 3">
-                Sentiment Analysis with Python 3 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="prev" title="Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern">
+                Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -784,7 +722,7 @@ D. Video on Demand (VoD) sistem televisi interaktif yang memfasilitasi untuk mem
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-1"> <a class="nav-link" href="#representasi-dan-kompresi-data"> <span class="nav-number">1</span> <span class="nav-text">Representasi dan Kompresi Data</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#representasi-dan-kompresi-pada-data-teks"> <span class="nav-number">1.1</span> <span class="nav-text">Representasi dan Kompresi pada Data Teks</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#run-length-encoding"> <span class="nav-number">1.1.1</span> <span class="nav-text">Run Length Encoding</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#huffman-coding"> <span class="nav-number">1.1.2</span> <span class="nav-text">Huffman Coding</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#representasi-dan-kompresi-pada-data-suara"> <span class="nav-number">1.2</span> <span class="nav-text">Representasi dan Kompresi pada Data Suara</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#jaringan-multimedia"> <span class="nav-number">2</span> <span class="nav-text">Jaringan Multimedia</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#streaming-multimedia"> <span class="nav-number">2.1</span> <span class="nav-text">Streaming Multimedia</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#voice-over-internet-protocol"> <span class="nav-number">2.2</span> <span class="nav-text">Voice Over Internet protocol</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#session-internet-protocol"> <span class="nav-number">2.3</span> <span class="nav-text">Session Internet Protocol</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#real-time-transport"> <span class="nav-number">2.4</span> <span class="nav-text">Real Time Transport</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#distribusi-multimedia"> <span class="nav-number">3</span> <span class="nav-text">Distribusi multimedia</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#augmented-reality"> <span class="nav-number">4</span> <span class="nav-text">Augmented Reality</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#jenis---jenis"> <span class="nav-number">4.1</span> <span class="nav-text">Jenis - jenis</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#digital-culture"> <span class="nav-number">5</span> <span class="nav-text">Digital Culture</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#map-reduce"> <span class="nav-number">1</span> <span class="nav-text">Map Reduce</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#map"> <span class="nav-number">1.1</span> <span class="nav-text">Map</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#reduce"> <span class="nav-number">1.2</span> <span class="nav-text">Reduce</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#produk"> <span class="nav-number">1.3</span> <span class="nav-text">produk</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#nosql"> <span class="nav-number">2</span> <span class="nav-text">NoSQL</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#couchdb"> <span class="nav-number">2.1</span> <span class="nav-text">CouchDB</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#cassandra"> <span class="nav-number">2.2</span> <span class="nav-text">Cassandra</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#mongodb"> <span class="nav-number">2.3</span> <span class="nav-text">MongoDB</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#riak"> <span class="nav-number">2.4</span> <span class="nav-text">Riak</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#redis"> <span class="nav-number">2.5</span> <span class="nav-text">Redis</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#quantum-computation"> <span class="nav-number">3</span> <span class="nav-text">Quantum Computation</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#entaglement"> <span class="nav-number">3.1</span> <span class="nav-text">Entaglement</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#quantum-gates"> <span class="nav-number">3.2</span> <span class="nav-text">Quantum Gates</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#pengoperasian-data-qubit"> <span class="nav-number">3.3</span> <span class="nav-text">Pengoperasian Data Qubit</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#algoritma-shor"> <span class="nav-number">3.4</span> <span class="nav-text">Algoritma Shor</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
     </ol>
   </div>
             
@@ -953,9 +891,9 @@ D. Video on Demand (VoD) sistem televisi interaktif yang memfasilitasi untuk mem
       
       <script type="text/javascript">
           var disqus_config = function () {
-              this.page.url = 'http://localhost:4000/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/';
-              this.page.identifier = '/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/';
-              this.page.title = 'Rangkuman Sistem Multimedia';
+              this.page.url = 'http://localhost:4000/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/';
+              this.page.identifier = '/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/';
+              this.page.title = 'Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern';
           };
           var d = document, s = d.createElement('script');
           s.src = 'https://blog-cpljbj5mlr.disqus.com/embed.js';

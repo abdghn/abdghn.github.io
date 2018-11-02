@@ -1,0 +1,1054 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abdghn" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Mempelajari atau Berkenalan terlebih dahulu dengan Nest JS">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Belajar Nest JS Part 1">
+<meta property="og:url" content="http://localhost:4000/2018/11/01/belajar-nest-js-part-1/">
+<meta property="og:site_name" content="Abdghn">
+<meta property="og:description" content="Mempelajari atau Berkenalan terlebih dahulu dengan Nest JS">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Belajar Nest JS Part 1">
+<meta name="twitter:description" content="Mempelajari atau Berkenalan terlebih dahulu dengan Nest JS">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/"/>
+
+
+
+
+
+  <title>Belajar Nest JS Part 1 | Abdghn</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abdghn</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/11/01/belajar-nest-js-part-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abdul Ghani Abbasi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abdghn">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Belajar Nest JS Part 1
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-01T00:00:00+07:00">
+                2018-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/01/belajar-nest-js-part-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2018/11/01/belajar-nest-js-part-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    Mempelajari atau Berkenalan terlebih dahulu dengan Nest JS
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+  <p>Nest is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with TypeScript (preserves compatibility with pure JavaScript) and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
+Under the hood, Nest makes use of Express, but also provides compatibility with a wide range of other libraries (e.g. Fastify). This allows for easy use of the myriad third-party plugins which are available.</p>
+</blockquote>
+
+<p>Untuk melakukan instalasi, saya menggunakan git</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/nestjs/typescript-starter.git project
+cd project
+npm install
+npm run start
+</code></pre></div></div>
+
+<p>setelah di clone, otomatis membuat template dari Nets JS. kemudian setelah run di terminal dapat membuka di browser localhost:3000 maka muncul output seperti gambar di bawah ini</p>
+
+<p>kemudian untuk menghubungkan database MongoDB dengan mongoose, buat folder database di dalam folder src</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src
+  database
+    database.module.ts
+    database.providers.ts
+</code></pre></div></div>
+
+<p>setelah buka file database.module.ts dan isikan kode dibawah ini</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">mongoose</span> <span class="k">from</span> <span class="s1">'mongoose'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">DB_PROVIDER</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'../constants'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">databaseProviders</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">provide</span><span class="p">:</span> <span class="nx">DB_PROVIDER</span><span class="p">,</span>
+        <span class="na">useFactory</span><span class="p">:</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="p">(</span><span class="nx">mongoose</span> <span class="k">as</span> <span class="nx">any</span><span class="p">).</span><span class="nb">Promise</span> <span class="o">=</span> <span class="nb">global</span><span class="p">.</span><span class="nb">Promise</span><span class="p">;</span>
+            <span class="k">return</span> <span class="kr">await</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'mongodb://localhost:27017/parley'</span><span class="p">);</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div></div>
+
+<p>pada {DB_PROVIDER} module yang dipanggil tidak ada, buat file constants.ts</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">DB_PROVIDER</span> <span class="o">=</span> <span class="s1">'DbConnectionToken'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>setelah berhasil menghubungkan MongoDB dengan Nest JS, install MongoDB dengan perintah</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i --save mongoose
+npm i --save-dev
+</code></pre></div></div>
+
+<p>setelah itu untuk mengakses alamat MongoDB yaitu mongodb://localhost:27017/parley dan otomatis membuat database dengan nama parley.</p>
+
+<p>Kemudian definisikan database ke modul di dalam file database.module.ts</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Module</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@nestjs/common'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">databaseProviders</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'./database.providers'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Module</span><span class="p">({</span>
+    <span class="na">components</span><span class="p">:</span> <span class="p">[...</span><span class="nx">databaseProviders</span><span class="p">],</span>
+    <span class="na">exports</span><span class="p">:</span> <span class="p">[...</span><span class="nx">databaseProviders</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">DatabaseModule</span> <span class="p">{</span> <span class="p">};</span>
+</code></pre></div></div>
+
+<p>setelah itu baru kita bisa menarik database modul di dalam modul2 lain dan menggunakan mongoose untuk menghubungkan objek untuk dijalankan query nya di database.</p>
+
+<h1 id="post-module">Post module</h1>
+<p>Kemudian mendesain app nya pendekatan dari entitas berbasis modular. Untuk membuat direktori modul pertama di dalam  direktori src.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src
+  -posts
+    --dto
+      ---create-post.dto.ts
+    --interfaces
+      --post.interface.ts
+    --posts.controller.ts
+    --posts.module.ts
+    --posts.providers.ts
+    --posts.schema.ts
+    --posts.service.ts
+</code></pre></div></div>
+
+<p>pada dto</p>
+
+<p>#Penjelasan REST API</p>
+<blockquote>
+  <p>RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data</p>
+</blockquote>
+
+<p>URL Design
+RESTful API diakses menggunakan protokol HTTP. Penamaan dan struktur URL yang konsisten akan menghasilkan API yang baik dan mudah untuk dimengerti developer. URL API biasa disebut endpoint dalam pemanggilannya. Contoh penamaan URL / endpoint yang baik adalah seperti berikut :</p>
+
+<p>/users
+/users/1234
+/users/1234/photos
+/users/1234/photos/abc
+HTTP Verbs
+Setiap request yang dilakukan terdapat metode yang dipakai agar server mengerti apa yang sedang di request client, diantaranya yang umum dipakai adalah :</p>
+
+<p>GET
+GET adalah metode HTTP Request yang paling simpel, metode ini digunakan untuk membaca atau mendapatkan data dari sumber.
+Contoh :
+GET /users : Mengembalikan daftar user
+GET /users/1234 : Mengembalikan data user dengan ID 1234</p>
+
+<p>POST
+POST adalah metode HTTP Request yang digunakan untuk membuat data baru dengan menyisipkan data dalam body saat request dilakukan.
+Contoh :
+POST /users : Membuat data user baru</p>
+
+<p>PUT
+PUT adalah metode HTTP Request yang biasanya digunakan untuk melakukan update data resource.
+Contoh :
+PUT /users/1234 : Mengupdate data user dengan ID 1234</p>
+
+<p>DELETE
+DELETE adalah metode HTTP Request yang digunakan untuk menghapus suatu data pada resource.
+Contoh :
+DELETE /users/1234 : Menghapus data user dengan ID 1234</p>
+
+<p>Selain HTTP Verbs diatas, masih ada metode HEAD dan PATCH dalam HTTP Request, tetapi jarang sekali digunakan.</p>
+
+<p>HTTP Response Code
+HTTP response code adalah kode standarisasi dalam menginformasikan hasil request kepada client. Secara umum terdapat 3 kelompok yang biasa kita jumpai pada RESTful API yaitu :</p>
+
+<p>2XX : adalah response code yang menampilkan bahwa request berhasil.
+4XX : adalah response code yang menampilkan bahwa request mengalami kesalahan pada sisi client.
+5XX : adalah response code yang menampilkan bahwa request mengalami kesalahan pada sisi server.</p>
+
+<p>Dan berikut ini adalah response code yang biasa digunakan pada REST :</p>
+
+<p>200 OK
+Response code ini menandakan bahwa request yang dilakukan berhasil.</p>
+
+<p>201 Created
+Response code ini menandakan bahwa request yang dilakukan berhasil dan data telah dibuat. Kode ini digunakan untuk mengkonfirmasi berhasilnya request PUT atau POST.</p>
+
+<p>400 Bad Request
+Response code ini menandakan bahwa request yang dibuat salah atau data yang dikirim tidak ada.</p>
+
+<p>401 Unauthorized
+Response code ini menandakan bahwa request yang dibuat membutuhkan authentication sebelum mengakses resource.</p>
+
+<p>404 Not Found
+Response Code ini menandakan bahwa resource yang di dipanggil tidak ditemukan.</p>
+
+<p>405 Method Not Allowed
+Response code ini menandakan bahwa request endpoint ada tetapi metode HTTP yang digunakan tidak diizinkan.</p>
+
+<p>409 Conflict
+Response code ini menandakan bahwa request yang dibuat terdapat duplikasi, biasanya informasi yang dikirim sudah ada sebelumnya.</p>
+
+<p>500 Internal Server Error
+Response code ini menandakan bahwa request yang dilakukan terdapat kesalahan pada sisi server atau resource.</p>
+
+<p>Format Response
+Setiap request yang dilakukan client akan menerima data response dari server, response tersebut biasanya berupa data XML ataupun JSON. Setelah mendapatkan data response tersebut barulah client bisa menggunakannya dengan cara memparsing data tersebut dan diolah sesuai kebutuhan.
+Contoh :
+XML</p>
+
+<p>HTTP/1.1 200 OK
+Date: Sat, 06 Oct 2001 23:20:04 GMT
+Server: Apache.1.3.12 (Unix)
+Connection: close
+Content-Type: text/xml
+Content-Length: 124</p>
+
+<?xml version=”1.0″?>
+<methodResponse>
+<params>
+<param />
+<value><double>18.24668429131</double></value>
+&lt;/param&gt;
+</params>
+</methodResponse>
+<p>JSON</p>
+
+<p>GET /users/1234</p>
+
+<p>HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json</p>
+
+<p>{
+“id”: “1234”,
+“first_name”: “jhon”,
+“last_name”: “doe”,
+“created”: “2015-05-22T14:56:29.000Z”,
+“updated”: “2015-05-22T14:56:29.000Z”
+}</p>
+<h1 id="penjelasan-tentang-mongoose">Penjelasan Tentang Mongoose</h1>
+<p>Mongoose adalah sebuah Object Document Mapper (ODM). Ini berarti Mongoose mengizinkan Anda untuk mendefinisikan obyek dengan skema yang benar-benar diketik yang dipetakan ke sebuah dokumen MongoDB.</p>
+
+<p>Mongoose menyediakan jumlah fungsionalitas yang luar biasa yang berkaitan dengan pembuatan dan pengerjaan skema. Mongoose saat ini memiliki delapan tipe skema dimana propertinya disimpan seperti saat berada di MongoDB. Diantaranya:</p>
+
+<p>String
+Number
+Date
+Buffer
+Boolean
+Mixed
+ObjectId
+Array
+Setiap tipe data memungkinkan Anda untuk menentukan:</p>
+
+<p>sebuah nilai default
+sebuah fungsi validasi custom
+menunjukan field yang dibutuhkan
+fungsi get yang memungkinkan Anda untuk memanipulasi data sebelum dikembalikan sebagai obyek
+sebuah set fungsi yang memungkinkan Anda untuk memanipulasi data sebelum disimpan ke database
+membuat indeks yang memungkinkan data agar ditarik secara lebih cepat
+Selanjutnya untuk opsi umum ini, tipe data tertentu memungkinkan Anda untuk menyesuaikan lebih lanjut bagaimana data disimpan dan diambil dari database. Sebagai contoh, sebuah tipe data String juga memungkinkan Anda untuk menentukan pilihan tambahan sebagai berikut:</p>
+
+<p>mengubah menjadi huruf kecil
+mengubah menjadi huruf besar
+memangkas data sebelum disimpan
+regular-expression yang dapat membatasi data yang diizinkan untuk disimpan selama dalam proses validasi
+sebuah enum yang dapat menentukan daftar string yang valid
+Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal yang diizinkan untuk field tersebut.</p>
+
+<p>Sebagian besar dari delapan jenis data yang diizinkan seharusnya cukup familiar untuk Anda. Namun, ada beberapa pengecualian yang mungkin menjadi pengecualian bagi Anda, seperti Buffer, Mixed, ObjectId, dan Array.</p>
+
+<p>Tipe data Buffer memungkinkan Anda untuk menyipan data biner. Contoh yang umum untuk data biner seperti gambar atau file encodem seperti dokumen PDF.</p>
+
+<p>Tipe data Mixed mengubah properti menjadi field “dapat menjadi apa saja”. Field ini menyerupai berapa banyak pengembang yang menggunakan MongoDB karena tidak ada struktur yang jelas. Berhati-hatilah menggunakan tipe data ini karena tipe ini kehilangan banyak fitur hebat yang disediakan oleh Mongoose, seperti validasi data dan pendeteksi perubahan entitas untuk dapat mengetahui secara otomatis dalam memperbarui properti saat menyimpan.</p>
+
+<p>Tipe data ObjectId umumnya menentukan sebuah tautan ke dokumen yang lain di dalam database Anda. Sebagai contoh, jika anda memiliki sebuah koleksi buku dan penulis, dokumen buku kemungkinan berisi sebuah properti ObjectId yang menunjuk ke penulis tertentu dari dokumen.</p>
+
+<p>Tipe data Array memungkinkan anda untuk menyimpan array yang seperti JavaScript. Dengan sebuah tipe data Array, anda dapat melakukan operasi array Javascript yang umum, seperti push, pop, shift, slice, dll.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/11/part-1-belajar-iOS/" rel="prev" title="Part 1 Belajar Ios">
+                Part 1 Belajar Ios <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Abdul Ghani Abbasi" />
+          <p class="site-author-name" itemprop="name">Abdul Ghani Abbasi</p>
+           
+              <p class="site-description motion-element" itemprop="description">Web abdghn</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/abdulghaniii" target="_blank" title="twitter">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  twitter
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="aaaa" target="_blank" title="facebook">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  facebook
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#post-module"> <span class="nav-number">1</span> <span class="nav-text">Post module</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-tentang-mongoose"> <span class="nav-number">2</span> <span class="nav-text">Penjelasan Tentang Mongoose</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abdul Ghani Abbasi</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://blog-cpljbj5mlr.disqus.com/count.js" async></script>
+    
+
+    
+      
+      <script type="text/javascript">
+          var disqus_config = function () {
+              this.page.url = 'http://localhost:4000/2018/11/01/belajar-nest-js-part-1/';
+              this.page.identifier = '/2018/11/01/belajar-nest-js-part-1/';
+              this.page.title = 'Belajar Nest JS Part 1';
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://blog-cpljbj5mlr.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+      </script>
+      
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
