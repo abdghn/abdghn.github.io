@@ -93,10 +93,77 @@ src
 ```
 
 
-pada dto
+pada dto kita mendefinisikan struktur data untuk API endpoint. Ketika membuat
+
+```javascript
+export class CreatePostDto {
+    readonly title: string;
+    readonly content: string;
+    readonly userId: string;
+}
+```
+
+kemudian kita membuat post interface di posts.interface.ts
+
+```javascript
+import { Document } from 'mongoose';
+
+export interface Post extends Document {
+    readonly title: string;
+    readonly content: string;
+    readonly userId: string;
+}
+```
+ketika sudah membuat 2 file diatas sekarang membuat post service pada posts.service.ts. Untuk postService membuat komponen kelas konstruktor , untuk menginjeksi dimana Nest JS melakukan depedency injection.
+
+```javascript
+import { Model } from 'mongoose';
+import { Component, Inject } from '@nestjs/common';
+
+import { Post } from './interfaces/post.interface';
+import { CreatePostDto } from './dto/create-post.dto';
+import { POST_MODEL_PROVIDER } from '../constants';
+
+@Component()
+export class PostsService {
+    constructor(
+        @Inject(POST_MODEL_PROVIDER) private readonly postModel: Model<Post>) { }
+
+    async create(createPostDto: CreatePostDto): Promise<Post> {
+        const createdPost = new this.postModel(createPostDto);
+        return await createdPost.save();
+    }
+
+    async findAll(): Promise<Post[]> {
+        return await this.postModel.find().exec();
+    }
+}
+```
+
+Di dalam provider, membangun mongoose model dan injeksi model. Untuk membuat model, kita harus mendefiniskan skema pada file posts.schema.ts
+
+```JavaScript
+import * as mongoose from 'mongoose';
+
+export const PostSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true,
+    },
+    content: {
+        type: String,
+        required: false,
+    },
+    userId: {
+        type: mongoose.SchemaTypes.ObjectId,
+        required: true,
+    }
+});
+```
 
 
-#Penjelasan REST API
+
+# Penjelasan REST API
 >RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data
 
 URL Design

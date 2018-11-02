@@ -447,9 +447,71 @@ npm i --save-dev
     --posts.service.ts
 </code></pre></div></div>
 
-<p>pada dto</p>
+<p>pada dto kita mendefinisikan struktur data untuk API endpoint. Ketika membuat</p>
 
-<p>#Penjelasan REST API</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nx">CreatePostDto</span> <span class="p">{</span>
+    <span class="nx">readonly</span> <span class="nx">title</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nx">readonly</span> <span class="nx">content</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nx">readonly</span> <span class="nx">userId</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>kemudian kita membuat post interface di posts.interface.ts</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Document</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'mongoose'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">Post</span> <span class="kd">extends</span> <span class="nx">Document</span> <span class="p">{</span>
+    <span class="nx">readonly</span> <span class="nx">title</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nx">readonly</span> <span class="nx">content</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nx">readonly</span> <span class="nx">userId</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>ketika sudah membuat 2 file diatas sekarang membuat post service pada posts.service.ts. Untuk postService membuat komponen kelas konstruktor , untuk menginjeksi dimana Nest JS melakukan depedency injection.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Model</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'mongoose'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">Inject</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@nestjs/common'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Post</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'./interfaces/post.interface'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CreatePostDto</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'./dto/create-post.dto'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">POST_MODEL_PROVIDER</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'../constants'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">()</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">PostsService</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span>
+        <span class="p">@</span><span class="nd">Inject</span><span class="p">(</span><span class="nx">POST_MODEL_PROVIDER</span><span class="p">)</span> <span class="kr">private</span> <span class="nx">readonly</span> <span class="nx">postModel</span><span class="p">:</span> <span class="nx">Model</span><span class="o">&lt;</span><span class="nx">Post</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+    <span class="k">async</span> <span class="nx">create</span><span class="p">(</span><span class="nx">createPostDto</span><span class="p">:</span> <span class="nx">CreatePostDto</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Post</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">createdPost</span> <span class="o">=</span> <span class="k">new</span> <span class="k">this</span><span class="p">.</span><span class="nx">postModel</span><span class="p">(</span><span class="nx">createPostDto</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kr">await</span> <span class="nx">createdPost</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">async</span> <span class="nx">findAll</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Post</span><span class="p">[]</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">postModel</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">exec</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Di dalam provider, membangun mongoose model dan injeksi model. Untuk membuat model, kita harus mendefiniskan skema pada file posts.schema.ts</p>
+
+<pre><code class="language-JavaScript">import * as mongoose from 'mongoose';
+
+export const PostSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true,
+    },
+    content: {
+        type: String,
+        required: false,
+    },
+    userId: {
+        type: mongoose.SchemaTypes.ObjectId,
+        required: true,
+    }
+});
+</code></pre>
+
+<h1 id="penjelasan-rest-api">Penjelasan REST API</h1>
 <blockquote>
   <p>RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data</p>
 </blockquote>
@@ -632,6 +694,10 @@ Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal
         <div class="post-nav" id="post-nav-id">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/02/belajar-nest-js-part-2/" rel="next" title="Belajar Nest JS Part 2">
+                <i class="fa fa-chevron-left"></i> Belajar Nest JS Part 2
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
@@ -725,7 +791,7 @@ Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -813,7 +879,7 @@ Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-1"> <a class="nav-link" href="#post-module"> <span class="nav-number">1</span> <span class="nav-text">Post module</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-tentang-mongoose"> <span class="nav-number">2</span> <span class="nav-text">Penjelasan Tentang Mongoose</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#post-module"> <span class="nav-number">1</span> <span class="nav-text">Post module</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-rest-api"> <span class="nav-number">2</span> <span class="nav-text">Penjelasan REST API</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-tentang-mongoose"> <span class="nav-number">3</span> <span class="nav-text">Penjelasan Tentang Mongoose</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
     </ol>
   </div>
             
