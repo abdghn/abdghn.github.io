@@ -15,6 +15,15 @@ npm install
 npm run start
 ```
 
+or
+
+
+```
+npm i -g @nestjs/cli
+nest new nest-restaurant-api
+npm run start:dev
+```
+
 setelah di clone, otomatis membuat template dari Nets JS. kemudian setelah run di terminal dapat membuka di browser localhost:3000 maka muncul output seperti gambar di bawah ini
 
 
@@ -160,11 +169,19 @@ export const PostSchema = new mongoose.Schema({
     }
 });
 ```
-
+# Kegunaan pada file src
+app.controller.ts and app.service.ts: those files are responsible for generating the message Hello world when the endpoint / is accessed through the browser. Because this endpoint is not important to this application you may delete these files as well. Soon you are going to learn in more details what controllers and services are.
+app.module.ts: this is a class of the type module that is responsible for declaring imports, exports, controllers, and providers to a Nest.js application. Every application has at least one module but you may create more than one module for more complex applications (more details on Nest.js documentation). The application of this tutorial will have only one module.
+main.ts: this is the file responsible for starting the server.
+main.hrm.ts: is a Hot Module Replacement file that installs modules during the server execution and it is useful to speed up the development process.
 
 
 # Penjelasan REST API
 >RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data
+
+![post]({{site.url}}/assets/images/.png)
+
+
 
 URL Design
 RESTful API diakses menggunakan protokol HTTP. Penamaan dan struktur URL yang konsisten akan menghasilkan API yang baik dan mudah untuk dimengerti developer. URL API biasa disebut endpoint dalam pemanggilannya. Contoh penamaan URL / endpoint yang baik adalah seperti berikut :
