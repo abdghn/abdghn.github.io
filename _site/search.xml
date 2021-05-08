@@ -2,6 +2,784 @@
 <search>
   
     <entry>
+      <title>REST API dengan GO</title>
+      <url>/tutorial/2019/12/25/membuat-REST-API-dengan-go/</url>
+      <content type="text">REST API
+
+Membuat Program Go
+Berikut ini adalah program Go
+
+package main
+
+import (
+    &quot;log&quot;
+    &quot;net/http&quot;
+)
+
+type server struct{}
+
+func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+    w.WriteHeader(http.StatusOK)
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.Write([]byte(`{&quot;message&quot;: &quot;hello world&quot;}`))
+}
+
+func main() {
+    s := &amp;amp;server{}
+    http.Handle(&quot;/&quot;, s)
+    log.Fatal(http.ListenAndServe(&quot;:8080&quot;, nil))
+}
+
+
+lalu untuk run program nya menggunakan
+
+go run main.go
+
+
+{&quot;message&quot;: &quot;hello world&quot;}
+
+
+Berikut nya untuk menunjukkan menggunakan ServeHTTP
+
+package main
+
+import (
+    &quot;log&quot;
+    &quot;net/http&quot;
+)
+
+func home(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    switch r.Method {
+    case &quot;GET&quot;:
+        w.WriteHeader(http.StatusOK)
+        w.Write([]byte(`{&quot;message&quot;: &quot;get called&quot;}`))
+    case &quot;POST&quot;:
+        w.WriteHeader(http.StatusCreated)
+        w.Write([]byte(`{&quot;message&quot;: &quot;post called&quot;}`))
+    case &quot;PUT&quot;:
+        w.WriteHeader(http.StatusAccepted)
+        w.Write([]byte(`{&quot;message&quot;: &quot;put called&quot;}`))
+    case &quot;DELETE&quot;:
+        w.WriteHeader(http.StatusOK)
+        w.Write([]byte(`{&quot;message&quot;: &quot;delete called&quot;}`))
+    default:
+        w.WriteHeader(http.StatusNotFound)
+        w.Write([]byte(`{&quot;message&quot;: &quot;not found&quot;}`))
+    }
+}
+
+func main() {
+    http.HandleFunc(&quot;/&quot;, home)
+    log.Fatal(http.ListenAndServe(&quot;:8080&quot;, nil))
+}
+
+
+Gorilla Mux
+Dalam menggunakan gorilla mux dengan menggunakan perintah
+
+ go get github.com/gorilla/mux
+
+
+setelah menambahkan mod gorilla mux, kode program nya seperti ini
+
+package main
+
+import (
+    &quot;log&quot;
+    &quot;net/http&quot;
+
+    &quot;github.com/gorilla/mux&quot;
+)
+
+func home(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    switch r.Method {
+    case &quot;GET&quot;:
+        w.WriteHeader(http.StatusOK)
+        w.Write([]byte(`{&quot;message&quot;: &quot;get called&quot;}`))
+    case &quot;POST&quot;:
+        w.WriteHeader(http.StatusCreated)
+        w.Write([]byte(`{&quot;message&quot;: &quot;post called&quot;}`))
+    case &quot;PUT&quot;:
+        w.WriteHeader(http.StatusAccepted)
+        w.Write([]byte(`{&quot;message&quot;: &quot;put called&quot;}`))
+    case &quot;DELETE&quot;:
+        w.WriteHeader(http.StatusOK)
+        w.Write([]byte(`{&quot;message&quot;: &quot;delete called&quot;}`))
+    default:
+        w.WriteHeader(http.StatusNotFound)
+        w.Write([]byte(`{&quot;message&quot;: &quot;not found&quot;}`))
+    }
+}
+
+func main() {
+    r := mux.NewRouter()
+    r.HandleFunc(&quot;/&quot;, home)
+    log.Fatal(http.ListenAndServe(&quot;:8080&quot;, r))
+}
+
+
+Handle HTTP methods
+Dalam menggunakan Handlefunc untuk membuat fungsi di handle oleh HTTP method
+
+package main
+
+import (
+    &quot;log&quot;
+    &quot;net/http&quot;
+
+    &quot;github.com/gorilla/mux&quot;
+)
+
+func get(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusOK)
+    w.Write([]byte(`{&quot;message&quot;: &quot;get called&quot;}`))
+}
+
+func post(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusCreated)
+    w.Write([]byte(`{&quot;message&quot;: &quot;post called&quot;}`))
+}
+
+func put(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusAccepted)
+    w.Write([]byte(`{&quot;message&quot;: &quot;put called&quot;}`))
+}
+
+func delete(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusOK)
+    w.Write([]byte(`{&quot;message&quot;: &quot;delete called&quot;}`))
+}
+
+func notFound(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusNotFound)
+    w.Write([]byte(`{&quot;message&quot;: &quot;not found&quot;}`))
+}
+
+func main() {
+    r := mux.NewRouter()
+    r.HandleFunc(&quot;/&quot;, get).Methods(http.MethodGet)
+    r.HandleFunc(&quot;/&quot;, post).Methods(http.MethodPost)
+    r.HandleFunc(&quot;/&quot;, put).Methods(http.MethodPut)
+    r.HandleFunc(&quot;/&quot;, delete).Methods(http.MethodDelete)
+    r.HandleFunc(&quot;/&quot;, notFound)
+    log.Fatal(http.ListenAndServe(&quot;:8080&quot;, r))
+}
+
+
+Sub Router
+
+func main() {
+    r := mux.NewRouter()
+    api := r.PathPrefix(&quot;/api/v1&quot;).Subrouter()
+    api.HandleFunc(&quot;&quot;, get).Methods(http.MethodGet)
+    api.HandleFunc(&quot;&quot;, post).Methods(http.MethodPost)
+    api.HandleFunc(&quot;&quot;, put).Methods(http.MethodPut)
+    api.HandleFunc(&quot;&quot;, delete).Methods(http.MethodDelete)
+    api.HandleFunc(&quot;&quot;, notFound)
+    log.Fatal(http.ListenAndServe(&quot;:8080&quot;, r))
+}
+
+
+Kemudian menambahkan prefix dengan contoh api/v1 jika ingin membuat v2 nanti nya
+
+package main
+
+import (
+    &quot;fmt&quot;
+    &quot;log&quot;
+    &quot;net/http&quot;
+    &quot;strconv&quot;
+
+    &quot;github.com/gorilla/mux&quot;
+)
+
+func get(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusOK)
+    w.Write([]byte(`{&quot;message&quot;: &quot;get called&quot;}`))
+}
+
+func post(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusCreated)
+    w.Write([]byte(`{&quot;message&quot;: &quot;post called&quot;}`))
+}
+
+func put(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusAccepted)
+    w.Write([]byte(`{&quot;message&quot;: &quot;put called&quot;}`))
+}
+
+func delete(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    w.WriteHeader(http.StatusOK)
+    w.Write([]byte(`{&quot;message&quot;: &quot;delete called&quot;}`))
+}
+
+func params(w http.ResponseWriter, r *http.Request) {
+    pathParams := mux.Vars(r)
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+
+    userID := -1
+    var err error
+    if val, ok := pathParams[&quot;userID&quot;]; ok {
+        userID, err = strconv.Atoi(val)
+        if err != nil {
+            w.WriteHeader(http.StatusInternalServerError)
+            w.Write([]byte(`{&quot;message&quot;: &quot;need a number&quot;}`))
+            return
+        }
+    }
+
+    commentID := -1
+    if val, ok := pathParams[&quot;commentID&quot;]; ok {
+        commentID, err = strconv.Atoi(val)
+        if err != nil {
+            w.WriteHeader(http.StatusInternalServerError)
+            w.Write([]byte(`{&quot;message&quot;: &quot;need a number&quot;}`))
+            return
+        }
+    }
+
+    query := r.URL.Query()
+    location := query.Get(&quot;location&quot;)
+
+    w.Write([]byte(fmt.Sprintf(`{&quot;userID&quot;: %d, &quot;commentID&quot;: %d, &quot;location&quot;: &quot;%s&quot; }`, userID, commentID, location)))
+}
+
+func main() {
+    r := mux.NewRouter()
+
+    api := r.PathPrefix(&quot;/api/v1&quot;).Subrouter()
+    api.HandleFunc(&quot;&quot;, get).Methods(http.MethodGet)
+    api.HandleFunc(&quot;&quot;, post).Methods(http.MethodPost)
+    api.HandleFunc(&quot;&quot;, put).Methods(http.MethodPut)
+    api.HandleFunc(&quot;&quot;, delete).Methods(http.MethodDelete)
+
+    api.HandleFunc(&quot;/user/{userID}/comment/{commentID}&quot;, params).Methods(http.MethodGet)
+
+    log.Fatal(http.ListenAndServe(&quot;:8080&quot;, r))
+}
+
+</content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>Belajar Go Part 1</title>
+      <url>/tutorial/2019/11/19/belajar-go-part-1/</url>
+      <content type="text">Penjelasan Golang
+Golang atau Go merupakan bahasa pemrograman yang di publikasikan tahun 2009 oleh Google dan Bahasa Go mengambil struktur sintaks seperti C / C++.
+
+
+Kelebihan Golang
+
+  Mendukung konkurensi di level bahasa dengan pengaplikasian cukup mudah
+  Mendukung pemrosesan data dengan banyak prosesor dalam waktu yang bersamaan (pararel processing)
+  Memiliki garbage collector
+  Proses kompilasi sangat cepat
+  Bukan bahasa pemrograman yang hirarkial, menjadikan developer tidak perlu ribet memikirkan segmen OOP-nya
+  Package/modul yang disediakan terbilang lengkap. Karena bahasa ini open source, banyak sekali developer yang juga mengembangkan modul-modul lain yang bisa dimanfaatkan
+
+
+Hello World!
+
+Instalasi Go
+
+Konfigurasi Go
+
+Membuat Aplikasi Go
+package main
+
+import &quot;fmt&quot;
+func main () {
+    fmt.Println(&quot;Hello World&quot;) 
+}
+
+
+atau bisa juga
+
+package main
+
+func main () {
+    print(&quot;Hello World&quot;) 
+}
+
+
+Kemudian untuk menjalankan aplikasi nya  dengan tahapan awal yaitu compile
+
+go build main.go
+
+
+Kemudian untuk menjalankan aplikasi dengan perintah
+
+./main
+
+Jika ingin melakukan perbaikan bugs atau error tidak perlu menggunakan compile, bisa dengan perintah
+
+go run main.go
+
+
+import f &quot;fmt&quot;
+
+func main(){
+    f.Println(&quot;Hello World&quot;)
+}
+
+Variabel
+Untuk mendekralasi variabel pada Go dapat menggunakan tipe data atau tidak. Perbedaannya hanya di bagian penulisan nya saja.
+
+Variabel dengan tipe data
+Deklarasi dengan tipe data atau yang biasa disebut manifest typing pada Go memiliki standar yaitu menggunakan keyword var dan menggunakan jenis tipe data nya apa. contohnya bisa dilihat di bawha ini.
+package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var firstName string = &quot;john&quot;
+
+    var lastName string
+    lastName = &quot;wick&quot;
+
+    fmt.Printf(&quot;halo %s %s!\n&quot;, firstName, lastName)
+}
+
+
+
+Variabel tanpa tipe data
+Deklarasi tanpa tipe data atau yang biasa disebut interfence pada Go untuk mendeklarasikan variabel
+
+var firstName string = &quot;john&quot;
+lastName := &quot;wick&quot;
+
+fmt.Printf(&quot;halo %s %s!\n&quot;, firstName, lastName)
+
+</content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>Belajar Uni Testing Javascript</title>
+      <url>/tutorial/2019/11/02/belajar-unit-testing-javascript-part-1/</url>
+      <content type="text">Teori
+
+  Unit Testing is a level of software testing where individual units/ components of a software are tested
+
+
+Penjelasan dari teori unit testing yaitu untuk menguji apakah fungsi yang kita buat telah sesuai dengan desain sistem.
+
+Kalau diibaratkan dalam kegiatan nyata misalkan kita ingin memasak tentunya hal pertama yang dilakukan adalah menyiapkan baik itu peralatan atau bahan memasak. Dalam membuat suatu masakan, hal - hal yang harus diperhatikan adalah seperti berapa lama dalam mengaduk bahan - bahan yang telah dicampurkan, menentukan suhu pada kompor atau oven, atau takaran untuk menaruh bumbu masak. Dalam unit testing, langkah - langkah untuk melakukan adalah  :
+
+  Menentukan nilai dari parameter input
+  Memanggil unit yang dites melewatkannya dengan parameter input
+  Menerima parameter kembalian dari unit yang dites dan mencetaknya, menampilkannya, atau mengetes hasilnya terhadap hasil yang diharapkan
+
+
+Keuntungan yang didapat dengan melakukan dengan unit testing adalah
+
+  Mencari error atau bug yang disebabkan oleh perubahan code menjadi lebih mudah
+  Code menjadi lebih reusable
+  Waktu yang dibutuhkan untuk melakukan debug lebih sedikit karena tidak perlu melakukan “developer test” dimana kita menjalankan program kita sambil menyediakan beberapa input untuk menguji apakah program akan berjalan sesuai keinginan kita.
+
+
+Pada javascript, unit testing yang digunakan adalah Mocha JS dan Chai.
+
+npm install mocha chai
+
+
+Kemudian fungsi untuk development
+
+module.exports = function(){
+    return 'hello'
+}
+
+
+Lalu untuk membuat fungsi unit testing untuk menguji fungsi yang mengembalikan nilai string ‘hello’. berikut ini adalah fungsi uit testing nya
+
+const assert = require('chai').assert
+const app = require('../app')
+
+
+describe('App', function(){ 
+    it('should return hello', function(){
+        assert.equal(app(), 'hello')
+    })
+})
+
+
+Dari describe yaitu untuk mengambil dari export controller App
+</content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>How to be UI / UX Designer</title>
+      <url>/tutorial/2019/03/25/belajar-ui-ux/</url>
+      <content type="text">
+</content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>How To Be Front End</title>
+      <url>/tutorial/2019/03/22/how-to-be-front-end/</url>
+      <content type="text">Komponen Dasar
+
+Mengenal HTML
+
+Semantic HTML
+Link :
+
+  https://www.duniailkom.com/tutorial-belajar-html5-pengertian-semantic-tag-pada-html5/
+    Mengenal CSS
+    Margin
+    Margin (dalam pengertian CSS) adalah ruang disekitar elemen/konten. Margin akan membentuk daerah (ruang) vertikal dan horizontal antara elemen. Jika elemen/konten tidak memilki margin, maka elemen-elemen tersebut akan rapat bertemu terhadap satu sama lain. Agar margin bekerja dengan baik, elemen biasanya diikuti oleh posisi float atau diposisikan relative. Style ini sering diterapkan untuk dapat memindahkan elemen lain di sekitarnya.
+  
+
+
+Padding
+Jadi bagaimana dengan padding? Nah, padding adalah ruang horizontal dan vertikal yang diatur di sekitar area isi/konten dari elemen yang ditargetkan. Jadi padding di bagian dalam kotak, bukan di luar.
+
+Padding juga dapat dipahami sebagai “filling”. Karena  padding tidak mempengaruhi jarak dari elemen ke elemen lainnya tetapi hanya mendefinisikan jarak inner antara tepi/border dan isi dari elemen.
+
+Border
+Border/garis tepi dapat digunakan untuk banyak hal, misalnya sebagai elemen dekoratif atau untuk memberi garis batas pemisah dari dua hal. Border properti mendefinisikan width, color, and style dari batas area pada box/kotak.
+
+Link :
+
+  http://problogiz.blogspot.com/2012/12/pengertian-margin-padding-dan-border.html
+
+
+Membuat Layout
+
+###
+
+Tools Front End
+
+React JS
+
+Responsive Web Development
+
+Viewport Meta Tag
+
+CCS3 Media Queries
+
+</content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>Pengenalan Teknik - teknik request http pada javascript</title>
+      <url>/2019/03/11/teknik-http-request/</url>
+      <content type="text">AJAX
+Ajax adalah cara paling tradisional yang melakukan request HTTP. Data bisa dikirim dengan menggunakan method HTTP POST dan menerima data dengan HTTP GET.
+
+Untuk membuat HTTP call di Ajax, kita perlu membuat sebuah objek XMLHttpRequest(), menentukan URL endpoint dan HTTP method-nya. Selanjutnya kita memanggil method open() untuk membuka koneksi ke URL yang dimasukkan menggunakan HTTP method yang diinginkan. Method send() akan memulai proses koneksi yang sebelumnya sudah dibuka oleh open().
+
+Method onreadystatechange dipanggil saat objek Http telah berhasil mendapat data yang diperlukan atau gagal. Ia memiliki dua method yaitu readyState dan status untuk memeriksa status request yang dilakukan.
+
+Fetch
+fetch adalah salah satu tool yang membantu melakuan request Asynchronous dengan lebih mudah. Ia mengembalikan sebuah Promise yang merupakan salah satu fitur andalan ES6. Perhatikan bagaimana cara penggunaan fetch di bawah ini:
+
+*code
+const API = ‘https://hn.algolia.com/api/v1/search?query=’;
+
+fetch(API + DEFAULT_QUERY)
+      .then(response =&amp;gt; {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(‘Something went wrong …’);
+        }
+      })
+      .then(data =&amp;gt; this.setState({ hits: data.hits, isLoading: false }))
+      .catch (error =&amp;gt; this.setState({ error, isLoading: false }));
+*
+
+Fungsi fetch meminta sebuah parameter yaitu alamat URL endpoint. Ia juga bisa menerima parameter lain sebagai query parameter untuk URL yang diberikan.
+
+Axios
+
+Link : https://www.codepolitan.com/teknik-teknik-melakukan-request-http-di-javascript-5afa5536d44e9
+</content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>React VS Angular</title>
+      <url>/2019/01/17/React-JS-vs-Angular-JS/</url>
+      <content type="text">React
+
+  React is a JavaScript library developed by Facebook to manage the user interface for web applications with ease. One of the main highlights of React is that it helps in creating manageable UI components, which makes it easier to scale large web applications. React works on the concept of Virtual DOM, where it keeps a mirror image of the actual DOM. Whenever a change occurs, React runs a diffing process, identifies the change, and updates it to the actual DOM. The concept of Virtual DOM makes app rendering faster and improves performance.
+
+
+Dalam sebuah komponen dalam react, terdapat tiga lifecycle berikut:
+Inisialisasi / mounting (ketika komponen dibuat/ditambahkan pertama kali pada DOM)
+Update / rerender (ketika terdapat perubahan state/prop yang mengakibatkan perubahan pada DOM)
+Unmounting (ketika komponen akan dihapus dari DOM)
+
+DOM (Document Object Model)
+
+dikarenakan javascript dapat berinteraksi dengan HTML
+DOM(Document Object Model) adalah model data standar. DOM adalah cara javascript melihat suatu halaman html. DOM adalah sebuah platform dan interface yang memperbolehkan pengaksesan dan perubahan pada konten, struktur, dan style pada sebuah dokumen oleh program dan  script. Istilah HTML DOM mengacu kepada dokumen html. Kasusnya disini ialah konten, struktur, dan style pada dokumen html dapat diakses dan dirubah dengan menggunakan sintaks javascript.
+Pada model DOM ini, setiap elemen html dipandang sebagai sebuah object. Setiap object bisa terdiri dari object-object lain, sama halnya dengan dokumen html yang terdiri dari elemen root (elemen &amp;lt;html&amp;gt;), elemen root terdiri dari elemen &amp;lt;head&amp;gt; dan elemen &amp;lt;body&amp;gt;, elemen &amp;lt;body&amp;gt; boleh jadi terdiri dari elemen , &amp;lt;h1&amp;gt;, &amp;lt;p&amp;gt;, dst. Elemen-elemen pada dokumen html membentuk sebuah object document yang merupakan object dari dokumen html itu sendiri. Dibawah ini adalah representasi HTML DOM dalam model pohon:
+
+dom_tree
+Kalau dalam pemrograman OOP(Object Oriented Programing), sebuah object memiliki property dan method, begitu juga elemen pada dokumen html ini memiliki property yaitu nilai pada elemen html yang bisa ditetapkan atau dirubah dan method yakni aksi yang dapat dilakukan pada elemen html. Contoh property yang biasa digunakan ialah innerHTML yang digunakan untuk memperoleh atau merubah konten dari elemen html itu sendiri. Kemudian method, contoh misalnya getElementById(“id”) milik object document yang digunakan untuk mengakses elemen html dalam dokumen html berdasarkan id.
+
+Virtual DOM
+Dari pada langsung bekerja dengan DOM secara langsung pada browser, pada virtual DOM kita terlebih dahulu membuat abstraksi DOM dalam bentuk virtual. Sehingga setiap perubahan terhadap struktur dokumen tidak terjadi secara langsung pada permukaan browser, akan tetapi terjadi di dalam memory. Sehingga proses menjadi lebih cepat.
+
+Setelah modifikasi pada Virtual DOM selesai, kita lakukan proses differing untuk membedakan antara struktur tree yang telah dirender sebelumnya pada browser dengan virtual tree yang sudah dibuat. Sehingga akan menghasilkan bagian-bagian yang ‘kotor’ alias berbeda. Dan hanya bagian yang butuh diubah saja yang kita render ulang.
+
+Proses ini tentu jauh lebih efektif dan lebih cepat dari pada jika kita harus bekerja secara langsung pada DOM yang asli.
+
+Lantas, bagaimana cara implementasinya?
+Oke, jawaban ini cukup rumit. Karena secara umum –pada virtual dom– kita akan menemui dua permasalahan:
+
+Kapan kita harus melakukan render ulang?
+Dan bagaimana cara kita untuk mengetahui bagian mana saja yang berubah dari struktur tree yang lama?
+Karena jawaban dari dua pertanyaan di atas adalah kunci kenapa Virtual DOM bisa resource-cheap atau lebih cepat. Kalau anda salah dalam menentukan kapan sistem harus melakukan render ulang, maka aplikasi anda akan tidak jelas dan tidak interaktif. Plus bisa menjadi super-lemot jika ternyata aplikasi anda selalu merender ulang padahal proses tersebut sedang tidak diperlukan. Atau pada proses kedua –yaitu proses differing/comparing tree lama dan yang baru–, kalau anda tidak menggunakan algoritma yang efektif dan efisien, maka teknik Virtual DOM yang anda gunakan akan lebih lelet dari pada cara yang konvensional.
+
+Flux
+
+  Flux adalah konsep pemrograman untuk mengolah data. Pada react hal ini sangat terkait dengan pengelolaan state pada komponen. Flux memberikan banyak manfaat untuk pengolahan data tersebut. Silahkan simak ulasan ini untuk mengetahui fungsi flux pada react.
+
+
+Flux merupakan konsep pemrograman yang mengatur aliran atau flow dari data. Pada konsep flux data dibuat menjadi uni-directional. Artinnya , seluruh data akan masuk ke dalam satu gerbang yang kemudian baru di distribusikan pada komponen-komponen didalamnya. Ilustrasinnya seperti saat kita masuk ke kelas yang memiliki satu pintu, seluruh siswa harus masuk ke dalam pintu tersebut yang secara otomatis “pintu” itu akan mengenali seluruh siswa yang masuk dan pada ahirnya mereka menuju ke bangku mereka masing-masing.
+
+1.Action , yaitu suatu object yang akan mentrigger aliran data. Actions akan menentukan data yang akan dikirimkan ke store melalui dispatcher. lebih detailnya, action adalah suatu javascript object yang menggunakan property berupa “type”  yang berfungsi untuk memberitahukan kepada dispatcher mengenai data yang harus disimpan pada store. Action ini akan mentrigger perubahan pada suatu komponen namun tidak dapat menspesifikan pada bagian mana yang harus berubah. Reducer merupakan modul yang dapat melakukan hal tersebut.
+Dispatcher, yaitu object yang berfungsi layaknya suatu router. Data – data yang tersentral tersebut tentunnya akan dibagikan ke komponen-komponen lain. Disinilah peran dari suatu dispatcher.
+Store, tempat untuk menyimpan state dan data-data logical lainnya. State pada store dapat diupdate secara parsial ketika memang dibutuhkan
+View, object yang menerima data dari store dan melakukan proses rendering
+
+React nya biasa nya digunakan untuk pengerjaan proyek2 kecil dikarenakan konsep library dimana dapat menentukan yang mau dipakai jadinya tidak banyak pilihan yang tersedia
+
+contoh aplikasi yang menggunakan react :
+
+  Facebook
+  AirBnb
+  Uber
+  Netflix
+  Instagram
+  Whatsapp
+  Dropbox
+
+
+Initialization
+Pada initialization, terdapat 3 methods yang akan dieksekusi yaitu componentWillMount, render dan componentDidMount. Method tersebut dieksekusi sesuai urutan pada gambar di atas dengan urutan dari atas ke bawah.
+ComponentWillMount akan dieksekusi paling awal pada saat pertama kali komponen dibuat, sebelum method render dieksekusi.
+Render merupakan method yang wajib ada pada setiap komponen pada react. Method ini akan mengembalikan sebuah react element yang merupakan representasi dari DOM komponen.
+Setelah method render dieksekusi, selanjutnya componentDidMount akan dieksekusi. Kita dapat mengakses DOM dan memanipulasi DOM atau melakukan proses pengambilan data atau AJAX request pada method ini. Selain itu, jika kita menggunakan JavaScript framework lain seperti jQuery, kita dapat memanggilnya pada method ini.
+
+Update / rerender
+
+Proses ini merupakan phase dimana komponen akan di-render ulang. Proses render ulang sebuah komponen dapat dipicu dari perubahan props atau state pada komponen tersebut.
+
+Pada gambar di atas terdapat 5 methods yang akan dieksekusi. Method tersebut adalah componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, render, componenDidUpdate. Urutan eksekusi ditunjukkan pada gambar di atas dengan urutan dari atas ke bawah.
+ComponentWillReceiveProps akan dieksekusi ketika terdapat perubahan pada props dan bukan merupakan render komponen yang pertama kali. Method ini dapat digunakan untuk mengubah state sesuai dengan props baru yang diterima. Perubahan state pada method ini tidak akan memicu phase update pada komponen (tidak akan merender komponen).
+ShouldComponentUpdate selalu dieksekusi sebelum method render. Method ini merupakan penentu apakah sebuah komponen akan di-render ulang atau tidak. Method shouldComponentUpdate mengembalikan nilai true atau false dengan nilai default adalah true. Jika method ini mengembalikan nilai true, maka komponen akan di-render ulang dan berlaku juga sebaliknya.
+ComponentWillUpdate akan dieksekusi jika method shouldComponenUpdate mengembalikan nilai true. Pada method ini, kita tidak dianjurkan untuk mengubah state dengan alasan bahwa method ini digunakan untuk mempersiapkan proses update komponen bukan untuk memicu proses update komponen.
+Setelah componentWillUpdate selesai dieksekusi, maka method render akan dieksekusi.
+Setelah method render selesai dieksekusi, componentDidUpdate akan dieksekusi. Method ini sama dengan method componentDidMount. Method ini dapat digunakan untuk interaksi dengan DOM setelah komponen selesai di-render.
+Unmounting
+Pada proses unmounting hanya ada satu method yang akan dieksekusi yaitu componentWillUnmount. Method ini akan dieksekusi sebelum komponen dihapus atau dihilangkan dari DOM.
+Implementasi Kode
+Setelah memahami component lifecycle, untuk lebih memahami setiap phase dari component lifecycle, saya telah membuat kode yang akan menunjukkan urutan eksekusi method pada setiap phase.
+Implementasi dengan menggunakan react, react-dom dan webpack-dev-server.
+
+Keunggulan React js ?
+Mudah dipahami
+Gaya penulisan yang deklaratif membuat react js mudah dipahami dan membuat react mudah di prediksi jika ada kesalahan penulisan kode.
+JSX
+JSX adalah sebuah extension javascript yang di gunakan react untuk menulis HTML di dalam Javascript. JSX bukanlah sintaks javascript, sehingga browser tidak bisa membaca sintaks ini, di butuh kan sebuah JSX compiler yang di gunakan untuk menterjemahkan JSX kedalam bahasa regular javascript agar bisa terbaca oleh browser. Saya sendiri menggunakan BABEL JS sebagai JSX compilernya.
+Modular
+Untuk membuat aplikasi dengan skala besar, kita dapat menulis kode-kode dengan skala yang lebih kecil untuk di satukan menjadi aplikasi utuh, dan dapat di gunakan kembali (reusable).
+Scalable
+React js dapat menangani dengan sangat baik sebuah program dengan skala yang besar yang dapat menampilkan perubahan data yang sangat kompleks.
+Flexibel
+Dengan belajar 1 libary saja kita dapat membuat aplikasi Web, Moblie, maupun Desktop.
+Effisien dan Cepat
+React JS menciptakan Virtual DOM untuk mempercepat urusan perubahan DOM. Semua operasi di kerjakan di dalam Virtual DOM, setelah operasi selesai React JS menulis perubahan tersebut di dalam DOM. Contoh kasusnya seperti ini: “Jika kita menulis dalam secarik kertas menggunakan spidol, apabila terjadi kesalahan penulisan kita harus menulis di kertas yang baru. Berbeda jika kita menggunakan pensil, cukup menghapus dan memperbaiki pada bagian yang salah ”.
+Mudah Debugging
+Ketika kita mulai menggunakan React JS, jangan lupa menginstall extensi resmi React JS. Kita dapat dengan mudah menjelejah Virtual DOM pada aplikasi yang sudah kita buat, sehingga jika ada bug bisa cepat ditemukan.
+SEO Bagus
+Salah satu masalah terbesar dari library Javascript pada umumnya adalah mereka sidak support search engine. Meskipun sudah banyak perbaikan, mesin pencari umumnya masih mengalami kesulitan. Namun tidak dengan React JS, kita dapat menjalankan React JS pada server dan Virtual DOM diberikan ke browser sebagai halaman web biasa, sehingga sangat support SEO.
+Kelemahan react js ?
+Meskipun React JS sangat powerfull, namun juga memiliki beberapa kelemahan antara lain:
+Hanya View Layer
+React js hanya sebuah pustaka View Layer, untuk membangun aplikasi besar kita harus menyusun sendiri kebutuhan aplikasi lainya seperti data layer, router, struktur aplikasi dan event system(kecuali event DOM).
+Dokumentasi tidak bagus
+Beberapa sumber artikel yang saya baca mengatakan bahwa dokumentasi react js tidak bagus karena informasi yang di berikan tidak lengkap, meskipun seperti itu kita tetap bisa mempelajarinya kok, tentunya dengan semangat dan ketekunan.
+Permasalahan lisensi
+Baru-baru ini muncul issue tentang lisensi react. Sebetulnya issue ini sudah ada sejak 2015, namun tampaknya ada pihak-pihak yang belum puas dan mempermasalahkanya. Menurut pemahaman saya bahwa “facebook memperbolehkan kita menggunakan react js untuk mengembangkan produk kita dengan catatan tidak untuk berkompetisi dengan produknya facebook”. Tapi sebenarnya ini tidak masalah , temen-teman bisa baca penjelasanya detail disini.
+Dukungan browser
+React js tidak mendukung browser versi lama, hanya browser versi baru. React js menghentikan dukungan pada browser Internet Explorer versi 8, sampai saat ini react yang bisa jalan di IE 8 adalah react versi v0.14. Versi terbaru dari react hanya mendukung Internet Explorer versi 9 keatas.
+
+Mengapa harus pakai react js ?
+React js mudah di pahami.
+Konsep Components pada react js merupakan konsep pengembangan web modern.
+Jika data elements pada aplikasi kita berubah setiap satuan waktu, maka kita bisa menggunakan react sebagai solusinya.
+Jika dalam satu team sama-sama sedang belajar react, maka pengembangan aplikasi bisa lebih cepat.
+
+JSX
+JSX is a JavaScript syntax extension which looks similar to XML. Here is an example:
+
+When compared to JavaScript, it’s easier to write JSX. It is as simple as opening and closing XML tags. Here is a JSX example:
+
+
+Welcome to TutsPlus
+
+Here is the compiled React code: 
+“use strict”;
+
+React.createElement(
+  “div”,
+  null,
+  React.createElement(
+    “p”,
+    null,
+    “Welcome to TutsPlus”
+  )
+);
+
+  
+    JSX code ensures readability and makes maintainability easier.
+  
+  
+    JSX optimizes the code while compiling, so it runs faster compared to the equivalent JavaScript code.
+  
+
+
+Angular
+Dalam angular untuk yang dikategorikan sebagai framework, angular mempunyai struktur untuk proyek yang lebih kompleks. Tentunya Angular digunakan untuk
+
+contoh aplikasi yang menggunakan angular adalah berikut ini :
+
+  Eat24
+  CVS shop
+  onefootball
+  Google Express
+  NBA
+  Delta
+  wix.com
+
+
+Persamaan
+
+Perbedaan
+
+Unidirectional VS Bidirectional
+
+</content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>Belajar Javascript Part 1</title>
+      <url>/2018/11/06/belajar-javascript-part-1/</url>
+      <content type="text">#Function Executions
+Kebanyakan pembuatan app menggunakan Javascript dibangun dengan V8, yaitu runtime yang dimiliki oleh chrome. untuk pemahaman lebih lanjut dapat ditonton video yang dijelaskan oleh Philip Robert,
+What the heck is the event loop anyway?
+Call Stack
+
+  It’s a data structure which records the function calls, basically where in the program we are. If we call a function to execute , we push something on to the stack, and when we return from a function, we pop off the top of the stack.
+
+
+sebelum memulai call stack memahami terlebih dahulu tentang Execution Context.
+Execution Context
+
+Call Stack merupakan pemanggilan fungsi - fungsi menggunakan konsep Stack. Stack merupakan sturktur data dimana data dipanggil dengan Last In First Out(LIFO) ketika fungsi pada javascript paling belakang, maka akan tercetak
+
+Heap
+
+  Objects are allocated in a heap i.e mostly unstructured region of memory. All the memory allocation to variables and objects happens here.
+
+
+Queue
+
+  A JavaScript runtime contains a message queue, which is a list of messages to be processed and the associated callback functions to execute. When the stack has enough capacity, a message is taken out of the queue and processed which consists of calling the associated function (and thus creating an initial stack frame). The message processing ends when the stack becomes empty again. In basic words , these messages are queued in response to external async events(such as a mouse being clicked or receiving the response to an HTTP request), given a callback function has been provided. If, for example a user were to click a button and no callback function was provided — no message would have been enqueued.
+
+
+Event Loop
+
+  Basically, when we evaluate the performance of our JS code, so a function in a stack makes it slow or fast, console.log() will be fast but performing iteration with for or while over thousands or millions of line items will be slower, and will keep the stack occupied or blocked. This is termed as blocking script, which you have read or heard about in Webpage Speed Insights.
+Network requests can be slow, the image requests can be slow, but thankfully the server requests can be done through AJAX, an asynchronous function. If suppose, these network requests are made through synchronous functions, then what would happen? The network requests are send to some server, which is basically another computer/machine somewhere. Now, computers can be slow sending back the response. In the meantime , if I click some CTA button, or some other rendering needs to be done, nothing will happen as the stack is blocked. In multi threaded language like Ruby, it can be handled, but in single threaded language like Javascript, this is not possible unless function inside the stack returns a value. The webpage will hell breaks loose as the browser can’t do anything. This is not ideal if we want fluid UI for the end user. How do we handle this?
+
+
+Monkey Patch
+A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).
+</content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title>Belajar Nest JS Part 2</title>
       <url>/2018/11/02/belajar-nest-js-part-2/</url>
       <content type="text">
@@ -29,6 +807,13 @@ git clone https://github.com/nestjs/typescript-starter.git project
 cd project
 npm install
 npm run start
+
+
+or
+
+npm i -g @nestjs/cli
+nest new nest-restaurant-api
+npm run start:dev
 
 
 setelah di clone, otomatis membuat template dari Nets JS. kemudian setelah run di terminal dapat membuka di browser localhost:3000 maka muncul output seperti gambar di bawah ini
@@ -162,10 +947,17 @@ export const PostSchema = new mongoose.Schema({
     }
 });
 
+Kegunaan pada file src
+app.controller.ts and app.service.ts: those files are responsible for generating the message Hello world when the endpoint / is accessed through the browser. Because this endpoint is not important to this application you may delete these files as well. Soon you are going to learn in more details what controllers and services are.
+app.module.ts: this is a class of the type module that is responsible for declaring imports, exports, controllers, and providers to a Nest.js application. Every application has at least one module but you may create more than one module for more complex applications (more details on Nest.js documentation). The application of this tutorial will have only one module.
+main.ts: this is the file responsible for starting the server.
+main.hrm.ts: is a Hot Module Replacement file that installs modules during the server execution and it is useful to speed up the development process.
 
 Penjelasan REST API
 
   RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data
+
+
 
 
 URL Design
@@ -350,10 +1142,12 @@ Membuat
     </entry>
   
     <entry>
-      <title>Sentiment Analysis with Python 3</title>
+      <title>Pengenalan Deep Learning</title>
       <url>/2018/07/15/part-1-pengenalan-neural-network/</url>
       <content type="text">Artificial Intelligence
-
+Neural Network
+Machine Learning
+Deep Learning
 Sebelum mengenal
 </content>
       <categories>

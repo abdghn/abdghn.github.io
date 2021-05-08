@@ -1,4 +1,659 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-02T11:11:42+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><subtitle>Web abdghn</subtitle><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">Belajar Nest JS Part 2</title><link href="http://localhost:4000/2018/11/02/belajar-nest-js-part-2/" rel="alternate" type="text/html" title="Belajar Nest JS Part 2" /><published>2018-11-02T00:00:00+07:00</published><updated>2018-11-02T00:00:00+07:00</updated><id>http://localhost:4000/2018/11/02/belajar-nest-js-part-2</id><content type="html" xml:base="http://localhost:4000/2018/11/02/belajar-nest-js-part-2/"></content><author><name>Abdul Ghani Abbasi</name></author><summary type="html"></summary></entry><entry><title type="html">Belajar Nest JS Part 1</title><link href="http://localhost:4000/2018/11/01/belajar-nest-js-part-1/" rel="alternate" type="text/html" title="Belajar Nest JS Part 1" /><published>2018-11-01T00:00:00+07:00</published><updated>2018-11-01T00:00:00+07:00</updated><id>http://localhost:4000/2018/11/01/belajar-nest-js-part-1</id><content type="html" xml:base="http://localhost:4000/2018/11/01/belajar-nest-js-part-1/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-25T17:12:31+07:00</updated><id>http://localhost:4000/</id><title type="html">Abdghn</title><subtitle>Web abdghn</subtitle><author><name>Abdul Ghani Abbasi</name></author><entry><title type="html">REST API dengan GO</title><link href="http://localhost:4000/tutorial/2019/12/25/membuat-REST-API-dengan-go/" rel="alternate" type="text/html" title="REST API dengan GO" /><published>2019-12-25T00:00:00+07:00</published><updated>2019-12-25T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2019/12/25/membuat-REST-API-dengan-go</id><content type="html" xml:base="http://localhost:4000/tutorial/2019/12/25/membuat-REST-API-dengan-go/">&lt;h1 id=&quot;rest-api&quot;&gt;REST API&lt;/h1&gt;
+
+&lt;h1 id=&quot;membuat-program-go&quot;&gt;Membuat Program Go&lt;/h1&gt;
+&lt;p&gt;Berikut ini adalah program Go&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;log&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;net/http&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServeHTTP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;hello world&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;lalu untuk run program nya menggunakan&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go run main.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hello world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Berikut nya untuk menunjukkan menggunakan &lt;code class=&quot;highlighter-rouge&quot;&gt;ServeHTTP&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;log&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;net/http&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;get called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusCreated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;post called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PUT&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusAccepted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;put called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;DELETE&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;delete called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusNotFound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;not found&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;gorilla-mux&quot;&gt;Gorilla Mux&lt;/h1&gt;
+&lt;p&gt;Dalam menggunakan gorilla mux dengan menggunakan perintah&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go get github.com/gorilla/mux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;setelah menambahkan mod gorilla mux, kode program nya seperti ini&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;log&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;net/http&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;github.com/gorilla/mux&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;get called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusCreated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;post called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PUT&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusAccepted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;put called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;DELETE&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;delete called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusNotFound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;not found&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;handle-http-methods&quot;&gt;Handle HTTP methods&lt;/h2&gt;
+&lt;p&gt;Dalam menggunakan &lt;code class=&quot;highlighter-rouge&quot;&gt;Handlefunc&lt;/code&gt; untuk membuat fungsi di handle oleh HTTP method&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;log&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;net/http&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;github.com/gorilla/mux&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;get called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusCreated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;post called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusAccepted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;put called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;delete called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notFound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusNotFound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;not found&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodPost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodPut&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodDelete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notFound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sub-router&quot;&gt;Sub Router&lt;/h2&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PathPrefix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/api/v1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Subrouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodPost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodPut&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodDelete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notFound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kemudian menambahkan prefix dengan contoh &lt;code class=&quot;highlighter-rouge&quot;&gt;api/v1&lt;/code&gt; jika ingin membuat v2 nanti nya&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;log&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;net/http&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;strconv&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;github.com/gorilla/mux&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;get called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusCreated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;post called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusAccepted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;put called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;delete called&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathParams&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Vars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strconv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Atoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusInternalServerError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;need a number&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commentID&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pathParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;commentID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ok&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commentID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strconv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Atoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteHeader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusInternalServerError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;message&quot;: &quot;need a number&quot;}`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;location&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`{&quot;userID&quot;: %d, &quot;commentID&quot;: %d, &quot;location&quot;: &quot;%s&quot; }`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commentID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PathPrefix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/api/v1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Subrouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodPost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodPut&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodDelete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/user/{userID}/comment/{commentID}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MethodGet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ListenAndServe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:8080&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">REST API</summary></entry><entry><title type="html">Belajar Go Part 1</title><link href="http://localhost:4000/tutorial/2019/11/19/belajar-go-part-1/" rel="alternate" type="text/html" title="Belajar Go Part 1" /><published>2019-11-19T00:00:00+07:00</published><updated>2019-11-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2019/11/19/belajar-go-part-1</id><content type="html" xml:base="http://localhost:4000/tutorial/2019/11/19/belajar-go-part-1/">&lt;h1 id=&quot;penjelasan-golang&quot;&gt;Penjelasan Golang&lt;/h1&gt;
+&lt;p&gt;Golang atau Go merupakan bahasa pemrograman yang di publikasikan tahun 2009 oleh Google dan Bahasa Go mengambil struktur sintaks seperti C / C++.&lt;/p&gt;
+
+&lt;!---(https://www.comestoarra.com/news/garbage-collection, Garbage Collection merupakan suatu bentuk manajemen memori otomatis,dimana terdapat suatu yang disebut Collector yang akan berusaha untuk melakukan dealokasi terhadap Garbage,yaitu memori yang dialokasikan untuk objek tertentu yang sudah tidak digunakan lagi.)
+---&gt;
+&lt;h1 id=&quot;kelebihan-golang&quot;&gt;Kelebihan Golang&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mendukung konkurensi di level bahasa dengan pengaplikasian cukup mudah&lt;/li&gt;
+  &lt;li&gt;Mendukung pemrosesan data dengan banyak prosesor dalam waktu yang bersamaan (pararel processing)&lt;/li&gt;
+  &lt;li&gt;Memiliki garbage collector&lt;/li&gt;
+  &lt;li&gt;Proses kompilasi sangat cepat&lt;/li&gt;
+  &lt;li&gt;Bukan bahasa pemrograman yang hirarkial, menjadikan developer tidak perlu ribet memikirkan segmen OOP-nya&lt;/li&gt;
+  &lt;li&gt;Package/modul yang disediakan terbilang lengkap. Karena bahasa ini open source, banyak sekali developer yang juga mengembangkan modul-modul lain yang bisa dimanfaatkan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hello-world&quot;&gt;Hello World!&lt;/h1&gt;
+
+&lt;h2 id=&quot;instalasi-go&quot;&gt;Instalasi Go&lt;/h2&gt;
+
+&lt;h2 id=&quot;konfigurasi-go&quot;&gt;Konfigurasi Go&lt;/h2&gt;
+
+&lt;h2 id=&quot;membuat-aplikasi-go&quot;&gt;Membuat Aplikasi Go&lt;/h2&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;atau bisa juga&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kemudian untuk menjalankan aplikasi nya  dengan tahapan awal yaitu compile&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go build main.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kemudian untuk menjalankan aplikasi dengan perintah&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Jika ingin melakukan perbaikan bugs atau error tidak perlu menggunakan compile, bisa dengan perintah&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go run main.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;variabel&quot;&gt;Variabel&lt;/h2&gt;
+&lt;p&gt;Untuk mendekralasi variabel pada Go dapat menggunakan tipe data atau tidak. Perbedaannya hanya di bagian penulisan nya saja.&lt;/p&gt;
+
+&lt;h3 id=&quot;variabel-dengan-tipe-data&quot;&gt;Variabel dengan tipe data&lt;/h3&gt;
+&lt;p&gt;Deklarasi dengan tipe data atau yang biasa disebut &lt;strong&gt;manifest typing&lt;/strong&gt; pada Go memiliki standar yaitu menggunakan keyword var dan menggunakan jenis tipe data nya apa. contohnya bisa dilihat di bawha ini.&lt;/p&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;john&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wick&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;halo %s %s!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;variabel-tanpa-tipe-data&quot;&gt;Variabel tanpa tipe data&lt;/h3&gt;
+&lt;p&gt;Deklarasi tanpa tipe data atau yang biasa disebut &lt;strong&gt;interfence&lt;/strong&gt; pada Go untuk mendeklarasikan variabel&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;john&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wick&quot;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;halo %s %s!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Penjelasan Golang Golang atau Go merupakan bahasa pemrograman yang di publikasikan tahun 2009 oleh Google dan Bahasa Go mengambil struktur sintaks seperti C / C++.</summary></entry><entry><title type="html">Belajar Uni Testing Javascript</title><link href="http://localhost:4000/tutorial/2019/11/02/belajar-unit-testing-javascript-part-1/" rel="alternate" type="text/html" title="Belajar Uni Testing Javascript" /><published>2019-11-02T00:00:00+07:00</published><updated>2019-11-02T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2019/11/02/belajar-unit-testing-javascript-part-1</id><content type="html" xml:base="http://localhost:4000/tutorial/2019/11/02/belajar-unit-testing-javascript-part-1/">&lt;h1 id=&quot;teori&quot;&gt;Teori&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Unit Testing is a level of software testing where individual units/ components of a software are tested&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Penjelasan dari teori unit testing yaitu untuk menguji apakah fungsi yang kita buat telah sesuai dengan desain sistem.&lt;/p&gt;
+
+&lt;p&gt;Kalau diibaratkan dalam kegiatan nyata misalkan kita ingin memasak tentunya hal pertama yang dilakukan adalah menyiapkan baik itu peralatan atau bahan memasak. Dalam membuat suatu masakan, hal - hal yang harus diperhatikan adalah seperti berapa lama dalam mengaduk bahan - bahan yang telah dicampurkan, menentukan suhu pada kompor atau oven, atau takaran untuk menaruh bumbu masak. Dalam unit testing, langkah - langkah untuk melakukan adalah  :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Menentukan nilai dari parameter input&lt;/li&gt;
+  &lt;li&gt;Memanggil unit yang dites melewatkannya dengan parameter input&lt;/li&gt;
+  &lt;li&gt;Menerima parameter kembalian dari unit yang dites dan mencetaknya, menampilkannya, atau mengetes hasilnya terhadap hasil yang diharapkan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Keuntungan yang didapat dengan melakukan dengan unit testing adalah&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mencari error atau bug yang disebabkan oleh perubahan code menjadi lebih mudah&lt;/li&gt;
+  &lt;li&gt;Code menjadi lebih reusable&lt;/li&gt;
+  &lt;li&gt;Waktu yang dibutuhkan untuk melakukan debug lebih sedikit karena tidak perlu melakukan “developer test” dimana kita menjalankan program kita sambil menyediakan beberapa input untuk menguji apakah program akan berjalan sesuai keinginan kita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pada javascript, unit testing yang digunakan adalah Mocha JS dan Chai.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install mocha chai
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kemudian fungsi untuk development&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lalu untuk membuat fungsi unit testing untuk menguji fungsi yang mengembalikan nilai string ‘hello’. berikut ini adalah fungsi uit testing nya&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'chai'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assert&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'../app'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'App'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt; 
+    &lt;span class=&quot;nx&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'should return hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dari describe yaitu untuk mengambil dari export controller &lt;strong&gt;App&lt;/strong&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Teori Unit Testing is a level of software testing where individual units/ components of a software are tested Penjelasan dari teori unit testing yaitu untuk menguji apakah fungsi yang kita buat telah sesuai dengan desain sistem.</summary></entry><entry><title type="html">How to be UI / UX Designer</title><link href="http://localhost:4000/tutorial/2019/03/25/belajar-ui-ux/" rel="alternate" type="text/html" title="How to be UI / UX Designer" /><published>2019-03-25T00:00:00+07:00</published><updated>2019-03-25T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2019/03/25/belajar-ui-ux</id><content type="html" xml:base="http://localhost:4000/tutorial/2019/03/25/belajar-ui-ux/"></content><author><name>Abdul Ghani Abbasi</name></author><summary type="html"></summary></entry><entry><title type="html">How To Be Front End</title><link href="http://localhost:4000/tutorial/2019/03/22/how-to-be-front-end/" rel="alternate" type="text/html" title="How To Be Front End" /><published>2019-03-22T00:00:00+07:00</published><updated>2019-03-22T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2019/03/22/how-to-be-front-end</id><content type="html" xml:base="http://localhost:4000/tutorial/2019/03/22/how-to-be-front-end/">&lt;h1 id=&quot;komponen-dasar&quot;&gt;Komponen Dasar&lt;/h1&gt;
+
+&lt;h2 id=&quot;mengenal-html&quot;&gt;Mengenal HTML&lt;/h2&gt;
+
+&lt;h3 id=&quot;semantic-html&quot;&gt;Semantic HTML&lt;/h3&gt;
+&lt;p&gt;Link :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://www.duniailkom.com/tutorial-belajar-html5-pengertian-semantic-tag-pada-html5/
+    &lt;h2 id=&quot;mengenal-css&quot;&gt;Mengenal CSS&lt;/h2&gt;
+    &lt;h3 id=&quot;margin&quot;&gt;Margin&lt;/h3&gt;
+    &lt;p&gt;Margin (dalam pengertian CSS) adalah ruang disekitar elemen/konten. Margin akan membentuk daerah (ruang) vertikal dan horizontal antara elemen. Jika elemen/konten tidak memilki margin, maka elemen-elemen tersebut akan rapat bertemu terhadap satu sama lain. Agar margin bekerja dengan baik, elemen biasanya diikuti oleh posisi float atau diposisikan relative. Style ini sering diterapkan untuk dapat memindahkan elemen lain di sekitarnya.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;padding&quot;&gt;Padding&lt;/h3&gt;
+&lt;p&gt;Jadi bagaimana dengan padding? Nah, padding adalah ruang horizontal dan vertikal yang diatur di sekitar area isi/konten dari elemen yang ditargetkan. Jadi padding di bagian dalam kotak, bukan di luar.&lt;/p&gt;
+
+&lt;p&gt;Padding juga dapat dipahami sebagai “filling”. Karena  padding tidak mempengaruhi jarak dari elemen ke elemen lainnya tetapi hanya mendefinisikan jarak inner antara tepi/border dan isi dari elemen.&lt;/p&gt;
+
+&lt;h3 id=&quot;border&quot;&gt;Border&lt;/h3&gt;
+&lt;p&gt;Border/garis tepi dapat digunakan untuk banyak hal, misalnya sebagai elemen dekoratif atau untuk memberi garis batas pemisah dari dua hal. Border properti mendefinisikan width, color, and style dari batas area pada box/kotak.&lt;/p&gt;
+
+&lt;p&gt;Link :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://problogiz.blogspot.com/2012/12/pengertian-margin-padding-dan-border.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;membuat-layout&quot;&gt;Membuat Layout&lt;/h3&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;h1 id=&quot;tools-front-end&quot;&gt;Tools Front End&lt;/h1&gt;
+
+&lt;h2 id=&quot;react-js&quot;&gt;React JS&lt;/h2&gt;
+
+&lt;h1 id=&quot;responsive-web-development&quot;&gt;Responsive Web Development&lt;/h1&gt;
+
+&lt;h2 id=&quot;viewport-meta-tag&quot;&gt;Viewport Meta Tag&lt;/h2&gt;
+
+&lt;h2 id=&quot;ccs3-media-queries&quot;&gt;CCS3 Media Queries&lt;/h2&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Komponen Dasar</summary></entry><entry><title type="html">Pengenalan Teknik - teknik request http pada javascript</title><link href="http://localhost:4000/2019/03/11/teknik-http-request/" rel="alternate" type="text/html" title="Pengenalan Teknik - teknik request http pada javascript" /><published>2019-03-11T00:00:00+07:00</published><updated>2019-03-11T00:00:00+07:00</updated><id>http://localhost:4000/2019/03/11/teknik-http-request</id><content type="html" xml:base="http://localhost:4000/2019/03/11/teknik-http-request/">&lt;h1 id=&quot;ajax&quot;&gt;AJAX&lt;/h1&gt;
+&lt;p&gt;Ajax adalah cara paling tradisional yang melakukan request HTTP. Data bisa dikirim dengan menggunakan method HTTP POST dan menerima data dengan HTTP GET.&lt;/p&gt;
+
+&lt;p&gt;Untuk membuat HTTP call di Ajax, kita perlu membuat sebuah objek XMLHttpRequest(), menentukan URL endpoint dan HTTP method-nya. Selanjutnya kita memanggil method open() untuk membuka koneksi ke URL yang dimasukkan menggunakan HTTP method yang diinginkan. Method send() akan memulai proses koneksi yang sebelumnya sudah dibuka oleh open().&lt;/p&gt;
+
+&lt;p&gt;Method onreadystatechange dipanggil saat objek Http telah berhasil mendapat data yang diperlukan atau gagal. Ia memiliki dua method yaitu readyState dan status untuk memeriksa status request yang dilakukan.&lt;/p&gt;
+
+&lt;h1 id=&quot;fetch&quot;&gt;Fetch&lt;/h1&gt;
+&lt;p&gt;fetch adalah salah satu tool yang membantu melakuan request Asynchronous dengan lebih mudah. Ia mengembalikan sebuah Promise yang merupakan salah satu fitur andalan ES6. Perhatikan bagaimana cara penggunaan fetch di bawah ini:&lt;/p&gt;
+
+&lt;p&gt;*code
+const API = ‘https://hn.algolia.com/api/v1/search?query=’;&lt;/p&gt;
+
+&lt;p&gt;fetch(API + DEFAULT_QUERY)
+      .then(response =&amp;gt; {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(‘Something went wrong …’);
+        }
+      })
+      .then(data =&amp;gt; this.setState({ hits: data.hits, isLoading: false }))
+      .catch (error =&amp;gt; this.setState({ error, isLoading: false }));
+*&lt;/p&gt;
+
+&lt;p&gt;Fungsi fetch meminta sebuah parameter yaitu alamat URL endpoint. Ia juga bisa menerima parameter lain sebagai query parameter untuk URL yang diberikan.&lt;/p&gt;
+
+&lt;h1 id=&quot;axios&quot;&gt;Axios&lt;/h1&gt;
+
+&lt;p&gt;Link : https://www.codepolitan.com/teknik-teknik-melakukan-request-http-di-javascript-5afa5536d44e9&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">AJAX Ajax adalah cara paling tradisional yang melakukan request HTTP. Data bisa dikirim dengan menggunakan method HTTP POST dan menerima data dengan HTTP GET.</summary></entry><entry><title type="html">React VS Angular</title><link href="http://localhost:4000/2019/01/17/React-JS-vs-Angular-JS/" rel="alternate" type="text/html" title="React VS Angular" /><published>2019-01-17T00:00:00+07:00</published><updated>2019-01-17T00:00:00+07:00</updated><id>http://localhost:4000/2019/01/17/React-JS-vs-Angular-JS</id><content type="html" xml:base="http://localhost:4000/2019/01/17/React-JS-vs-Angular-JS/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;React is a JavaScript library developed by Facebook to manage the user interface for web applications with ease. One of the main highlights of React is that it helps in creating manageable UI components, which makes it easier to scale large web applications. React works on the concept of Virtual DOM, where it keeps a mirror image of the actual DOM. Whenever a change occurs, React runs a diffing process, identifies the change, and updates it to the actual DOM. The concept of Virtual DOM makes app rendering faster and improves performance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dalam sebuah komponen dalam react, terdapat tiga lifecycle berikut:
+Inisialisasi / mounting (ketika komponen dibuat/ditambahkan pertama kali pada DOM)
+Update / rerender (ketika terdapat perubahan state/prop yang mengakibatkan perubahan pada DOM)
+Unmounting (ketika komponen akan dihapus dari DOM)&lt;/p&gt;
+
+&lt;h2 id=&quot;dom-document-object-model&quot;&gt;DOM (Document Object Model)&lt;/h2&gt;
+
+&lt;p&gt;dikarenakan javascript dapat berinteraksi dengan HTML
+DOM(Document Object Model) adalah model data standar. DOM adalah cara javascript melihat suatu halaman html. DOM adalah sebuah platform dan interface yang memperbolehkan pengaksesan dan perubahan pada konten, struktur, dan style pada sebuah dokumen oleh program dan  script. Istilah HTML DOM mengacu kepada dokumen html. Kasusnya disini ialah konten, struktur, dan style pada dokumen html dapat diakses dan dirubah dengan menggunakan sintaks javascript.
+Pada model DOM ini, setiap elemen html dipandang sebagai sebuah object. Setiap object bisa terdiri dari object-object lain, sama halnya dengan dokumen html yang terdiri dari elemen root (elemen &amp;lt;html&amp;gt;), elemen root terdiri dari elemen &amp;lt;head&amp;gt; dan elemen &amp;lt;body&amp;gt;, elemen &amp;lt;body&amp;gt; boleh jadi terdiri dari elemen &lt;a&gt;, &amp;lt;h1&amp;gt;, &amp;lt;p&amp;gt;, dst. Elemen-elemen pada dokumen html membentuk sebuah object document yang merupakan object dari dokumen html itu sendiri. Dibawah ini adalah representasi HTML DOM dalam model pohon:&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;dom_tree
+Kalau dalam pemrograman OOP(Object Oriented Programing), sebuah object memiliki property dan method, begitu juga elemen pada dokumen html ini memiliki property yaitu nilai pada elemen html yang bisa ditetapkan atau dirubah dan method yakni aksi yang dapat dilakukan pada elemen html. Contoh property yang biasa digunakan ialah innerHTML yang digunakan untuk memperoleh atau merubah konten dari elemen html itu sendiri. Kemudian method, contoh misalnya getElementById(“id”) milik object document yang digunakan untuk mengakses elemen html dalam dokumen html berdasarkan id.&lt;/p&gt;
+
+&lt;h2 id=&quot;virtual-dom&quot;&gt;Virtual DOM&lt;/h2&gt;
+&lt;p&gt;Dari pada langsung bekerja dengan DOM secara langsung pada browser, pada virtual DOM kita terlebih dahulu membuat abstraksi DOM dalam bentuk virtual. Sehingga setiap perubahan terhadap struktur dokumen tidak terjadi secara langsung pada permukaan browser, akan tetapi terjadi di dalam memory. Sehingga proses menjadi lebih cepat.&lt;/p&gt;
+
+&lt;p&gt;Setelah modifikasi pada Virtual DOM selesai, kita lakukan proses differing untuk membedakan antara struktur tree yang telah dirender sebelumnya pada browser dengan virtual tree yang sudah dibuat. Sehingga akan menghasilkan bagian-bagian yang ‘kotor’ alias berbeda. Dan hanya bagian yang butuh diubah saja yang kita render ulang.&lt;/p&gt;
+
+&lt;p&gt;Proses ini tentu jauh lebih efektif dan lebih cepat dari pada jika kita harus bekerja secara langsung pada DOM yang asli.&lt;/p&gt;
+
+&lt;p&gt;Lantas, bagaimana cara implementasinya?
+Oke, jawaban ini cukup rumit. Karena secara umum –pada virtual dom– kita akan menemui dua permasalahan:&lt;/p&gt;
+
+&lt;p&gt;Kapan kita harus melakukan render ulang?
+Dan bagaimana cara kita untuk mengetahui bagian mana saja yang berubah dari struktur tree yang lama?
+Karena jawaban dari dua pertanyaan di atas adalah kunci kenapa Virtual DOM bisa resource-cheap atau lebih cepat. Kalau anda salah dalam menentukan kapan sistem harus melakukan render ulang, maka aplikasi anda akan tidak jelas dan tidak interaktif. Plus bisa menjadi super-lemot jika ternyata aplikasi anda selalu merender ulang padahal proses tersebut sedang tidak diperlukan. Atau pada proses kedua –yaitu proses differing/comparing tree lama dan yang baru–, kalau anda tidak menggunakan algoritma yang efektif dan efisien, maka teknik Virtual DOM yang anda gunakan akan lebih lelet dari pada cara yang konvensional.&lt;/p&gt;
+
+&lt;h2 id=&quot;flux&quot;&gt;Flux&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Flux adalah konsep pemrograman untuk mengolah data. Pada react hal ini sangat terkait dengan pengelolaan state pada komponen. Flux memberikan banyak manfaat untuk pengolahan data tersebut. Silahkan simak ulasan ini untuk mengetahui fungsi flux pada react.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Flux merupakan konsep pemrograman yang mengatur aliran atau flow dari data. Pada konsep flux data dibuat menjadi uni-directional. Artinnya , seluruh data akan masuk ke dalam satu gerbang yang kemudian baru di distribusikan pada komponen-komponen didalamnya. Ilustrasinnya seperti saat kita masuk ke kelas yang memiliki satu pintu, seluruh siswa harus masuk ke dalam pintu tersebut yang secara otomatis “pintu” itu akan mengenali seluruh siswa yang masuk dan pada ahirnya mereka menuju ke bangku mereka masing-masing.&lt;/p&gt;
+
+&lt;p&gt;1.Action , yaitu suatu object yang akan mentrigger aliran data. Actions akan menentukan data yang akan dikirimkan ke store melalui dispatcher. lebih detailnya, action adalah suatu javascript object yang menggunakan property berupa “type”  yang berfungsi untuk memberitahukan kepada dispatcher mengenai data yang harus disimpan pada store. Action ini akan mentrigger perubahan pada suatu komponen namun tidak dapat menspesifikan pada bagian mana yang harus berubah. Reducer merupakan modul yang dapat melakukan hal tersebut.
+Dispatcher, yaitu object yang berfungsi layaknya suatu router. Data – data yang tersentral tersebut tentunnya akan dibagikan ke komponen-komponen lain. Disinilah peran dari suatu dispatcher.
+Store, tempat untuk menyimpan state dan data-data logical lainnya. State pada store dapat diupdate secara parsial ketika memang dibutuhkan
+View, object yang menerima data dari store dan melakukan proses rendering&lt;/p&gt;
+
+&lt;p&gt;React nya biasa nya digunakan untuk pengerjaan proyek2 kecil dikarenakan konsep library dimana dapat menentukan yang mau dipakai jadinya tidak banyak pilihan yang tersedia&lt;/p&gt;
+
+&lt;p&gt;contoh aplikasi yang menggunakan react :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Facebook&lt;/li&gt;
+  &lt;li&gt;AirBnb&lt;/li&gt;
+  &lt;li&gt;Uber&lt;/li&gt;
+  &lt;li&gt;Netflix&lt;/li&gt;
+  &lt;li&gt;Instagram&lt;/li&gt;
+  &lt;li&gt;Whatsapp&lt;/li&gt;
+  &lt;li&gt;Dropbox&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;initialization&quot;&gt;Initialization&lt;/h3&gt;
+&lt;p&gt;Pada initialization, terdapat 3 methods yang akan dieksekusi yaitu componentWillMount, render dan componentDidMount. Method tersebut dieksekusi sesuai urutan pada gambar di atas dengan urutan dari atas ke bawah.
+ComponentWillMount akan dieksekusi paling awal pada saat pertama kali komponen dibuat, sebelum method render dieksekusi.
+Render merupakan method yang wajib ada pada setiap komponen pada react. Method ini akan mengembalikan sebuah react element yang merupakan representasi dari DOM komponen.
+Setelah method render dieksekusi, selanjutnya componentDidMount akan dieksekusi. Kita dapat mengakses DOM dan memanipulasi DOM atau melakukan proses pengambilan data atau AJAX request pada method ini. Selain itu, jika kita menggunakan JavaScript framework lain seperti jQuery, kita dapat memanggilnya pada method ini.&lt;/p&gt;
+
+&lt;h3 id=&quot;update--rerender&quot;&gt;Update / rerender&lt;/h3&gt;
+
+&lt;p&gt;Proses ini merupakan phase dimana komponen akan di-render ulang. Proses render ulang sebuah komponen dapat dipicu dari perubahan props atau state pada komponen tersebut.&lt;/p&gt;
+
+&lt;p&gt;Pada gambar di atas terdapat 5 methods yang akan dieksekusi. Method tersebut adalah componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, render, componenDidUpdate. Urutan eksekusi ditunjukkan pada gambar di atas dengan urutan dari atas ke bawah.
+ComponentWillReceiveProps akan dieksekusi ketika terdapat perubahan pada props dan bukan merupakan render komponen yang pertama kali. Method ini dapat digunakan untuk mengubah state sesuai dengan props baru yang diterima. Perubahan state pada method ini tidak akan memicu phase update pada komponen (tidak akan merender komponen).
+ShouldComponentUpdate selalu dieksekusi sebelum method render. Method ini merupakan penentu apakah sebuah komponen akan di-render ulang atau tidak. Method shouldComponentUpdate mengembalikan nilai true atau false dengan nilai default adalah true. Jika method ini mengembalikan nilai true, maka komponen akan di-render ulang dan berlaku juga sebaliknya.
+ComponentWillUpdate akan dieksekusi jika method shouldComponenUpdate mengembalikan nilai true. Pada method ini, kita tidak dianjurkan untuk mengubah state dengan alasan bahwa method ini digunakan untuk mempersiapkan proses update komponen bukan untuk memicu proses update komponen.
+Setelah componentWillUpdate selesai dieksekusi, maka method render akan dieksekusi.
+Setelah method render selesai dieksekusi, componentDidUpdate akan dieksekusi. Method ini sama dengan method componentDidMount. Method ini dapat digunakan untuk interaksi dengan DOM setelah komponen selesai di-render.
+Unmounting
+Pada proses unmounting hanya ada satu method yang akan dieksekusi yaitu componentWillUnmount. Method ini akan dieksekusi sebelum komponen dihapus atau dihilangkan dari DOM.
+Implementasi Kode
+Setelah memahami component lifecycle, untuk lebih memahami setiap phase dari component lifecycle, saya telah membuat kode yang akan menunjukkan urutan eksekusi method pada setiap phase.
+Implementasi dengan menggunakan react, react-dom dan webpack-dev-server.&lt;/p&gt;
+
+&lt;h2 id=&quot;keunggulan-react-js-&quot;&gt;Keunggulan React js ?&lt;/h2&gt;
+&lt;p&gt;Mudah dipahami
+Gaya penulisan yang deklaratif membuat react js mudah dipahami dan membuat react mudah di prediksi jika ada kesalahan penulisan kode.
+JSX
+JSX adalah sebuah extension javascript yang di gunakan react untuk menulis HTML di dalam Javascript. JSX bukanlah sintaks javascript, sehingga browser tidak bisa membaca sintaks ini, di butuh kan sebuah JSX compiler yang di gunakan untuk menterjemahkan JSX kedalam bahasa regular javascript agar bisa terbaca oleh browser. Saya sendiri menggunakan BABEL JS sebagai JSX compilernya.
+Modular
+Untuk membuat aplikasi dengan skala besar, kita dapat menulis kode-kode dengan skala yang lebih kecil untuk di satukan menjadi aplikasi utuh, dan dapat di gunakan kembali (reusable).
+Scalable
+React js dapat menangani dengan sangat baik sebuah program dengan skala yang besar yang dapat menampilkan perubahan data yang sangat kompleks.
+Flexibel
+Dengan belajar 1 libary saja kita dapat membuat aplikasi Web, Moblie, maupun Desktop.
+Effisien dan Cepat
+React JS menciptakan Virtual DOM untuk mempercepat urusan perubahan DOM. Semua operasi di kerjakan di dalam Virtual DOM, setelah operasi selesai React JS menulis perubahan tersebut di dalam DOM. Contoh kasusnya seperti ini: “Jika kita menulis dalam secarik kertas menggunakan spidol, apabila terjadi kesalahan penulisan kita harus menulis di kertas yang baru. Berbeda jika kita menggunakan pensil, cukup menghapus dan memperbaiki pada bagian yang salah ”.
+Mudah Debugging
+Ketika kita mulai menggunakan React JS, jangan lupa menginstall extensi resmi React JS. Kita dapat dengan mudah menjelejah Virtual DOM pada aplikasi yang sudah kita buat, sehingga jika ada bug bisa cepat ditemukan.
+SEO Bagus
+Salah satu masalah terbesar dari library Javascript pada umumnya adalah mereka sidak support search engine. Meskipun sudah banyak perbaikan, mesin pencari umumnya masih mengalami kesulitan. Namun tidak dengan React JS, kita dapat menjalankan React JS pada server dan Virtual DOM diberikan ke browser sebagai halaman web biasa, sehingga sangat support SEO.&lt;/p&gt;
+&lt;h2 id=&quot;kelemahan-react-js-&quot;&gt;Kelemahan react js ?&lt;/h2&gt;
+&lt;p&gt;Meskipun React JS sangat powerfull, namun juga memiliki beberapa kelemahan antara lain:
+Hanya View Layer
+React js hanya sebuah pustaka View Layer, untuk membangun aplikasi besar kita harus menyusun sendiri kebutuhan aplikasi lainya seperti data layer, router, struktur aplikasi dan event system(kecuali event DOM).
+Dokumentasi tidak bagus
+Beberapa sumber artikel yang saya baca mengatakan bahwa dokumentasi react js tidak bagus karena informasi yang di berikan tidak lengkap, meskipun seperti itu kita tetap bisa mempelajarinya kok, tentunya dengan semangat dan ketekunan.
+Permasalahan lisensi
+Baru-baru ini muncul issue tentang lisensi react. Sebetulnya issue ini sudah ada sejak 2015, namun tampaknya ada pihak-pihak yang belum puas dan mempermasalahkanya. Menurut pemahaman saya bahwa “facebook memperbolehkan kita menggunakan react js untuk mengembangkan produk kita dengan catatan tidak untuk berkompetisi dengan produknya facebook”. Tapi sebenarnya ini tidak masalah , temen-teman bisa baca penjelasanya detail disini.
+Dukungan browser
+React js tidak mendukung browser versi lama, hanya browser versi baru. React js menghentikan dukungan pada browser Internet Explorer versi 8, sampai saat ini react yang bisa jalan di IE 8 adalah react versi v0.14. Versi terbaru dari react hanya mendukung Internet Explorer versi 9 keatas.&lt;/p&gt;
+
+&lt;h2 id=&quot;mengapa-harus-pakai-react-js-&quot;&gt;Mengapa harus pakai react js ?&lt;/h2&gt;
+&lt;p&gt;React js mudah di pahami.
+Konsep Components pada react js merupakan konsep pengembangan web modern.
+Jika data elements pada aplikasi kita berubah setiap satuan waktu, maka kita bisa menggunakan react sebagai solusinya.
+Jika dalam satu team sama-sama sedang belajar react, maka pengembangan aplikasi bisa lebih cepat.&lt;/p&gt;
+
+&lt;h2 id=&quot;jsx&quot;&gt;JSX&lt;/h2&gt;
+&lt;p&gt;JSX is a JavaScript syntax extension which looks similar to XML. Here is an example:&lt;/p&gt;
+
+&lt;p&gt;When compared to JavaScript, it’s easier to write JSX. It is as simple as opening and closing XML tags. Here is a JSX example:&lt;/p&gt;
+
+&lt;div&gt;
+&lt;p&gt;Welcome to TutsPlus&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Here is the compiled React code: 
+“use strict”;&lt;/p&gt;
+
+&lt;p&gt;React.createElement(
+  “div”,
+  null,
+  React.createElement(
+    “p”,
+    null,
+    “Welcome to TutsPlus”
+  )
+);&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;JSX code ensures readability and makes maintainability easier.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;JSX optimizes the code while compiling, so it runs faster compared to the equivalent JavaScript code.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;angular&quot;&gt;Angular&lt;/h1&gt;
+&lt;p&gt;Dalam angular untuk yang dikategorikan sebagai framework, angular mempunyai struktur untuk proyek yang lebih kompleks. Tentunya Angular digunakan untuk&lt;/p&gt;
+
+&lt;p&gt;contoh aplikasi yang menggunakan angular adalah berikut ini :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Eat24&lt;/li&gt;
+  &lt;li&gt;CVS shop&lt;/li&gt;
+  &lt;li&gt;onefootball&lt;/li&gt;
+  &lt;li&gt;Google Express&lt;/li&gt;
+  &lt;li&gt;NBA&lt;/li&gt;
+  &lt;li&gt;Delta&lt;/li&gt;
+  &lt;li&gt;wix.com&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;persamaan&quot;&gt;Persamaan&lt;/h1&gt;
+
+&lt;h1 id=&quot;perbedaan&quot;&gt;Perbedaan&lt;/h1&gt;
+
+&lt;h1 id=&quot;unidirectional-vs-bidirectional&quot;&gt;Unidirectional VS Bidirectional&lt;/h1&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">React React is a JavaScript library developed by Facebook to manage the user interface for web applications with ease. One of the main highlights of React is that it helps in creating manageable UI components, which makes it easier to scale large web applications. React works on the concept of Virtual DOM, where it keeps a mirror image of the actual DOM. Whenever a change occurs, React runs a diffing process, identifies the change, and updates it to the actual DOM. The concept of Virtual DOM makes app rendering faster and improves performance.</summary></entry><entry><title type="html">Belajar Javascript Part 1</title><link href="http://localhost:4000/2018/11/06/belajar-javascript-part-1/" rel="alternate" type="text/html" title="Belajar Javascript Part 1" /><published>2018-11-06T00:00:00+07:00</published><updated>2018-11-06T00:00:00+07:00</updated><id>http://localhost:4000/2018/11/06/belajar-javascript-part-1</id><content type="html" xml:base="http://localhost:4000/2018/11/06/belajar-javascript-part-1/">&lt;p&gt;#Function Executions
+Kebanyakan pembuatan app menggunakan Javascript dibangun dengan V8, yaitu runtime yang dimiliki oleh chrome. untuk pemahaman lebih lanjut dapat ditonton video yang dijelaskan oleh Philip Robert,
+&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&quot;&gt;What the heck is the event loop anyway?&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;call-stack&quot;&gt;Call Stack&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;It’s a data structure which records the function calls, basically where in the program we are. If we call a function to execute , we push something on to the stack, and when we return from a function, we pop off the top of the stack.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;sebelum memulai call stack memahami terlebih dahulu tentang Execution Context.&lt;/p&gt;
+&lt;h3 id=&quot;execution-context&quot;&gt;Execution Context&lt;/h3&gt;
+
+&lt;p&gt;Call Stack merupakan pemanggilan fungsi - fungsi menggunakan konsep Stack. Stack merupakan sturktur data dimana data dipanggil dengan Last In First Out(LIFO) ketika fungsi pada javascript paling belakang, maka akan tercetak&lt;/p&gt;
+
+&lt;h2 id=&quot;heap&quot;&gt;Heap&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Objects are allocated in a heap i.e mostly unstructured region of memory. All the memory allocation to variables and objects happens here.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;queue&quot;&gt;Queue&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A JavaScript runtime contains a message queue, which is a list of messages to be processed and the associated callback functions to execute. When the stack has enough capacity, a message is taken out of the queue and processed which consists of calling the associated function (and thus creating an initial stack frame). The message processing ends when the stack becomes empty again. In basic words , these messages are queued in response to external async events(such as a mouse being clicked or receiving the response to an HTTP request), given a callback function has been provided. If, for example a user were to click a button and no callback function was provided — no message would have been enqueued.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;event-loop&quot;&gt;Event Loop&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Basically, when we evaluate the performance of our JS code, so a function in a stack makes it slow or fast, console.log() will be fast but performing iteration with for or while over thousands or millions of line items will be slower, and will keep the stack occupied or blocked. This is termed as blocking script, which you have read or heard about in Webpage Speed Insights.
+Network requests can be slow, the image requests can be slow, but thankfully the server requests can be done through AJAX, an asynchronous function. If suppose, these network requests are made through synchronous functions, then what would happen? The network requests are send to some server, which is basically another computer/machine somewhere. Now, computers can be slow sending back the response. In the meantime , if I click some CTA button, or some other rendering needs to be done, nothing will happen as the stack is blocked. In multi threaded language like Ruby, it can be handled, but in single threaded language like Javascript, this is not possible unless function inside the stack returns a value. The webpage will hell breaks loose as the browser can’t do anything. This is not ideal if we want fluid UI for the end user. How do we handle this?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;monkey-patch&quot;&gt;Monkey Patch&lt;/h1&gt;
+&lt;p&gt;A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">#Function Executions Kebanyakan pembuatan app menggunakan Javascript dibangun dengan V8, yaitu runtime yang dimiliki oleh chrome. untuk pemahaman lebih lanjut dapat ditonton video yang dijelaskan oleh Philip Robert, What the heck is the event loop anyway? Call Stack It’s a data structure which records the function calls, basically where in the program we are. If we call a function to execute , we push something on to the stack, and when we return from a function, we pop off the top of the stack.</summary></entry><entry><title type="html">Belajar Nest JS Part 2</title><link href="http://localhost:4000/2018/11/02/belajar-nest-js-part-2/" rel="alternate" type="text/html" title="Belajar Nest JS Part 2" /><published>2018-11-02T00:00:00+07:00</published><updated>2018-11-02T00:00:00+07:00</updated><id>http://localhost:4000/2018/11/02/belajar-nest-js-part-2</id><content type="html" xml:base="http://localhost:4000/2018/11/02/belajar-nest-js-part-2/"></content><author><name>Abdul Ghani Abbasi</name></author><summary type="html"></summary></entry><entry><title type="html">Belajar Nest JS Part 1</title><link href="http://localhost:4000/2018/11/01/belajar-nest-js-part-1/" rel="alternate" type="text/html" title="Belajar Nest JS Part 1" /><published>2018-11-01T00:00:00+07:00</published><updated>2018-11-01T00:00:00+07:00</updated><id>http://localhost:4000/2018/11/01/belajar-nest-js-part-1</id><content type="html" xml:base="http://localhost:4000/2018/11/01/belajar-nest-js-part-1/">&lt;blockquote&gt;
   &lt;p&gt;Nest is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with TypeScript (preserves compatibility with pure JavaScript) and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
 Under the hood, Nest makes use of Express, but also provides compatibility with a wide range of other libraries (e.g. Fastify). This allows for easy use of the myriad third-party plugins which are available.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -9,6 +664,13 @@ Under the hood, Nest makes use of Express, but also provides compatibility with 
 cd project
 npm install
 npm run start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -g @nestjs/cli
+nest new nest-restaurant-api
+npm run start:dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;setelah di clone, otomatis membuat template dari Nets JS. kemudian setelah run di terminal dapat membuka di browser localhost:3000 maka muncul output seperti gambar di bawah ini&lt;/p&gt;
@@ -142,11 +804,18 @@ export const PostSchema = new mongoose.Schema({
     }
 });
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;kegunaan-pada-file-src&quot;&gt;Kegunaan pada file src&lt;/h1&gt;
+&lt;p&gt;app.controller.ts and app.service.ts: those files are responsible for generating the message Hello world when the endpoint / is accessed through the browser. Because this endpoint is not important to this application you may delete these files as well. Soon you are going to learn in more details what controllers and services are.
+app.module.ts: this is a class of the type module that is responsible for declaring imports, exports, controllers, and providers to a Nest.js application. Every application has at least one module but you may create more than one module for more complex applications (more details on Nest.js documentation). The application of this tutorial will have only one module.
+main.ts: this is the file responsible for starting the server.
+main.hrm.ts: is a Hot Module Replacement file that installs modules during the server execution and it is useful to speed up the development process.&lt;/p&gt;
 
 &lt;h1 id=&quot;penjelasan-rest-api&quot;&gt;Penjelasan REST API&lt;/h1&gt;
 &lt;blockquote&gt;
   &lt;p&gt;RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/.png&quot; alt=&quot;post&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;URL Design
 RESTful API diakses menggunakan protokol HTTP. Penamaan dan struktur URL yang konsisten akan menghasilkan API yang baik dan mudah untuk dimengerti developer. URL API biasa disebut endpoint dalam pemanggilannya. Contoh penamaan URL / endpoint yang baik adalah seperti berikut :&lt;/p&gt;
@@ -286,487 +955,4 @@ Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal
 
 &lt;p&gt;Tipe data ObjectId umumnya menentukan sebuah tautan ke dokumen yang lain di dalam database Anda. Sebagai contoh, jika anda memiliki sebuah koleksi buku dan penulis, dokumen buku kemungkinan berisi sebuah properti ObjectId yang menunjuk ke penulis tertentu dari dokumen.&lt;/p&gt;
 
-&lt;p&gt;Tipe data Array memungkinkan anda untuk menyimpan array yang seperti JavaScript. Dengan sebuah tipe data Array, anda dapat melakukan operasi array Javascript yang umum, seperti push, pop, shift, slice, dll.&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Nest is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with TypeScript (preserves compatibility with pure JavaScript) and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming). Under the hood, Nest makes use of Express, but also provides compatibility with a wide range of other libraries (e.g. Fastify). This allows for easy use of the myriad third-party plugins which are available.</summary></entry><entry><title type="html">Part 1 Belajar Ios</title><link href="http://localhost:4000/2018/10/11/part-1-belajar-iOS/" rel="alternate" type="text/html" title="Part 1 Belajar Ios" /><published>2018-10-11T00:00:00+07:00</published><updated>2018-10-11T00:00:00+07:00</updated><id>http://localhost:4000/2018/10/11/part-1-belajar-iOS</id><content type="html" xml:base="http://localhost:4000/2018/10/11/part-1-belajar-iOS/"></content><author><name>Abdul Ghani Abbasi</name></author><summary type="html"></summary></entry><entry><title type="html">Belajar Android dengan Firebase Part 1</title><link href="http://localhost:4000/2018/10/05/part-1-firebase-android-findingbpjs/" rel="alternate" type="text/html" title="Belajar Android dengan Firebase Part 1" /><published>2018-10-05T00:00:00+07:00</published><updated>2018-10-05T00:00:00+07:00</updated><id>http://localhost:4000/2018/10/05/part-1-firebase-android-findingbpjs</id><content type="html" xml:base="http://localhost:4000/2018/10/05/part-1-firebase-android-findingbpjs/">&lt;h1 id=&quot;firebase&quot;&gt;Firebase&lt;/h1&gt;
-
-&lt;h1 id=&quot;membuat-model-untuk-informasi-dari-user-dan-untuk-menyimpan-data-ke-dalam-tabel-firebase&quot;&gt;Membuat Model untuk informasi dari user dan untuk menyimpan data ke dalam tabel firebase&lt;/h1&gt;
-
-&lt;h1 id=&quot;membuat&quot;&gt;Membuat&lt;/h1&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Firebase</summary></entry><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/2018/07/15/part-1-pengenalan-neural-network/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-07-15T00:00:00+07:00</published><updated>2018-07-15T00:00:00+07:00</updated><id>http://localhost:4000/2018/07/15/part-1-pengenalan-neural-network</id><content type="html" xml:base="http://localhost:4000/2018/07/15/part-1-pengenalan-neural-network/">&lt;h1 id=&quot;artificial-intelligence&quot;&gt;Artificial Intelligence&lt;/h1&gt;
-
-&lt;p&gt;Sebelum mengenal&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Artificial Intelligence</summary></entry><entry><title type="html">Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/" rel="alternate" type="text/html" title="Pertemuan 2 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-28T00:00:00+07:00</published><updated>2018-04-28T00:00:00+07:00</updated><id>http://localhost:4000/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern</id><content type="html" xml:base="http://localhost:4000/tugas%20kuliah/2018/04/28/pertemuan-2-pengantar-komputasi-modern/">&lt;h1 id=&quot;map-reduce&quot;&gt;Map Reduce&lt;/h1&gt;
-&lt;p&gt;MapReduce merupakan model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam cluster yang terdiri atas ribuan komputer&lt;/p&gt;
-
-&lt;h2 id=&quot;map&quot;&gt;Map&lt;/h2&gt;
-&lt;p&gt;Proses Map yaitu mengumpulkan informasi dari potongan - potongan data dari komputer - komputer yang saling terhubung.&lt;/p&gt;
-
-&lt;h2 id=&quot;reduce&quot;&gt;Reduce&lt;/h2&gt;
-&lt;p&gt;Hasil dari proses Map di arakhkan ke proses Reduce yaitu mengirimkan hasil akhr kepada pengguna.&lt;/p&gt;
-
-&lt;h2 id=&quot;produk&quot;&gt;produk&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Apache Hadoop&lt;/li&gt;
-  &lt;li&gt;Pig&lt;/li&gt;
-  &lt;li&gt;Cascading&lt;/li&gt;
-  &lt;li&gt;Microsoft Dryad&lt;/li&gt;
-  &lt;li&gt;IBM MapReduce Tool for   Eclipse  &lt;/li&gt;
-  &lt;li&gt;Skynet&lt;/li&gt;
-  &lt;li&gt;CouchDB&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;nosql&quot;&gt;NoSQL&lt;/h1&gt;
-&lt;p&gt;NoSQL adalah sebuah konsep mengenai penyimpanan data non-relasional. NoSQL sangat berguna pada data-data yang terus-menerus berkembang, dimana  data tersebut sangat kompleks sehingga sebuah database relational tidak lagi bisa mengakomodir&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Kelebihan NoSQL&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;NoSQL bisa menampung data yang terstruktur, semi terstruktur dan tidak terstuktur secara efesien dalam skala besar.
-Menggunakan OOP dalam pengaksesan atau manipulasi datanya.
-jika database noSQL di jalankan di cluster server (multiple server) maka data akan tersebar secara otomatis dan merata keseluruh server&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Kekurangan NoSQL&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hostingnya mahal. beberapa layanan di luar negeri mencharge biaya 100-200USD untuk hosting database noSQL
-Sulitnya mencari hosting Cpanel yang mendukung database MongoDB atau database noSQL lainnya&lt;/p&gt;
-
-&lt;h2 id=&quot;couchdb&quot;&gt;CouchDB&lt;/h2&gt;
-&lt;p&gt;CouchDB yang dikembangkan oleh Apache lebih dulu muncul jauh sebelum mongoDB yaitu pada tahun 2005. CouchDB tidak menyimpan datanya dalam tabel melainkan dalam dokumen seperti halnya mongoDB.
-Basis data ini juga merupakan proyek open source serta dikembangkan dalam bahasa pemrograman Erlang oleh karena itu kita bisa ikut berkontribusi dalam pengembangan CouchDB agar basis data ini lebih baik.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/couchdb.jpg&quot; alt=&quot;couchdb&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;cassandra&quot;&gt;Cassandra&lt;/h2&gt;
-&lt;p&gt;Cassandra merupakan sebuah sistem penyimpanan data terdistribusi untuk menangani jumlah data yang sangat besar dan terstruktur. Cassandra juga dikembangkan Apache.&lt;/p&gt;
-
-&lt;p&gt;Cassandra juga merupakan aplikasi open source yang ditulis dalam bahasa Java dengan lisensi Apache License 2.0.&lt;/p&gt;
-
-&lt;p&gt;Untuk memproses datanya, Cassandra menggunakan bahasa sendiri yang mirip dengan SQL yaitu Cassandra Query Language (CQL).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/cassandra.jpg&quot; alt=&quot;cassandra&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;mongodb&quot;&gt;MongoDB&lt;/h2&gt;
-
-&lt;p&gt;MongoDB merupakan basis data yang paling populer diantara basis data NoSQL lainnya. Hal ini dikarenakan pemasangan maupun penggunaan mongoDB tidaklah sulit atau merepotkan penggunanya. Selain itu mongoDB juga merupakan salah satu basis data yang open source.
-MongoDB merupakan basis data NoSQL yang document based. Ia menyimpan data-datanya dalam suatu dokumen JSON yang disebut BSON (Binary JSON).
-Dikembangkan sejak tahun 2009, mongoDB sekarang telah mendukung hampir semua bahasa pemrograman untuk dapat berinteraksi dengan mongoDB.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/mongodb.jpg&quot; alt=&quot;mongodb&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;riak&quot;&gt;Riak&lt;/h2&gt;
-&lt;p&gt;Riak merupakan basis data NoSQL terdistribusi yang menyimpan datanya dalam bentu key-value. Riak menawarkan fitur high availability, fault tolerance, operational simplicaity, dan scalability.&lt;/p&gt;
-
-&lt;p&gt;Riak memiliki dua versi yakni Open source edition dan Enterprise edition. Enterprise edition menawarkan dukungan berbayar intensif dari pengembangnya. Pengguna Open source edition dapat bermigrasi kapan saja ke Enterprise edition jika dibutuhkan. Erlang ditulis dalam bahasa pemrograman Erlang dengan lisensi Apache License 2.0&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/riak.jpg&quot; alt=&quot;riak&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;redis&quot;&gt;Redis&lt;/h2&gt;
-&lt;p&gt;Redis merupakan basis data berbasis key-value. Redis merupakan singkatan dari REmote DIctionary Server. Basis data ini dikembangkan oleh Salvatore Sanfilippo pada tahun 2009 dan ditulis dalam bahasa C. Redis banyak dipilih karena memiliki fitur in-memory, networked, dan durabilitas tinggi.&lt;/p&gt;
-
-&lt;p&gt;Redis mendukung banyak bahasa pemrograman seperti ActionScript, C/C++, C#, Clojure, Common LIsp, Dart, Erlang, Go, Haskell, Haxe, Io, Java, JavaScript (Node.js), Lua, Objective-C, Perl, PHP, Pure Data, Python, R, Ruby, Scala, Smalltalk, dan Tcl.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/redis.jpg&quot; alt=&quot;redis&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;quantum-computation&quot;&gt;Quantum Computation&lt;/h1&gt;
-
-&lt;p&gt;Quantum computation atau komputasi quantum merupakan sebuah perhitungan yang menggunakan kuantum mekanika fenomena yang dilakukan untuk melakukan operasi data&lt;/p&gt;
-
-&lt;h2 id=&quot;entaglement&quot;&gt;Entaglement&lt;/h2&gt;
-&lt;p&gt;Entanglement adalah suatu teori mekanika quantum yang menggambarkan seberapa cepat dan betapa kuatnya keterhubungan partikel-partikel pada Quantum computer yang dimana jika suatu partikel diperlakukan “A” maka akan memberikan dampak “A” juga ke partikel lainnya&lt;/p&gt;
-
-&lt;h2 id=&quot;quantum-gates&quot;&gt;Quantum Gates&lt;/h2&gt;
-&lt;p&gt;Quantum gates merupakan gerbang dari kuantum yang berfungsi mengoperasikan bit yang terdiri dari 0 dan 1 juga dalam qubits sehingga proses yang terjadi lebih cepat, karena setiap perhitungan dilakukan secara bersamaan&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/quantumgates.jpg&quot; alt=&quot;quantumgates&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;pengoperasian-data-qubit&quot;&gt;Pengoperasian Data Qubit&lt;/h2&gt;
-&lt;p&gt;Dalam komputer kuantum, sejumlah partikel elemental seperti elektron atau foton dapat digunakan yang  bertindak sebagai representasi dari 0 dan  1. Setiap partikel-partikel ini dikenal sebagai qubit, sifat dan perilaku partikel-partikel ini membentuk dasar dari komputasi kuantum.
-Namun dalam mekanika quantum, objek apapun yang memiliki dua status berbeda pasti memiliki rangkaian status potensial, disebut superposisi, yang menjerat kedua status hingga derajat bermacam-macam.
-&lt;img src=&quot;http://localhost:4000/assets/images/entaglement.jpg&quot; alt=&quot;Entaglement&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;algoritma-shor&quot;&gt;Algoritma Shor&lt;/h2&gt;
-
-&lt;p&gt;Inti dari algoritma ini merupakan bagaimana cara menyelesaikan faktorisasi terhaadap bilanga interger atau bulat yang besar.&lt;/p&gt;
-
-&lt;p&gt;Algoritma Shor terdiri dari dua bagian:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Penurunan yang bisa dilakukan pada komputer klasik, dari masalah anjak untuk masalah ketertiban - temuan.&lt;/li&gt;
-  &lt;li&gt;Sebuah algoritma kuantum untuk memecahkan masalah order-temuan&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Abdul Ghani Abbasi</name></author><category term="tugas kuliah" /><summary type="html">Map Reduce MapReduce merupakan model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam cluster yang terdiri atas ribuan komputer</summary></entry><entry><title type="html">Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern</title><link href="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/" rel="alternate" type="text/html" title="Pertemuan 1 Mata Kuliah Pengantar Komputasi Modern" /><published>2018-04-09T00:00:00+07:00</published><updated>2018-04-09T00:00:00+07:00</updated><id>http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern</id><content type="html" xml:base="http://localhost:4000/2018/04/09/pertemuan-1-Pengantar-Komputasi-Modern/">&lt;h1 id=&quot;teori-komputasi&quot;&gt;Teori Komputasi&lt;/h1&gt;
-
-&lt;h2 id=&quot;pengertian-teori-komputasi&quot;&gt;Pengertian Teori Komputasi&lt;/h2&gt;
-&lt;p&gt;Teori komputasi adalah cabang ilmu komputer teoritis, berkaitan dengan studi bagaimana persoalan(problem) dapat diselesaikan pada sebuah model dengan menggunakan algoritma. Model tersebut dinamakan model komputasi.&lt;/p&gt;
-
-&lt;h2 id=&quot;teori-otomata&quot;&gt;Teori Otomata&lt;/h2&gt;
-&lt;p&gt;Teori Otomata adalah teori mengenai mesin-mesin abstrak, dan berkaitan erat dengan teori bahasa formal. ada beberapa hal yang berkaitan dengan Otomata, yaitu Grammar. Grammar adalah bentuk abstrak yang dapat diterima (accept) untuk membangkitkan suatu kalimat otomata berdasarkan suatu aturan tertentu.&lt;/p&gt;
-
-&lt;h2 id=&quot;teori-komputabilitas&quot;&gt;Teori Komputabilitas&lt;/h2&gt;
-
-&lt;p&gt;Teori komputabilitas bertujuan untuk memeriksa apakah persoalan komputasi dapat dipecahkan pada suatu model komputasi teoritis. Dengan kata lain, teori komputabilitas mengklasifikasikan persoalan sebagai dapat dipecahkan (solvable) atau persoalan yang tidak dapat dipecahkan (unsolvable).&lt;/p&gt;
-
-&lt;h2 id=&quot;teori-kompleksitas&quot;&gt;Teori Kompleksitas&lt;/h2&gt;
-&lt;p&gt;Teori kompleksitas bertujuan untuk mengkaji kebutuhan waktu dan ruang untuk memecahkan persoalan yang diselesaikan dengan pendekatan yang berbeda-beda.&lt;/p&gt;
-
-&lt;h2 id=&quot;model-komputasi&quot;&gt;Model komputasi&lt;/h2&gt;
-
-&lt;h3 id=&quot;finite-state-automatafsa--finite-state-machinefsm&quot;&gt;Finite State Automata(FSA) / Finite State Machine(FSM)&lt;/h3&gt;
-&lt;p&gt;Finite State Machine dapat berupa suatu mesin yang tidak memiliki output. Finite State Machine yang tidak mengeluarkan output ini dikenal sebagai Finite State Automata (FSA).&lt;/p&gt;
-
-&lt;p&gt;Secara formal FSA dapat didefinisikan sebagai TUPLE-5 : (K, VT, M, S, Z)
-Dimana :
-K	: himpunan hingga stata,
-VT 	: himpunan hingga simbol input (alfabet)
-M 	: fungsi transisi, menggambarkan transisi stata AH akibat pembacaan symbol input. (Fungsi transisi ini biasanya diberikan dalam bentuk tabel.)
-S  	: stata awal
-Z  	: himpunan stata penerima&lt;/p&gt;
-
-&lt;p&gt;Ada dua jenis Finite State Automata :
-• Deterministic Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
-bersifat tertentu. “Jika pada setiap state dari FSA tersebut apabila menerima input
-sebuah simbol maka HANYA ada SATU NEXT STATE yang mungkin dituju.”
-&lt;strong&gt;M(DFA) : K x VT x K&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;• Non Deterministik Finite Automata : transisi stata AH akibat pembacaan sebuah simbol
-bersifat tak tentu. “Jika FSA tersebut menerima input simbol maka minimal ada satu
-state yang akan berpindah ke LEBIH DARI SATU NEXT STATE yang mungkin dituju.”
-&lt;strong&gt;M(AHN) : K x VT x 2K&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;contoh-soal&quot;&gt;Contoh Soal&lt;/h4&gt;
-
-&lt;h2 id=&quot;push-down-automatapda&quot;&gt;Push Down Automata(PDA)&lt;/h2&gt;
-&lt;p&gt;PDA adalah mesin otomata yang memiliki kendali masukan menggunakan teknik LIFO (Last In First Out), untuk menentukan apakah suatu output diterima atau tidak oleh mesin tsb. Dalam melakukan proses peneerimaan input, PDA menggunakan memory stack.
-Mekanisme kerja memory stack adalah menyimpan input pertama pada alamat paling bawah, input berikutnya di simpan pada alamat di atasnya, dan input terakhir di simpan pada alamat paling atas. Perintah operasi yang digunakan untuk menyimpan input pada stack adalah “push”. Sedangkan perintah operasi untuk mengeluarkan input yang telah tersimpan adalah “pop”.&lt;/p&gt;
-
-&lt;p&gt;Sebuah PDA dinyatakan dengan 7 Tupel:
-Q = himpunan state
-Σ = himpunan simbol input
-T = simbol stack
-Δ = fungsi transisi
-S = state awal
-F = state akhir
-Z = top of stack&lt;/p&gt;
-
-&lt;h2 id=&quot;turing-machine&quot;&gt;Turing Machine&lt;/h2&gt;
-
-&lt;p&gt;Mesin Turing adalah model komputasi teoretis yang ditemukan oleh Alan Turing, berfungsi sebagai model ideal untuk melakukan perhitungan matematis. Walaupun model ideal ini diperkenalkan sebelum komputer nyata dibangun, model ini tetap diterima kalangan ilmu komputer sebagai model komputer yang sesuai untuk menentukan apakah suatu fungsi dapat selesaikan oleh komputer atau tidak (menentukan computable function). Mesin Turing terkenal dengan ungkapan “ Apapun yang bisa dilakukan oleh Mesin Turing pasti bisa dilakukan oleh komputer.”&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/model_komputasi.png&quot; alt=&quot;Model Computing&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;implementasi&quot;&gt;Implementasi&lt;/h2&gt;
-
-&lt;h3 id=&quot;bidang-fisika&quot;&gt;Bidang Fisika&lt;/h3&gt;
-&lt;p&gt;Implementasi komputasi modern di bidang Fisika adalah Computational Physics yang mempelajari suatu gabungan antara Fisika, Komputer Sains dan Matematika Terapan untuk memberikan solusi pada “Kejadian dan masalah yang kompleks pada dunia nyata” baik dengan menggunakan simulasi juga penggunaan Algoritma yang tepat.
-Banyak perangkat lunak ataupun bahasa yang digunakan, seperti : MatLab, Visual Basic, Fortran, Open Source Physics (OSP), Labview, Mathematica, dan lain sebagainya digunakan untuk pemahaman dan pencarian solusi numerik dari masalah-masalah pada Fisika komputasi.&lt;/p&gt;
-&lt;h3 id=&quot;bidang-kimia&quot;&gt;Bidang Kimia&lt;/h3&gt;
-&lt;p&gt;Implementasi komputasi modern di bidang Kimia adalah Computational Chemistry yaitu penggunaan ilmu komputer untuk membantu menyelesaikan masalah Kimia. Contohnya penggunaan super komputer untuk menghitung struktur dan sifat molekul. Istilah Kimia teori dapat didefinisikan sebagai deskripsi Matematika untuk Kimia, sedangkan Kimia komputasi biasanya digunakan ketika metode Matematika dikembangkan dengan cukup baik untuk dapat digunakan dalam program komputer.&lt;/p&gt;
-&lt;h3 id=&quot;bidang-matematika&quot;&gt;Bidang Matematika&lt;/h3&gt;
-&lt;p&gt;Menyelesaikan sebuah masalah yang berkaitan dengan perhitungan Matematis, namun dalam pengertian yang akan dibahas dalam pembahasan komputasi modern ini merupakan sebuah sistem yang akan menyelesaikan masalah Matematis menggunakan komputer dengan cara menyusun Algoritma yang dapat dimengerti oleh komputer.&lt;/p&gt;
-&lt;h3 id=&quot;bidang-geografi&quot;&gt;Bidang Geografi&lt;/h3&gt;
-&lt;p&gt;Komputasi dalam bidang Geografi biasanya di gunakan untuk peramalan cuaca, di Indonesia khususnya ada salah satu instansi Negara dengan nama BMKG (Badan Meteorologi Klimatologi dan Geofisika) yakni instansi negara yang meneliti mengamati tentang Metereologi, Klimatologi kualitas udara dan Geofisika&lt;/p&gt;
-&lt;h3 id=&quot;bidang-geologi&quot;&gt;Bidang Geologi&lt;/h3&gt;
-&lt;p&gt;Implementasi pada bidang ini untuk memetakan letak sumber daya dan kontur dari permukaan bumi yang terdapat hasil tambang.&lt;/p&gt;
-
-&lt;h1 id=&quot;cloud-computing&quot;&gt;Cloud Computing&lt;/h1&gt;
-&lt;p&gt;Cloud Computing hadir dengan memudahkan akses data dari mana saja dan kapan saja, karena dengan memanfaatkan internet dan menggunakan perangkat fixed atau mobile device menggunakan internet cloud sebagai tempat penyimpanan data, aplikasi dan lainya&lt;/p&gt;
-
-&lt;h2 id=&quot;grid-computing&quot;&gt;Grid Computing&lt;/h2&gt;
-
-&lt;p&gt;Komputasi Grid sebenarnya merupakan sebuah aplikasi pengembangan dari jaringan komputer (network). Hanya saja, tidak seperti jaringan komputer konvensional yang berfokus pada komunikasi antar piranti (device), aplikasi pada grid computing dirancang untuk memanfaatkan sumber daya pada terminal dalam jaringannya.&lt;/p&gt;
-
-&lt;h2 id=&quot;virtualisasi&quot;&gt;Virtualisasi&lt;/h2&gt;
-&lt;p&gt;Virtualisasi adalah sebuah teknologi, yang memungkinkan anda untuk membuat versi virtual dari sesuatu yang bersifat fisik, misalnya sistem operasi, storage data atau sumber daya jaringan. Proses tersebut dilakukan oleh sebuah software atau firmware bernama Hypervisor. Hypervisor inilah yang menjadi nyawanya virtualisasi, karena dialah layer yang “berpura – pura” menjadi sebuah infrastruktur untuk menjalankan beberapa virtual machine.&lt;/p&gt;
-
-&lt;p&gt;Istilah virtualisasi perangkat-keras mengacu kepada upaya menciptakan mesin virtual yang bekerja layaknya sebuah komputer lengkap dengan sistem operasi.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Para-virtualisasi&lt;/strong&gt;: Perangkat keras tidak disimulasikan tetapi perangkat-lunak tamu berjalan dalam domainnya sendiri seolah-olah dalam sistem yang berbeda. Dalam hal ini perangkat-lunak tamu perlu disesuaikan untuk dapat berjalan.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Virtualisasi sebagian&lt;/strong&gt;: Tidak semua aspek lingkungan disimulasikan tidak semua perangkat-lunak dapat langsung berjalan, beberapa perlu disesuaikan untuk dapat berjalan dalam lingkungan virtual ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Virtualisasi penuh&lt;/strong&gt;: Hampir menyerupai mesin asli dan mampu menjalankan perangkat lunak tanpa perlu diubah.&lt;/p&gt;
-
-&lt;h2 id=&quot;distributed-computation-dalam-cloud-computing&quot;&gt;Distributed Computation dalam Cloud Computing&lt;/h2&gt;
-
-&lt;p&gt;Komputasi Terdistribusi merupakan salah satu tujuan dari Cloud Computing, karena menawarkan pengaksesan sumber daya secara parallel, para pengguna juga bisa memanfaatkannya secara bersamaan (tidak harus menunggu dalam antrian untuk mendapatkan pelayanan), terdiri dari banyak sistem sehingga jika salah satu sistem crash, sistem lain tidak akan terpengaruh, dapat menghemat biaya operasional karena tidak membutuhkan sumber daya (resourches).&lt;/p&gt;
-
-&lt;h2 id=&quot;standar-teknologi-informasi-pada-cloud-computing&quot;&gt;Standar Teknologi Informasi pada Cloud Computing&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/Gartner.png&quot; alt=&quot;Model test&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;saas-software-as-a-service&quot;&gt;SaaS (Software as a Service)&lt;/h3&gt;
-&lt;p&gt;Software as a Service adalah layanan software yang digunakan melalui internet. Sebenarnya hal ini bukan merupakan hal yang asing dan sering kita gunakan (hanya mungkin kita belum tahu aja), contoh dari SaaS ini adalah google docs, facebook, aplikasi CRM berbayar, dan lain-lain. Pengguna hanya perlu menggunakan aplikasi tersebut tanpa harus mengerti bagaimana data disimpan, bagaimana aplikasi tersebut di maintenance, karena hal tersebut merupakan service yang disediakan penyedia jasa. Pembayaran dari penggunaan aplikasi-aplikasi ini pun hanya per pemakaiannya (terkadang ada yang tak berbayar tetapi ada fitur-fitur tertentu yang bisa didapatkan ketika pengguna membayar fitur-fitur tersebut, yah semacam nyewa parabola gitu lah, bayar berdasar channel yang diinginkan).&lt;/p&gt;
-
-&lt;h3 id=&quot;paas-platform-as-a-service&quot;&gt;PaaS (Platform as a Service)&lt;/h3&gt;
-&lt;p&gt;Platform as a Service adalah penyediaan platform bagi developer yang disediakan melalui internet. Hal ini dibutuhkan ketika aplikasi yang disediakan melalui SaaS tidak sesuai dengan kebutuhan proses bisnis yang terdapat pada perusahaan. PaaS memungkinkan kita untuk membangun aplikasi, mengupload aplikasi, melakukan testing aplikasi, ataupun mengatur konfigurasi yang dibutuhkan dalam proses pengembangan aplikasi.&lt;/p&gt;
-
-&lt;h3 id=&quot;iaas-infrastructure-as-a-service&quot;&gt;IaaS (Infrastructure as a Service)&lt;/h3&gt;
-&lt;p&gt;Infrastructure as a Service adalah penyediaan infrastruktur yang disediakan melalui internet dan dibayarkan berdasarkan pemakaian. Hal ini terjadi apabila developer membutuhkan sebuah infrastruktur dimana dia dapat melakukan setting untuk jalannya sebuah aplikasi. IaaS memberikan kendali penuh bagi pengguna layanan untuk menyewa infrastruktur IT (storage, RAM, prosesor dll) secara virtual tanpa sistem operasi, yang tentunya pemilihan sistem operasi tersebut dipilih berdasarkan keinginan pengguna.  Apabila SaaS dan PaaS kurang terasa manfaatnya bagi perusahaan, IaaS ini sangat menguntungkan bagi perusahaan kecil yang membutuhkan sebuah infrastruktur IT tanpa harus membeli perangkat yang dibutuhkan tersebut.&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Teori Komputasi</summary></entry><entry><title type="html">Rangkuman Sistem Multimedia</title><link href="http://localhost:4000/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/" rel="alternate" type="text/html" title="Rangkuman Sistem Multimedia" /><published>2018-03-21T00:00:00+07:00</published><updated>2018-03-21T00:00:00+07:00</updated><id>http://localhost:4000/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia</id><content type="html" xml:base="http://localhost:4000/tugas%20kuliah/2018/03/21/rangkuman-sistem-multimedia/">&lt;p&gt;Multimedia  : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.&lt;/p&gt;
-
-&lt;p&gt;Sistem  : Adalah kumpulan dari elemen – elemen yang berinteraksi untuk mencapai suatu tujuan tertentu.&lt;/p&gt;
-
-&lt;p&gt;Sistem Multimedia : Adalah beberapa sistem yang mendukung lebih dari satu macam   media.&lt;/p&gt;
-&lt;h2 id=&quot;text&quot;&gt;Text&lt;/h2&gt;
-
-&lt;p&gt;jenis text terbagi dalam 3 kategori&lt;/p&gt;
-
-&lt;h3 id=&quot;plain-text&quot;&gt;Plain text&lt;/h3&gt;
-&lt;p&gt;Plain text adalah teks yang dikode dalam format ASCII&lt;/p&gt;
-
-&lt;p&gt;Contoh :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/plaintext.jpg&quot; alt=&quot;plain&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;hyper-text&quot;&gt;Hyper Text&lt;/h3&gt;
-&lt;p&gt;Hypert Text adalah teks yang memiliki fasilitas linking dan betujuan untuk menyambungkan/berhubungan dengan dokumen lain/teks sebelumnya yang telah diberi atau memiliki format pada sisi penulisannya. Hypert Text disebut juga sebagai link penghubung.
- Hypertext terbagi menjadi dua,yaitu  :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;HTML (Hypertext Markup Language) yang berfungsi untuk mengontrol tampilan web&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;XML (Extensible Markup Language) yang berfungsi untuk menjadikan dokumen lebih simple dan lebih cepat.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;rich-text&quot;&gt;Rich text&lt;/h3&gt;
-&lt;p&gt;Rich Text Format adalah teks yang sudah diformatting dan sudah di desain sedemikian rupa sehingga pada teks ini kita dapat memberikan efek pada teks dengan di Bold, Italic, Underline dan diberi warna.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/richtext.jpg&quot; alt=&quot;richtext&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;image&quot;&gt;Image&lt;/h2&gt;
-&lt;p&gt;Image atau citra adalah gambar pada bidang dua dimensi
-Sebuah titik terkecil dalam sebuah gambar grafis yang dihitung per inci disebut dengan pixel.
-&lt;img src=&quot;http://localhost:4000/assets/images/pixel.png&quot; alt=&quot;pixel&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
-&lt;p&gt;Video
-Merupakan rangkaian gambar yang ditampilkan secara sekuensial&lt;/p&gt;
-
-&lt;h1 id=&quot;representasi-dan-kompresi-data&quot;&gt;Representasi dan Kompresi Data&lt;/h1&gt;
-
-&lt;p&gt;Kompresi Data merupakan cara untuk memperkeil kebutuhan penyimpanan data&lt;/p&gt;
-
-&lt;p&gt;Kompresi terbagi 2 jenis yaitu Lossy dan Loseless&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Lossy : teknik kompresi dengan menghilangkan beberapa informasi penting&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Loseless : teknik kompresi dengan tidak menghilangkan beberapa informasi&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;representasi-dan-kompresi-pada-data-teks&quot;&gt;Representasi dan Kompresi pada Data Teks&lt;/h2&gt;
-
-&lt;h3 id=&quot;run-length-encoding&quot;&gt;Run Length Encoding&lt;/h3&gt;
-&lt;p&gt;Suatu teknik kompresi dengan menghasilkan output Loseless&lt;/p&gt;
-
-&lt;p&gt;Contoh :&lt;/p&gt;
-
-&lt;p&gt;Data: ABCCCCCCCCDEFGGGG = 17 karakter&lt;/p&gt;
-
-&lt;p&gt;dapat menggunakan tanda ! untuk mengurangi panjang nya data sehingga menjadi seperti ini&lt;/p&gt;
-
-&lt;p&gt;Data: ABCCCCCCCCDEFGGGG = 17 karakter&lt;/p&gt;
-
-&lt;h3 id=&quot;huffman-coding&quot;&gt;Huffman Coding&lt;/h3&gt;
-&lt;p&gt;Huffman merupakan teknik dengan banyak nya 1 huruf kemudian dibagi banyak nya huruf maka dilakukan Kompresi&lt;/p&gt;
-
-&lt;p&gt;Contoh :&lt;/p&gt;
-
-&lt;p&gt;MAMA SAYA
-A = 4 -&amp;gt; 4/8 = 0.5
-M = 2 -&amp;gt; 2/8 = 0.25
-S = 1 -&amp;gt; 1/8 = 0.125
-Y = 1 -&amp;gt; 1/8 = 0.125
-Total = 8 karakter&lt;/p&gt;
-
-&lt;p&gt;kemudian dibuat pohon Huffman nya maka menjadi seperti ini
-&lt;img src=&quot;http://localhost:4000/assets/images/huffman.jpg&quot; alt=&quot;huffman&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;representasi-dan-kompresi-pada-data-suara&quot;&gt;Representasi dan Kompresi pada Data Suara&lt;/h2&gt;
-
-&lt;p&gt;Kompresi pada Audio yaitu dengan memotong jarak amplitudo paling maksimum dan minimum yang dianggap noise&lt;/p&gt;
-
-&lt;p&gt;Contoh Lossy format :Vorbis, MP3&lt;/p&gt;
-
-&lt;p&gt;Contoh Loseless format : FLAC&lt;/p&gt;
-
-&lt;h1 id=&quot;jaringan-multimedia&quot;&gt;Jaringan Multimedia&lt;/h1&gt;
-&lt;p&gt;Penggunaan komputer untuk menampilkan media dengan interaksi dan komunikasi&lt;/p&gt;
-
-&lt;h2 id=&quot;streaming-multimedia&quot;&gt;Streaming Multimedia&lt;/h2&gt;
-
-&lt;p&gt;Merupakan multimedia yang secara terus menerus diterima dan ditampilkan oleh user&lt;/p&gt;
-
-&lt;h2 id=&quot;voice-over-internet-protocol&quot;&gt;Voice Over Internet protocol&lt;/h2&gt;
-
-&lt;p&gt;teknologi yang memungkinkan komunikasi suara menggunkana jaringan berbasis IP&lt;/p&gt;
-
-&lt;h2 id=&quot;session-internet-protocol&quot;&gt;Session Internet Protocol&lt;/h2&gt;
-&lt;p&gt;SIP merupakan sebuah protocol standart multimedia dimana merupakan produk dari Internet Engineering Task Force (IETF) dan telah digunakan menjadi suatu standart penggunaan VoIP&lt;/p&gt;
-
-&lt;h2 id=&quot;real-time-transport&quot;&gt;Real Time Transport&lt;/h2&gt;
-
-&lt;p&gt;Real Time Transport Protocol  (RTP) didefinisikan sebagai standarisasi paket untukmengirimkan audio dan video pada jaringan IP.&lt;/p&gt;
-
-&lt;h1 id=&quot;distribusi-multimedia&quot;&gt;Distribusi multimedia&lt;/h1&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B. Broadcasting penyiaran multimedia baik berupa video maupun suara yang disiarkan kepada penonton melalui media elektronik. Ex: Live instagram
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Cara kerja tv:
-    • Kamera merekam sebuah objek yang dengan sistem prism dibagi menjadi tiga warna
-    • CCD mengubahnya menjadi sebuah elektronik signal yang disebut video signal
-    • Tranmisi merubahnya menjadi signal televisi yang disiarkan melalui antenna dengan gelombang elektromagnetik
-    • Anttena rumah akan menerima signal televisi
-    • Tunner memisahkan video signal dengan audio signak
-    • Video signal dibagi menjadi tiga signal
-    • Ketiga signal akan menampilkan gambar&lt;/p&gt;
-
-&lt;p&gt;Cara kerja live broadcasting:
-bekerja di saat yang bersamaan secara langsung, dimana audio mengirim datanya ke sound card dan dienkripsi oleh encoder yang akan langsung diupload ke streaming server oleh streamer.
-EX:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C. Internet Radio Yaitu: audio digital yang ditransmisikan melalui internet. Cara kerja internet radio:
-1. Audio pada sebuah sound card diencoding pada komputer yang digunakan untuk broadcasting
-2. Sistem encode menterjemahkan audio ke streaming format dan mengkompresnya untuk bisa dikirimkan via internet.
-3. Audio yang telah dikompres dikirim ke server
-4. Server mengirimkan data audio melalui internet ke komputer pendengar melalui sebuah plug-in atau software.
-5. Plug-in akan menterjemhkan data audio dari server ke suara yang bisa didengar pendengar   EX: Prambors
-
-
-
-
-
-
-
-
-
-D. Video on Demand (VoD) sistem televisi interaktif yang memfasilitasi untuk memilih sendiri program televisi atau video yang ingin ditonton.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;augmented-reality&quot;&gt;Augmented Reality&lt;/h1&gt;
-
-&lt;p&gt;sebuah konsep yang memadukan dunia maya(virtual) dan dunia nyata dengan cara menanamkan sebuah object di dalam proses pembuatannya.&lt;/p&gt;
-
-&lt;h2 id=&quot;jenis---jenis&quot;&gt;Jenis - jenis&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Memakai Marker (Marker Based Tracking), yaitu terdapat proses pemakaian marker didalamnya untuk memunculkan objek 2D atau 3D.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Tanpa Marker (Markerless), yaitu tidak terdapat pemakaian marker didalamnya tetapi menggunakan teknik yang mempunyai ruang lingkup lebih luas daripada metode Marker Based Tracking.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;digital-culture&quot;&gt;Digital Culture&lt;/h1&gt;
-
-&lt;p&gt;suatu perkembangan yang menjadikan budaya di era digital contoh nya seperti mengakses informasi dari internet, serta mengirimkan email dan download upload&lt;/p&gt;
-
-&lt;p&gt;contoh : E-commerce, E-book dll&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><category term="tugas kuliah" /><summary type="html">Multimedia : Adalah beberapa media yang berbeda untuk menggabungkan dan menyampaikan informasi dalam bentuk Text , Audio , Grafik , Animasi dan Video atau bisa juga di katakan kombinasi antara tiga elemen yaitu suara, gambar dan text.</summary></entry><entry><title type="html">Sentiment Analysis with Python 3</title><link href="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/" rel="alternate" type="text/html" title="Sentiment Analysis with Python 3" /><published>2018-03-19T00:00:00+07:00</published><updated>2018-03-19T00:00:00+07:00</updated><id>http://localhost:4000/tutorial/2018/03/19/sentiment-analysis</id><content type="html" xml:base="http://localhost:4000/tutorial/2018/03/19/sentiment-analysis/">&lt;h1 id=&quot;team&quot;&gt;Team&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Abdul Ghoni Abbasi (5C414919)&lt;/li&gt;
-  &lt;li&gt;Aldi Ginanjar (50414741)&lt;/li&gt;
-  &lt;li&gt;M. Fadlan Prayoga (56414918)&lt;/li&gt;
-  &lt;li&gt;Widya Maylani (5C414218)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;scraping&quot;&gt;Scraping&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Web Scraping adalah pengambilan sebuah dokumen semi-struktur dari internet, umumnya berupa halaman-halaman web dalam bahasa markup seperti HTML atau XHTML, dan menganalisis untuk diambil data tertentu dari halaman tersebut&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/post.png&quot; alt=&quot;post&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;graph_api_version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'v2.9'&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# paste your access token below&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;access_token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'EAAanvSwEfswBAG4xDMDJuJqmsPb179nvHy0XPMR7BcgPejGKBhaa7Iy0EaQu2W5PCOA92BcgiZA9nXJCJrFZBzKksVGwMCQHX7oq7lAXsn4YZBObZAZCI9kKa04m0eMsOpNoeZAwveKaZBu2cKQDUfycIM8zjbor0tbSplAABUlwQZDZD'&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'164305410295882'&lt;/span&gt;
-
-
-&lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'1727321057327635'&lt;/span&gt;
-
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://graph.facebook.com/{}/{}_{}/comments'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph_api_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'access_token'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;access_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'error'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'error'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'got {} comments'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'paging'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'next'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'paging'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'paging'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'next'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;#menyimpan komentar ke dalam suatu file&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'comments.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'w'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;import library requests agar mendapatkan akses token dari facebook, kemudian memasukkan access token yang terdapat pada facebook. Berikutnya untuk mengambil semua data komentar pada suatu post facebook yang dibutuhkan adalah id dari user facebook dan id dari post  yang ditentukan dalam variabel url nya. Setelah itu bisa di ketahui konsep scraping untuk mengambil semua komentar di dalam suatu post tersebut membuat array dengan nama comments and menggunakan library requests untuk mendapatkan akses token, untuk dibuat scraping atau data komentar dari suatu post dibuat kondisi terdapat error dalam data JSON tersebut maka ditampilkan pesan error, jika tidak maka dimuat isi array dengan banyak nya komentar menggunakan perintah&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Jika sudah simpan file python dengan nama &lt;code class=&quot;highlighter-rouge&quot;&gt;scraping.py&lt;/code&gt; lalu run program yang sudah dibuat dengan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 scraping.py&lt;/code&gt; maka akan ditampilkan output
-&lt;img src=&quot;http://localhost:4000/assets/images/output1.png&quot; alt=&quot;output1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemudian untuk data comment yang sudah di extract disimpan dalam file bernama &lt;code class=&quot;highlighter-rouge&quot;&gt;comments.txt&lt;/code&gt; dan output yang dhasilkan dari script python diatas berupa:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comments.png&quot; alt=&quot;scraping&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;sentiment-analysis&quot;&gt;Sentiment Analysis&lt;/h1&gt;
-
-&lt;p&gt;Sebelum melakukan sentimen analisis, import library seperti NLTK, pandas&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;string&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Library yang digunakan yaitu vader lexicon untuk pemanggilan fungsi &lt;code class=&quot;highlighter-rouge&quot;&gt;SentimentIntensityAnalyzer()&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk.sentiment.vader&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SentimentIntensityAnalyzer&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SentimentIntensityAnalyzer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;print-positive-negative-and-neutral&quot;&gt;Print Positive, Negative and Neutral&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;positive&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;neutral&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;negative&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;polarity_scores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;compound&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;neutral&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;compound&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;positive&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;negative&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library &lt;code class=&quot;highlighter-rouge&quot;&gt;SentimentIntensityAnalyzer()&lt;/code&gt; sama dengan 0 maa akan masuk ke dalam indeks “neutral” akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks “positive” dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array “negative” akan bertambah. Untuk mencetak perolehan angka sentimen gunakan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;print(summary)&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-{'positive': 57, 'neutral': 81, 'negative': 55}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;result-from-pie-chart&quot;&gt;Result from Pie Chart&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pie_plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autopct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%.2&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;f'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;autopct=%2.f&lt;/code&gt; maka outputnya adalah
-&lt;img src=&quot;http://localhost:4000/assets/images/output2.png&quot; alt=&quot;Pie Chart&quot; /&gt;&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Team</summary></entry></feed>
+&lt;p&gt;Tipe data Array memungkinkan anda untuk menyimpan array yang seperti JavaScript. Dengan sebuah tipe data Array, anda dapat melakukan operasi array Javascript yang umum, seperti push, pop, shift, slice, dll.&lt;/p&gt;</content><author><name>Abdul Ghani Abbasi</name></author><summary type="html">Nest is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with TypeScript (preserves compatibility with pure JavaScript) and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming). Under the hood, Nest makes use of Express, but also provides compatibility with a wide range of other libraries (e.g. Fastify). This allows for easy use of the myriad third-party plugins which are available.</summary></entry></feed>

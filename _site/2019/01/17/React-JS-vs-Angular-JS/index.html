@@ -1,0 +1,994 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abdghn" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Mempelajari perbedaan penggunaan pada react &amp; angular">
+<meta name="keywords" content="Jekyll, NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React VS Angular">
+<meta property="og:url" content="http://localhost:4000/2019/01/17/React-JS-vs-Angular-JS/">
+<meta property="og:site_name" content="Abdghn">
+<meta property="og:description" content="Mempelajari perbedaan penggunaan pada react &amp; angular">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React VS Angular">
+<meta name="twitter:description" content="Mempelajari perbedaan penggunaan pada react &amp; angular">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/"/>
+
+
+
+
+
+  <title>React VS Angular | Abdghn</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abdghn</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2019/01/17/React-JS-vs-Angular-JS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abdul Ghani Abbasi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abdghn">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            React VS Angular
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-17T00:00:00+07:00">
+                2019-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/17/React-JS-vs-Angular-JS/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2019/01/17/React-JS-vs-Angular-JS/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    Mempelajari perbedaan penggunaan pada react & angular
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="react">React</h1>
+<blockquote>
+  <p>React is a JavaScript library developed by Facebook to manage the user interface for web applications with ease. One of the main highlights of React is that it helps in creating manageable UI components, which makes it easier to scale large web applications. React works on the concept of Virtual DOM, where it keeps a mirror image of the actual DOM. Whenever a change occurs, React runs a diffing process, identifies the change, and updates it to the actual DOM. The concept of Virtual DOM makes app rendering faster and improves performance.</p>
+</blockquote>
+
+<p>Dalam sebuah komponen dalam react, terdapat tiga lifecycle berikut:
+Inisialisasi / mounting (ketika komponen dibuat/ditambahkan pertama kali pada DOM)
+Update / rerender (ketika terdapat perubahan state/prop yang mengakibatkan perubahan pada DOM)
+Unmounting (ketika komponen akan dihapus dari DOM)</p>
+
+<h2 id="dom-document-object-model">DOM (Document Object Model)</h2>
+
+<p>dikarenakan javascript dapat berinteraksi dengan HTML
+DOM(Document Object Model) adalah model data standar. DOM adalah cara javascript melihat suatu halaman html. DOM adalah sebuah platform dan interface yang memperbolehkan pengaksesan dan perubahan pada konten, struktur, dan style pada sebuah dokumen oleh program dan  script. Istilah HTML DOM mengacu kepada dokumen html. Kasusnya disini ialah konten, struktur, dan style pada dokumen html dapat diakses dan dirubah dengan menggunakan sintaks javascript.
+Pada model DOM ini, setiap elemen html dipandang sebagai sebuah object. Setiap object bisa terdiri dari object-object lain, sama halnya dengan dokumen html yang terdiri dari elemen root (elemen &lt;html&gt;), elemen root terdiri dari elemen &lt;head&gt; dan elemen &lt;body&gt;, elemen &lt;body&gt; boleh jadi terdiri dari elemen <a>, &lt;h1&gt;, &lt;p&gt;, dst. Elemen-elemen pada dokumen html membentuk sebuah object document yang merupakan object dari dokumen html itu sendiri. Dibawah ini adalah representasi HTML DOM dalam model pohon:</a></p>
+
+<p>dom_tree
+Kalau dalam pemrograman OOP(Object Oriented Programing), sebuah object memiliki property dan method, begitu juga elemen pada dokumen html ini memiliki property yaitu nilai pada elemen html yang bisa ditetapkan atau dirubah dan method yakni aksi yang dapat dilakukan pada elemen html. Contoh property yang biasa digunakan ialah innerHTML yang digunakan untuk memperoleh atau merubah konten dari elemen html itu sendiri. Kemudian method, contoh misalnya getElementById(“id”) milik object document yang digunakan untuk mengakses elemen html dalam dokumen html berdasarkan id.</p>
+
+<h2 id="virtual-dom">Virtual DOM</h2>
+<p>Dari pada langsung bekerja dengan DOM secara langsung pada browser, pada virtual DOM kita terlebih dahulu membuat abstraksi DOM dalam bentuk virtual. Sehingga setiap perubahan terhadap struktur dokumen tidak terjadi secara langsung pada permukaan browser, akan tetapi terjadi di dalam memory. Sehingga proses menjadi lebih cepat.</p>
+
+<p>Setelah modifikasi pada Virtual DOM selesai, kita lakukan proses differing untuk membedakan antara struktur tree yang telah dirender sebelumnya pada browser dengan virtual tree yang sudah dibuat. Sehingga akan menghasilkan bagian-bagian yang ‘kotor’ alias berbeda. Dan hanya bagian yang butuh diubah saja yang kita render ulang.</p>
+
+<p>Proses ini tentu jauh lebih efektif dan lebih cepat dari pada jika kita harus bekerja secara langsung pada DOM yang asli.</p>
+
+<p>Lantas, bagaimana cara implementasinya?
+Oke, jawaban ini cukup rumit. Karena secara umum –pada virtual dom– kita akan menemui dua permasalahan:</p>
+
+<p>Kapan kita harus melakukan render ulang?
+Dan bagaimana cara kita untuk mengetahui bagian mana saja yang berubah dari struktur tree yang lama?
+Karena jawaban dari dua pertanyaan di atas adalah kunci kenapa Virtual DOM bisa resource-cheap atau lebih cepat. Kalau anda salah dalam menentukan kapan sistem harus melakukan render ulang, maka aplikasi anda akan tidak jelas dan tidak interaktif. Plus bisa menjadi super-lemot jika ternyata aplikasi anda selalu merender ulang padahal proses tersebut sedang tidak diperlukan. Atau pada proses kedua –yaitu proses differing/comparing tree lama dan yang baru–, kalau anda tidak menggunakan algoritma yang efektif dan efisien, maka teknik Virtual DOM yang anda gunakan akan lebih lelet dari pada cara yang konvensional.</p>
+
+<h2 id="flux">Flux</h2>
+<blockquote>
+  <p>Flux adalah konsep pemrograman untuk mengolah data. Pada react hal ini sangat terkait dengan pengelolaan state pada komponen. Flux memberikan banyak manfaat untuk pengolahan data tersebut. Silahkan simak ulasan ini untuk mengetahui fungsi flux pada react.</p>
+</blockquote>
+
+<p>Flux merupakan konsep pemrograman yang mengatur aliran atau flow dari data. Pada konsep flux data dibuat menjadi uni-directional. Artinnya , seluruh data akan masuk ke dalam satu gerbang yang kemudian baru di distribusikan pada komponen-komponen didalamnya. Ilustrasinnya seperti saat kita masuk ke kelas yang memiliki satu pintu, seluruh siswa harus masuk ke dalam pintu tersebut yang secara otomatis “pintu” itu akan mengenali seluruh siswa yang masuk dan pada ahirnya mereka menuju ke bangku mereka masing-masing.</p>
+
+<p>1.Action , yaitu suatu object yang akan mentrigger aliran data. Actions akan menentukan data yang akan dikirimkan ke store melalui dispatcher. lebih detailnya, action adalah suatu javascript object yang menggunakan property berupa “type”  yang berfungsi untuk memberitahukan kepada dispatcher mengenai data yang harus disimpan pada store. Action ini akan mentrigger perubahan pada suatu komponen namun tidak dapat menspesifikan pada bagian mana yang harus berubah. Reducer merupakan modul yang dapat melakukan hal tersebut.
+Dispatcher, yaitu object yang berfungsi layaknya suatu router. Data – data yang tersentral tersebut tentunnya akan dibagikan ke komponen-komponen lain. Disinilah peran dari suatu dispatcher.
+Store, tempat untuk menyimpan state dan data-data logical lainnya. State pada store dapat diupdate secara parsial ketika memang dibutuhkan
+View, object yang menerima data dari store dan melakukan proses rendering</p>
+
+<p>React nya biasa nya digunakan untuk pengerjaan proyek2 kecil dikarenakan konsep library dimana dapat menentukan yang mau dipakai jadinya tidak banyak pilihan yang tersedia</p>
+
+<p>contoh aplikasi yang menggunakan react :</p>
+<ul>
+  <li>Facebook</li>
+  <li>AirBnb</li>
+  <li>Uber</li>
+  <li>Netflix</li>
+  <li>Instagram</li>
+  <li>Whatsapp</li>
+  <li>Dropbox</li>
+</ul>
+
+<h3 id="initialization">Initialization</h3>
+<p>Pada initialization, terdapat 3 methods yang akan dieksekusi yaitu componentWillMount, render dan componentDidMount. Method tersebut dieksekusi sesuai urutan pada gambar di atas dengan urutan dari atas ke bawah.
+ComponentWillMount akan dieksekusi paling awal pada saat pertama kali komponen dibuat, sebelum method render dieksekusi.
+Render merupakan method yang wajib ada pada setiap komponen pada react. Method ini akan mengembalikan sebuah react element yang merupakan representasi dari DOM komponen.
+Setelah method render dieksekusi, selanjutnya componentDidMount akan dieksekusi. Kita dapat mengakses DOM dan memanipulasi DOM atau melakukan proses pengambilan data atau AJAX request pada method ini. Selain itu, jika kita menggunakan JavaScript framework lain seperti jQuery, kita dapat memanggilnya pada method ini.</p>
+
+<h3 id="update--rerender">Update / rerender</h3>
+
+<p>Proses ini merupakan phase dimana komponen akan di-render ulang. Proses render ulang sebuah komponen dapat dipicu dari perubahan props atau state pada komponen tersebut.</p>
+
+<p>Pada gambar di atas terdapat 5 methods yang akan dieksekusi. Method tersebut adalah componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, render, componenDidUpdate. Urutan eksekusi ditunjukkan pada gambar di atas dengan urutan dari atas ke bawah.
+ComponentWillReceiveProps akan dieksekusi ketika terdapat perubahan pada props dan bukan merupakan render komponen yang pertama kali. Method ini dapat digunakan untuk mengubah state sesuai dengan props baru yang diterima. Perubahan state pada method ini tidak akan memicu phase update pada komponen (tidak akan merender komponen).
+ShouldComponentUpdate selalu dieksekusi sebelum method render. Method ini merupakan penentu apakah sebuah komponen akan di-render ulang atau tidak. Method shouldComponentUpdate mengembalikan nilai true atau false dengan nilai default adalah true. Jika method ini mengembalikan nilai true, maka komponen akan di-render ulang dan berlaku juga sebaliknya.
+ComponentWillUpdate akan dieksekusi jika method shouldComponenUpdate mengembalikan nilai true. Pada method ini, kita tidak dianjurkan untuk mengubah state dengan alasan bahwa method ini digunakan untuk mempersiapkan proses update komponen bukan untuk memicu proses update komponen.
+Setelah componentWillUpdate selesai dieksekusi, maka method render akan dieksekusi.
+Setelah method render selesai dieksekusi, componentDidUpdate akan dieksekusi. Method ini sama dengan method componentDidMount. Method ini dapat digunakan untuk interaksi dengan DOM setelah komponen selesai di-render.
+Unmounting
+Pada proses unmounting hanya ada satu method yang akan dieksekusi yaitu componentWillUnmount. Method ini akan dieksekusi sebelum komponen dihapus atau dihilangkan dari DOM.
+Implementasi Kode
+Setelah memahami component lifecycle, untuk lebih memahami setiap phase dari component lifecycle, saya telah membuat kode yang akan menunjukkan urutan eksekusi method pada setiap phase.
+Implementasi dengan menggunakan react, react-dom dan webpack-dev-server.</p>
+
+<h2 id="keunggulan-react-js-">Keunggulan React js ?</h2>
+<p>Mudah dipahami
+Gaya penulisan yang deklaratif membuat react js mudah dipahami dan membuat react mudah di prediksi jika ada kesalahan penulisan kode.
+JSX
+JSX adalah sebuah extension javascript yang di gunakan react untuk menulis HTML di dalam Javascript. JSX bukanlah sintaks javascript, sehingga browser tidak bisa membaca sintaks ini, di butuh kan sebuah JSX compiler yang di gunakan untuk menterjemahkan JSX kedalam bahasa regular javascript agar bisa terbaca oleh browser. Saya sendiri menggunakan BABEL JS sebagai JSX compilernya.
+Modular
+Untuk membuat aplikasi dengan skala besar, kita dapat menulis kode-kode dengan skala yang lebih kecil untuk di satukan menjadi aplikasi utuh, dan dapat di gunakan kembali (reusable).
+Scalable
+React js dapat menangani dengan sangat baik sebuah program dengan skala yang besar yang dapat menampilkan perubahan data yang sangat kompleks.
+Flexibel
+Dengan belajar 1 libary saja kita dapat membuat aplikasi Web, Moblie, maupun Desktop.
+Effisien dan Cepat
+React JS menciptakan Virtual DOM untuk mempercepat urusan perubahan DOM. Semua operasi di kerjakan di dalam Virtual DOM, setelah operasi selesai React JS menulis perubahan tersebut di dalam DOM. Contoh kasusnya seperti ini: “Jika kita menulis dalam secarik kertas menggunakan spidol, apabila terjadi kesalahan penulisan kita harus menulis di kertas yang baru. Berbeda jika kita menggunakan pensil, cukup menghapus dan memperbaiki pada bagian yang salah ”.
+Mudah Debugging
+Ketika kita mulai menggunakan React JS, jangan lupa menginstall extensi resmi React JS. Kita dapat dengan mudah menjelejah Virtual DOM pada aplikasi yang sudah kita buat, sehingga jika ada bug bisa cepat ditemukan.
+SEO Bagus
+Salah satu masalah terbesar dari library Javascript pada umumnya adalah mereka sidak support search engine. Meskipun sudah banyak perbaikan, mesin pencari umumnya masih mengalami kesulitan. Namun tidak dengan React JS, kita dapat menjalankan React JS pada server dan Virtual DOM diberikan ke browser sebagai halaman web biasa, sehingga sangat support SEO.</p>
+<h2 id="kelemahan-react-js-">Kelemahan react js ?</h2>
+<p>Meskipun React JS sangat powerfull, namun juga memiliki beberapa kelemahan antara lain:
+Hanya View Layer
+React js hanya sebuah pustaka View Layer, untuk membangun aplikasi besar kita harus menyusun sendiri kebutuhan aplikasi lainya seperti data layer, router, struktur aplikasi dan event system(kecuali event DOM).
+Dokumentasi tidak bagus
+Beberapa sumber artikel yang saya baca mengatakan bahwa dokumentasi react js tidak bagus karena informasi yang di berikan tidak lengkap, meskipun seperti itu kita tetap bisa mempelajarinya kok, tentunya dengan semangat dan ketekunan.
+Permasalahan lisensi
+Baru-baru ini muncul issue tentang lisensi react. Sebetulnya issue ini sudah ada sejak 2015, namun tampaknya ada pihak-pihak yang belum puas dan mempermasalahkanya. Menurut pemahaman saya bahwa “facebook memperbolehkan kita menggunakan react js untuk mengembangkan produk kita dengan catatan tidak untuk berkompetisi dengan produknya facebook”. Tapi sebenarnya ini tidak masalah , temen-teman bisa baca penjelasanya detail disini.
+Dukungan browser
+React js tidak mendukung browser versi lama, hanya browser versi baru. React js menghentikan dukungan pada browser Internet Explorer versi 8, sampai saat ini react yang bisa jalan di IE 8 adalah react versi v0.14. Versi terbaru dari react hanya mendukung Internet Explorer versi 9 keatas.</p>
+
+<h2 id="mengapa-harus-pakai-react-js-">Mengapa harus pakai react js ?</h2>
+<p>React js mudah di pahami.
+Konsep Components pada react js merupakan konsep pengembangan web modern.
+Jika data elements pada aplikasi kita berubah setiap satuan waktu, maka kita bisa menggunakan react sebagai solusinya.
+Jika dalam satu team sama-sama sedang belajar react, maka pengembangan aplikasi bisa lebih cepat.</p>
+
+<h2 id="jsx">JSX</h2>
+<p>JSX is a JavaScript syntax extension which looks similar to XML. Here is an example:</p>
+
+<p>When compared to JavaScript, it’s easier to write JSX. It is as simple as opening and closing XML tags. Here is a JSX example:</p>
+
+<div>
+<p>Welcome to TutsPlus</p>
+</div>
+<p>Here is the compiled React code: 
+“use strict”;</p>
+
+<p>React.createElement(
+  “div”,
+  null,
+  React.createElement(
+    “p”,
+    null,
+    “Welcome to TutsPlus”
+  )
+);</p>
+<ol>
+  <li>
+    <p>JSX code ensures readability and makes maintainability easier.</p>
+  </li>
+  <li>
+    <p>JSX optimizes the code while compiling, so it runs faster compared to the equivalent JavaScript code.</p>
+  </li>
+</ol>
+
+<h1 id="angular">Angular</h1>
+<p>Dalam angular untuk yang dikategorikan sebagai framework, angular mempunyai struktur untuk proyek yang lebih kompleks. Tentunya Angular digunakan untuk</p>
+
+<p>contoh aplikasi yang menggunakan angular adalah berikut ini :</p>
+<ul>
+  <li>Eat24</li>
+  <li>CVS shop</li>
+  <li>onefootball</li>
+  <li>Google Express</li>
+  <li>NBA</li>
+  <li>Delta</li>
+  <li>wix.com</li>
+</ul>
+
+<h1 id="persamaan">Persamaan</h1>
+
+<h1 id="perbedaan">Perbedaan</h1>
+
+<h1 id="unidirectional-vs-bidirectional">Unidirectional VS Bidirectional</h1>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/11/teknik-http-request/" rel="next" title="Pengenalan Teknik - teknik request http pada javascript">
+                <i class="fa fa-chevron-left"></i> Pengenalan Teknik - teknik request http pada javascript
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/06/belajar-javascript-part-1/" rel="prev" title="Belajar Javascript Part 1">
+                Belajar Javascript Part 1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.gif"
+               alt="Abdul Ghani Abbasi" />
+          <p class="site-author-name" itemprop="name">Abdul Ghani Abbasi</p>
+           
+              <p class="site-description motion-element" itemprop="description">Web abdghn</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/abdulghaniii" target="_blank" title="twitter">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  twitter
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="aaaa" target="_blank" title="facebook">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  facebook
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#react"> <span class="nav-number">1</span> <span class="nav-text">React</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-2"> <a class="nav-link" href="#dom-document-object-model"> <span class="nav-number">1.1</span> <span class="nav-text">DOM (Document Object Model)</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#virtual-dom"> <span class="nav-number">1.2</span> <span class="nav-text">Virtual DOM</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#flux"> <span class="nav-number">1.3</span> <span class="nav-text">Flux</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#initialization"> <span class="nav-number">1.3.1</span> <span class="nav-text">Initialization</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#update--rerender"> <span class="nav-number">1.3.2</span> <span class="nav-text">Update / rerender</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#keunggulan-react-js-"> <span class="nav-number">1.4</span> <span class="nav-text">Keunggulan React js ?</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#kelemahan-react-js-"> <span class="nav-number">1.5</span> <span class="nav-text">Kelemahan react js ?</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#mengapa-harus-pakai-react-js-"> <span class="nav-number">1.6</span> <span class="nav-text">Mengapa harus pakai react js ?</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#jsx"> <span class="nav-number">1.7</span> <span class="nav-text">JSX</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#angular"> <span class="nav-number">2</span> <span class="nav-text">Angular</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#persamaan"> <span class="nav-number">3</span> <span class="nav-text">Persamaan</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#perbedaan"> <span class="nav-number">4</span> <span class="nav-text">Perbedaan</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#unidirectional-vs-bidirectional"> <span class="nav-number">5</span> <span class="nav-text">Unidirectional VS Bidirectional</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abdul Ghani Abbasi</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://blog-cpljbj5mlr.disqus.com/count.js" async></script>
+    
+
+    
+      
+      <script type="text/javascript">
+          var disqus_config = function () {
+              this.page.url = 'http://localhost:4000/2019/01/17/React-JS-vs-Angular-JS/';
+              this.page.identifier = '/2019/01/17/React-JS-vs-Angular-JS/';
+              this.page.title = 'React VS Angular';
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://blog-cpljbj5mlr.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+      </script>
+      
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

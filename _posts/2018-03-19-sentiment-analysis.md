@@ -104,7 +104,7 @@ print(summary)
 
 untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nilai variabel ss yang merupakan perhitungan pada library `SentimentIntensityAnalyzer()` sama dengan 0 maa akan masuk ke dalam indeks "neutral" akan bertambah 1, untuk nilai lebih dari sama dengan maka akan masuk ke dalam indeks "positive" dan untuk nilai komentar yang negatif jika nilai nya kurang dari 0 maka indeks array "negative" akan bertambah. Untuk mencetak perolehan angka sentimen gunakan perintah `print(summary)`
 
-```
+```json
 
 {'positive': 57, 'neutral': 81, 'negative': 55}
 ```
