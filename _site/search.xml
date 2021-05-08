@@ -2,6 +2,535 @@
 <search>
   
     <entry>
+      <title>Hackerrank test solution part 1</title>
+      <url>/tutorial/2021/03/27/hackerrank-solusion-part-1/</url>
+      <content type="text">Simple Array Sum
+
+tujuannya adalah untuk mendapatkan jumlah dari tiap elemen array, contohnya 1 + 2 + 4 + 10 + 11 = 31
+
+Input
+6
+1 2 3 4 10 11
+
+Output
+31
+
+
+Code
+
+  var sum = 0;
+    for (var i = 0; i &amp;lt;ar.length; i++) {
+    sum += ar[i];
+    }
+    return sum;
+
+Alternative
+
+  let sum = (accumulator, currentValue) =&amp;gt; accumulator + currentValue;
+  return ar.reduce(sum);
+
+
+Compare the Triplets
+di compare the triplets ini bertujuan untuk menentukan nilai mana yang lebih besar dari tiap elemen array, contohnya kasus nya :
+jika a mempunyai array [1,2,3] dan b mempunyai array [3,2,1] dengan kondisi di bawah ini
+
+  jika a[0] lebih besar dari pada b[0] maka a mendapatkan poin 1
+  jika a[1] sama dengan b[1]maka tidak ada yang mendapatkan poin
+  jika a[2] lebih kecil dari b[2] maka b yang mendapatkan poin
+
+
+kemudian hasil poin antara a dan menggabungkan ke dalam array menjadi [1,1]
+
+Input
+17 28 30
+99 16 8
+
+
+Output
+2 1
+
+
+Code
+    let score = [0,0]
+
+    for (let i = 0; i &amp;lt; a.length; i++)
+        a[i] &amp;gt; b[i] ? score[0]++ : a[i] &amp;lt; b[i] ? score[1]++ : &quot;&quot;
+    return score
+
+
+A Very Big Sum
+tujuannya adalah untuk mendapatkan jumlah dari tiap elemen array, contohnya 1 + 2 + 4 + 10 + 11 = 31
+
+Input
+6
+1 2 3 4 10 11
+
+Output
+31
+
+
+Code
+    let score = [0,0]
+
+    for (let i = 0; i &amp;lt; a.length; i++)
+        a[i] &amp;gt; b[i] ? score[0]++ : a[i] &amp;lt; b[i] ? score[1]++ : &quot;&quot;
+    return score
+
+
+Alternative
+  let sum = (accumulator, currentValue) =&amp;gt; accumulator + currentValue;
+  return ar.reduce(sum);
+
+
+Diagonal Difference
+
+Input
+3
+11 2 4
+4 5 6
+10 8 -12
+
+
+Output
+15
+
+
+Explanation
+
+The primary diagonal is:
+11
+   5
+     -12
+
+
+Sum across the primary diagonal: 11 + 5 - 12 = 4
+The secondary diagonal is:
+     4
+   5
+10
+
+
+Code
+
+    var n = matrix.length;
+    var diag1 = 0;
+    var diag2 = 0;
+    for(var i=0; i&amp;lt;n; i++){
+        for(var j=0; j&amp;lt;n; j++){
+            // an element from the main diagonal
+            if(i === j) { 
+                diag1 += matrix[i][j];
+            }
+            // an element from the counterdiagonal
+            if(i + j === n - 1){
+                diag2 += matrix[i][j];
+            }
+        }
+    }
+    return Math.abs(diag1 - diag2);
+
+Plus Minus
+
+Input
+STDIN           Function
+-----           --------
+6               arr[] size n = 6
+-4 3 -9 0 4 1   arr = [-4, 3, -9, 0, 4, 1]
+
+
+Output
+0.500000
+0.333333
+0.166667
+
+
+Code
+ let positives = 0, negatives = 0, zeros = 0;
+     const len = arr.length || 0;
+      
+     if (len &amp;gt; 0 &amp;amp;&amp;amp; len &amp;lt;= 100) {
+          arr.map((elem, key) =&amp;gt; {
+               if (elem &amp;gt; 0) {
+                    positives++;
+               } else if (elem &amp;lt; 0) {
+                    negatives++; 
+               } else {
+                    zeros++;
+               }
+                  
+               return elem; 
+          }); 
+     } 
+     
+     console.log((positives / len) || 0);
+     console.log((negatives / len) || 0);
+     console.log((zeros / len) || 0);  
+
+
+Alternative
+    let positive = arr.filter(number =&amp;gt; number &amp;gt; 0).length / arr.length;
+    let negative = arr.filter(number =&amp;gt; number &amp;lt; 0).length / arr.length;;
+    let zeronums = arr.filter(number =&amp;gt; number == 0).length / arr.length;;
+    return console.log(positive.toFixed(6) + '\n' + negative.toFixed(6) + '\n' + zeronums.toFixed(6))
+
+
+Staircase
+
+Input
+6
+
+
+Output
+     #
+    ##
+   ###
+  ####
+ #####
+######
+
+
+Code
+
+
+    // want to declare a variable that will hold the final output that we will print 
+    let output = ''
+    
+    // outer for loop to keep track of the overall number of rows (n)
+    for (let i = 1; i &amp;lt;= n; i++) {
+    
+        // inner for loop to keep track of the preceding spaces on each line
+            // s should start out at n-1 which we can see from the pic I drew
+            // s should be greater than or equal to i because the number of spaces decreases as i increases
+            // decrease s bc the number of spaces decreases as i increases
+        for (let s = n - 1; s &amp;gt;= i; s--) {
+            output += ' '
+        }
+        
+        // inner for loop to keep track of the #s on each line
+            // h should start at one because the first line will always have one #
+            // h should be less than or equal to the row that we are on since h will approach and eventually equal n
+            // h increases since we increment h to equal i which will eventually equal n
+        for (let h = 1; h &amp;lt;= i; h++) {
+            output += '#'
+        }
+        // new line
+        output += &quot;\n&quot;
+       
+    }
+    // log the final result
+    console.log(output)
+
+
+Alternative
+// here we use just one for loop where i tracks the number of rows
+  // the number of rows (i) should be less than or equal to n
+    for (let i = 1; i &amp;lt;= n; i++) {
+      // print out a &quot; &quot; n-i times and append a # i times
+      // console log adds a new line by default
+      
+        console.log(&quot; &quot;.repeat(n-i) + &quot;#&quot;.repeat(i))
+    }    
+
+
+Birthday Cake Candles
+
+Input
+4
+3 2 1 3
+
+Output
+2
+
+
+Explanation
+
+Candle heights are [3,2,1,3] . The tallest candles are 3 units, and there are 2 of them.
+
+Code
+
+// Step 1
+    let max = 0;
+    let counter = 0;
+
+    // Step 2 (a)
+    arr.forEach(item =&amp;gt; {
+        // Step 3
+        if (item &amp;gt; max) {
+            // Step 4
+            max = item;
+            counter = 1;
+            // Step 2 (b)
+        } else if (item === max) {
+            counter++;
+        }
+    });
+
+    return counter;
+
+
+Alternative
+
+    let maxNum = Math.max(...ar);
+    let filtered = ar.filter(function(value, index, arr) {
+        return value === maxNum;
+    });
+    return filtered.length;
+
+
+Time Conversion
+
+Input
+
+Output
+
+Code
+
+const arr = s.slice(0,8).split(':');
+arr[0] = (s.indexOf('PM') &amp;gt; -1) ?
+         (arr[0] == 12 ? '12' : Number(arr[0]) + 12) :
+         (arr[0] == 12 ? '00' : arr[0]);
+return arr.join(':');
+
+
+Grading Students
+
+Input
+
+Outputs
+
+Code
+
+    let output = [];
+    for (let i = 0; i &amp;lt; grades.length; i++) {
+        if (grades[i] &amp;gt;= 38) {
+            let reminder = grades[i] % 5;
+            if (reminder === 3) {
+                output.push(grades[i] + 2)
+            } else if (reminder === 4) {
+                output.push(grades[i] + 1)
+            } else {
+                output.push(grades[i]);
+            }
+        } else {
+            output.push(grades[i]);
+        }
+    }
+
+    return output;
+
+
+Mini-Max Sum
+
+Input
+
+Output
+
+Code
+  let minValue = 0, maxValue = 0, minIndex = 0, maxIndex = 0, minSum = 0, maxSum = 0;
+  minValue = Math.min(...arr);
+  maxValue = Math.max(...arr);
+  minIndex = arr.indexOf(minValue);
+  maxIndex = arr.indexOf(maxValue);
+
+  for (let i = 0; i &amp;lt; arr.length; i++){
+      if (minIndex != i) {
+          maxSum += arr[i];
+      }
+      if (maxIndex != i) {
+          minSum += arr[i];
+      }
+  }
+     console.log(minSum, maxSum);
+
+
+Alternative
+
+    let maxVal = Math.max(...arr);
+    let minVal = Math.min(...arr);
+    console.log((sum - maxVal) + ' ' + (sum - minVal));
+
+
+Apple and Orange
+
+Input
+
+Output
+
+Code
+
+const fLoc = function (treeLoc, arr2d) {
+       return arr2d.map(fruitLoc =&amp;gt; (treeLoc + fruitLoc));
+    }
+    const fRange = function (s, t, arr2d) {
+        let a, b;
+        a = 0; b = 0;
+        arr2d.forEach((f, i) =&amp;gt; {
+            if (i === 0) { // apple count
+                f.forEach(loc =&amp;gt; s &amp;lt;= loc &amp;amp;&amp;amp; loc &amp;lt;= t ? a++ : null);
+            }
+            if (i === 1) { // orange count
+                f.forEach(loc =&amp;gt; s &amp;lt;= loc &amp;amp;&amp;amp; loc &amp;lt;= t ? b++ : null);
+            }
+        });
+        return [a, b];
+    }
+    console.log(fRange(s, t, [fLoc(a, apples), fLoc(b, oranges)]).join('\n'));
+
+
+Alternative
+
+// using filter
+function countApplesAndOranges2(s, t, a, b, apples, oranges) {
+  console.log(apples.filter(d =&amp;gt; s - a &amp;lt;= d &amp;amp;&amp;amp; d &amp;lt;= t - a).length);
+  console.log(oranges.filter(d =&amp;gt; s - b &amp;lt;= d &amp;amp;&amp;amp; d &amp;lt;= t - b).length);
+}
+
+
+
+
+// using reduce
+function countApplesAndOranges3(s, t, a, b, apples, oranges) {
+  console.log( apple.reduce((sum, d) =&amp;gt; sum + (s - a &amp;lt;= d &amp;amp;&amp;amp; d &amp;lt;= t - a), 0));
+  console.log(orange.reduce((sum, d) =&amp;gt; sum + (s - b &amp;lt;= d &amp;amp;&amp;amp; d &amp;lt;= t - b), 0));
+}
+
+
+// using filter and map
+function countApplesAndOranges4 {
+  function addBy(num) {
+    return (d) =&amp;gt; d + num;
+  }
+  function isScored(d) {
+    return s &amp;lt;= d &amp;amp;&amp;amp; d &amp;lt;= t;
+  }
+  const larry = apples.map(addBy(a)).filter(isScored).length;
+  const rob = oranges.map(addBy(b)).filter(isScored).length;
+  console.log(larry, rob);
+}
+
+
+// using Array.prototype (bad because a new version of ECMA could come out with a 'sum' helper for arrays)
+function countApplesAndOranges5 {
+  Array.prototype.sum = function(f) {
+      return this.reduce((s, v) =&amp;gt; s + f(v), 0);
+  }
+  console.log( apple.sum(d =&amp;gt; s - a &amp;lt;= d &amp;amp;&amp;amp; d &amp;lt;= t - a));
+  console.log(orange.sum(d =&amp;gt; s - b &amp;lt;= d &amp;amp;&amp;amp; d &amp;lt;= t - b));
+}
+
+
+Number Line Jumps
+
+Input
+
+Output
+
+Code
+
+    let result = 'NO'
+    for (let i = 0; i &amp;lt;= 10000; i++) {
+        if (x1 + v1 * i === x2 + v2 * i) {
+            result = 'YES'
+        }
+    }
+    return result;
+
+</content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>Back to Basic Javascript</title>
+      <url>/tutorial/2020/01/12/back-basic-js/</url>
+      <content type="text">Hai, it’s really embarrasing because i was did interview and going to fuck up. Because i not understand about javascript, backend and etc. anything about what i really strong about javascript, just destroy everything my expectation. i’m dissapointed my friend because my friend is know my ability. So here i am, come back to write again because i dont want to forget anymore. thanks to my office because i can work from anywhere hahah
+
+Types
+as you know, there are types in javascript is primitive and complex
+primitve
+
+  When you access a primitive type you work directly on its value.
+
+
+primitive
+string
+number
+boolean
+null
+undefined
+symbol
+bigint
+complex
+
+  When you access a complex type you work on a reference to its value.
+
+
+complex have
+complex
+object
+array
+function
+
+</content>
+      <categories>
+        
+          <category> tutorial </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title>Belajar Javascript Part 1</title>
+      <url>/2018/11/06/belajar-javascript-part-1/</url>
+      <content type="text">#Function Executions
+Kebanyakan pembuatan app menggunakan Javascript dibangun dengan V8, yaitu runtime yang dimiliki oleh chrome. untuk pemahaman lebih lanjut dapat ditonton video yang dijelaskan oleh Philip Robert,
+What the heck is the event loop anyway?
+Call Stack
+
+  It’s a data structure which records the function calls, basically where in the program we are. If we call a function to execute , we push something on to the stack, and when we return from a function, we pop off the top of the stack.
+
+
+sebelum memulai call stack memahami terlebih dahulu tentang Execution Context.
+Execution Context
+
+Call Stack merupakan pemanggilan fungsi - fungsi menggunakan konsep Stack. Stack merupakan sturktur data dimana data dipanggil dengan Last In First Out(LIFO) ketika fungsi pada javascript paling belakang, maka akan tercetak
+
+Heap
+
+  Objects are allocated in a heap i.e mostly unstructured region of memory. All the memory allocation to variables and objects happens here.
+
+
+Queue
+
+  A JavaScript runtime contains a message queue, which is a list of messages to be processed and the associated callback functions to execute. When the stack has enough capacity, a message is taken out of the queue and processed which consists of calling the associated function (and thus creating an initial stack frame). The message processing ends when the stack becomes empty again. In basic words , these messages are queued in response to external async events(such as a mouse being clicked or receiving the response to an HTTP request), given a callback function has been provided. If, for example a user were to click a button and no callback function was provided — no message would have been enqueued.
+
+
+Event Loop
+
+Monkey Patch
+A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).
+</content>
+      <categories>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
       <title>Belajar Nest JS Part 2</title>
       <url>/2018/11/02/belajar-nest-js-part-2/</url>
       <content type="text">
@@ -29,6 +558,13 @@ git clone https://github.com/nestjs/typescript-starter.git project
 cd project
 npm install
 npm run start
+
+
+or
+
+npm i -g @nestjs/cli
+nest new nest-restaurant-api
+npm run start:dev
 
 
 setelah di clone, otomatis membuat template dari Nets JS. kemudian setelah run di terminal dapat membuka di browser localhost:3000 maka muncul output seperti gambar di bawah ini
@@ -162,10 +698,17 @@ export const PostSchema = new mongoose.Schema({
     }
 });
 
+Kegunaan pada file src
+app.controller.ts and app.service.ts: those files are responsible for generating the message Hello world when the endpoint / is accessed through the browser. Because this endpoint is not important to this application you may delete these files as well. Soon you are going to learn in more details what controllers and services are.
+app.module.ts: this is a class of the type module that is responsible for declaring imports, exports, controllers, and providers to a Nest.js application. Every application has at least one module but you may create more than one module for more complex applications (more details on Nest.js documentation). The application of this tutorial will have only one module.
+main.ts: this is the file responsible for starting the server.
+main.hrm.ts: is a Hot Module Replacement file that installs modules during the server execution and it is useful to speed up the development process.
 
 Penjelasan REST API
 
   RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data
+
+
 
 
 URL Design
@@ -885,6 +1428,7 @@ untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nil
 
 Result from Pie Chart
 
+**python**
 import matplotlib.pyplot as plt
 pie_plot = pd.Series(summary,name='')
 pie_plot.plot.pie(fontsize=11,figsize=(6,6),autopct='%.2f');

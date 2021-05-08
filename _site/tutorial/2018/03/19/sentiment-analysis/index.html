@@ -494,12 +494,13 @@
 
 <h2 id="result-from-pie-chart">Result from Pie Chart</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="n">pie_plot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
-<span class="n">pie_plot</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">autopct</span><span class="o">=</span><span class="s">'</span><span class="si">%.2</span><span class="s">f'</span><span class="p">);</span>
-</code></pre></div></div>
+<p>**<code class="highlighter-rouge">python**
+import matplotlib.pyplot as plt
+pie_plot = pd.Series(summary,name='')
+pie_plot.plot.pie(fontsize=11,figsize=(6,6),autopct='%.2f');
+</code></p>
 
-<p>Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah <code class="highlighter-rouge">autopct=%2.f</code> maka outputnya adalah
+<p>Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk <strong>menyajikan</strong> data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah <code class="highlighter-rouge">autopct=%2.f</code> maka outputnya adalah
 <img src="http://localhost:4000/assets/images/output2.png" alt="Pie Chart" /></p>
 
       
@@ -633,7 +634,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -746,7 +747,7 @@
   
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -83,7 +83,7 @@
 <link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Jekyll, NexT" />
+  <meta name="keywords" content="" />
 
 
 
@@ -111,17 +111,17 @@
 
 
 
-<meta name="description" content="Web abdghn">
+<meta name="description" content="Mempelajari tentang javascript pada function executions yaitu Call Stack,Event Loop, Tasks dll">
 <meta name="keywords" content="Jekyll, NexT">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Abdghn">
-<meta property="og:url" content="http://localhost:4000/tags/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Belajar Javascript Part 1">
+<meta property="og:url" content="http://localhost:4000/2018/11/06/belajar-javascript-part-1/">
 <meta property="og:site_name" content="Abdghn">
-<meta property="og:description" content="Web abdghn">
+<meta property="og:description" content="Mempelajari tentang javascript pada function executions yaitu Call Stack,Event Loop, Tasks dll">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Abdghn">
-<meta name="twitter:description" content="Web abdghn">
+<meta name="twitter:title" content="Belajar Javascript Part 1">
+<meta name="twitter:description" content="Mempelajari tentang javascript pada function executions yaitu Call Stack,Event Loop, Tasks dll">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -154,7 +154,7 @@
 
 
 
-  <title>              Tags | Abdghn      </title>
+  <title>Belajar Javascript Part 1 | Abdghn</title>
   
 
 
@@ -268,42 +268,196 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+
 <div id="posts" class="posts-expand">
-<header class="post-header">
+  
+  
 
-	<h1 class="post-title" itemprop="name headline">
-    
-      Tags
-    
-  </h1>
-
-
-
-</header>
+  
 
   
   
-    <div class="tag-cloud">
-      <div class="tag-cloud-title">
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/11/06/belajar-javascript-part-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abdul Ghani Abbasi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="assets/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abdghn">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
           
-            No tags
           
-      </div>
-      <div class="tag-cloud-tags">
-        
-        
-        
-        
-        
-        
+            Belajar Javascript Part 1
+          
+        </h1>
         
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-06T00:00:00+07:00">
+                2018-11-06
+              </time>
+            
 
+            
 
-        
-      </div>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/06/belajar-javascript-part-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2018/11/06/belajar-javascript-part-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    Mempelajari tentang javascript pada function executions yaitu Call Stack,Event Loop, Tasks dll
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#Function Executions
+Kebanyakan pembuatan app menggunakan Javascript dibangun dengan V8, yaitu runtime yang dimiliki oleh chrome. untuk pemahaman lebih lanjut dapat ditonton video yang dijelaskan oleh Philip Robert,
+<a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">What the heck is the event loop anyway?</a></p>
+<h2 id="call-stack">Call Stack</h2>
+<blockquote>
+  <p>It’s a data structure which records the function calls, basically where in the program we are. If we call a function to execute , we push something on to the stack, and when we return from a function, we pop off the top of the stack.</p>
+</blockquote>
+
+<p>sebelum memulai call stack memahami terlebih dahulu tentang Execution Context.</p>
+<h3 id="execution-context">Execution Context</h3>
+
+<p>Call Stack merupakan pemanggilan fungsi - fungsi menggunakan konsep Stack. Stack merupakan sturktur data dimana data dipanggil dengan Last In First Out(LIFO) ketika fungsi pada javascript paling belakang, maka akan tercetak</p>
+
+<h2 id="heap">Heap</h2>
+<blockquote>
+  <p>Objects are allocated in a heap i.e mostly unstructured region of memory. All the memory allocation to variables and objects happens here.</p>
+</blockquote>
+
+<h2 id="queue">Queue</h2>
+<blockquote>
+  <p>A JavaScript runtime contains a message queue, which is a list of messages to be processed and the associated callback functions to execute. When the stack has enough capacity, a message is taken out of the queue and processed which consists of calling the associated function (and thus creating an initial stack frame). The message processing ends when the stack becomes empty again. In basic words , these messages are queued in response to external async events(such as a mouse being clicked or receiving the response to an HTTP request), given a callback function has been provided. If, for example a user were to click a button and no callback function was provided — no message would have been enqueued.</p>
+</blockquote>
+
+<h2 id="event-loop">Event Loop</h2>
+
+<h1 id="monkey-patch">Monkey Patch</h1>
+<p>A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).</p>
+
+      
     </div>
-  
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/tutorial/2020/01/12/back-basic-js/" rel="next" title="Back to Basic Javascript">
+                <i class="fa fa-chevron-left"></i> Back to Basic Javascript
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/02/belajar-nest-js-part-2/" rel="prev" title="Belajar Nest JS Part 2">
+                Belajar Nest JS Part 2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
 </div>
 
 
@@ -312,6 +466,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -329,10 +494,27 @@
     <div class="sidebar-inner">
 
       
+        
+        
+        
+
+
+
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/assets/images/avatar.gif"
@@ -418,6 +600,31 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#monkey-patch"> <span class="nav-number">1</span> <span class="nav-text">Monkey Patch</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -575,6 +782,20 @@
       <script id="dsq-count-scr" src="https://blog-cpljbj5mlr.disqus.com/count.js" async></script>
     
 
+    
+      
+      <script type="text/javascript">
+          var disqus_config = function () {
+              this.page.url = 'http://localhost:4000/2018/11/06/belajar-javascript-part-1/';
+              this.page.identifier = '/2018/11/06/belajar-javascript-part-1/';
+              this.page.title = 'Belajar Javascript Part 1';
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://blog-cpljbj5mlr.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+      </script>
+      
     
 
   

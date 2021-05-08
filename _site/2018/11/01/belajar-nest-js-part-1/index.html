@@ -119,9 +119,11 @@
 <meta property="og:site_name" content="Abdghn">
 <meta property="og:description" content="Mempelajari atau Berkenalan terlebih dahulu dengan Nest JS">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://localhost:4000/assets/images/.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Belajar Nest JS Part 1">
 <meta name="twitter:description" content="Mempelajari atau Berkenalan terlebih dahulu dengan Nest JS">
+<meta name="twitter:image" content="http://localhost:4000/assets/images/.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -379,6 +381,13 @@ npm install
 npm run start
 </code></pre></div></div>
 
+<p>or</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i -g @nestjs/cli
+nest new nest-restaurant-api
+npm run start:dev
+</code></pre></div></div>
+
 <p>setelah di clone, otomatis membuat template dari Nets JS. kemudian setelah run di terminal dapat membuka di browser localhost:3000 maka muncul output seperti gambar di bawah ini</p>
 
 <p>kemudian untuk menghubungkan database MongoDB dengan mongoose, buat folder database di dalam folder src</p>
@@ -510,11 +519,18 @@ export const PostSchema = new mongoose.Schema({
     }
 });
 </code></pre>
+<h1 id="kegunaan-pada-file-src">Kegunaan pada file src</h1>
+<p>app.controller.ts and app.service.ts: those files are responsible for generating the message Hello world when the endpoint / is accessed through the browser. Because this endpoint is not important to this application you may delete these files as well. Soon you are going to learn in more details what controllers and services are.
+app.module.ts: this is a class of the type module that is responsible for declaring imports, exports, controllers, and providers to a Nest.js application. Every application has at least one module but you may create more than one module for more complex applications (more details on Nest.js documentation). The application of this tutorial will have only one module.
+main.ts: this is the file responsible for starting the server.
+main.hrm.ts: is a Hot Module Replacement file that installs modules during the server execution and it is useful to speed up the development process.</p>
 
 <h1 id="penjelasan-rest-api">Penjelasan REST API</h1>
 <blockquote>
   <p>RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data</p>
 </blockquote>
+
+<p><img src="http://localhost:4000/assets/images/.png" alt="post" /></p>
 
 <p>URL Design
 RESTful API diakses menggunakan protokol HTTP. Penamaan dan struktur URL yang konsisten akan menghasilkan API yang baik dan mudah untuk dimengerti developer. URL API biasa disebut endpoint dalam pemanggilannya. Contoh penamaan URL / endpoint yang baik adalah seperti berikut :</p>
@@ -791,7 +807,7 @@ Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -879,7 +895,7 @@ Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal
             
               <div class="post-toc-content">
     <ol class=nav>
-      <li class="nav-item nav-level-1"> <a class="nav-link" href="#post-module"> <span class="nav-number">1</span> <span class="nav-text">Post module</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-rest-api"> <span class="nav-number">2</span> <span class="nav-text">Penjelasan REST API</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-tentang-mongoose"> <span class="nav-number">3</span> <span class="nav-text">Penjelasan Tentang Mongoose</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#post-module"> <span class="nav-number">1</span> <span class="nav-text">Post module</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#kegunaan-pada-file-src"> <span class="nav-number">2</span> <span class="nav-text">Kegunaan pada file src</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-rest-api"> <span class="nav-number">3</span> <span class="nav-text">Penjelasan REST API</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#penjelasan-tentang-mongoose"> <span class="nav-number">4</span> <span class="nav-text">Penjelasan Tentang Mongoose</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
     </ol>
   </div>
             
@@ -904,7 +920,7 @@ Properti Number dan Date keduanya mendukung penentuan nilai minimal dan maksimal
   
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

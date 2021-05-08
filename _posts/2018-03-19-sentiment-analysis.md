@@ -112,11 +112,11 @@ untuk penentuan suatu komentar termasuk komentar positif dibuat kondisi jika nil
 
 ## Result from Pie Chart
 
-```python
+**```python**
 import matplotlib.pyplot as plt
 pie_plot = pd.Series(summary,name='')
 pie_plot.plot.pie(fontsize=11,figsize=(6,6),autopct='%.2f');
 ```
 
-Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk menyajikan data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah `autopct=%2.f` maka outputnya adalah
+Kemudian untuk memvisualisasikan data sentimen nya,gunakan library matplotlib dan dipanggil perintah untuk **menyajikan** data chart dengan jenis pie sehingga data yang ditampilkan dengan menampilkan dictionary summary dan menampilkan angka persentasi 2 angka dibelakang koma dengan perintah `autopct=%2.f` maka outputnya adalah
 ![Pie Chart]({{ site.url }}/assets/images/output2.png)
